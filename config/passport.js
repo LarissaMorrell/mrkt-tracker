@@ -36,15 +36,19 @@ module.exports = function(passport) {
             passwordField: 'password',
             passReqToCallback: true // allows us to pass back the entire request to the callback
         },
-        function(req, email, password, done) {
+
+        //passport automatically takes email/passport out of the req.body
+        function(req, email, password,
+            // firstName, lastName, address, city, 
+            // state, zip, phone, company, position, 
+            done) {
             // asynchronous
             // User.findOne wont fire unless data is sent back
             process.nextTick(function() {
-                console.log("hello1", password, email);
                 // find a user whose email is the same as the forms email
                 // we are checking to see if the user trying to login already exists
                 User.findOne({ 'local.email': email }, function(err, user) {
-                    console.log("hello", user);
+                    
                     // if there are any errors, return the error
                     if (err)
                         return done(err);
@@ -56,10 +60,21 @@ module.exports = function(passport) {
                         // if there is no user with that email
                         // create the user
                         var newUser = new User();
-
+                        console.log('first name', req.body.firstName); //firstName is equal to name='...' in ejs and html/postman
                         // set the user's local credentials
                         newUser.local.email = email;
                         newUser.local.password = newUser.generateHash(password);
+                        newUser.info.firstName = req.body.firstName;
+                        newUser.info.lastName = req.body.lastName;
+                        newUser.info.streetAddress = req.body.streetAddress;
+                        newUser.info.city = req.body.city;
+                        newUser.info.state = req.body.state;
+                        newUser.info.zip = req.body.zip;
+                        newUser.info.phone = req.body.phone;
+                        newUser.info.company = req.body.company;
+                        newUser.info.position = req.body.position;
+
+                        console.log(newUser);
 
                         // save the user
                         newUser.save(function(err) {

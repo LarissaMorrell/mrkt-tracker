@@ -34,6 +34,10 @@ module.exports = function(app, passport) {
         res.render('signup.ejs', { message: req.flash('signupMessage') });
     });
 
+    app.get('/me', isLoggedIn, function(req, res) {
+        res.json(req.user.apiRepr());
+    })
+
     // process the signup form
     app.post('/signup', passport.authenticate('local-signup', {
         successRedirect : '/profile', // redirect to the secure profile section
