@@ -45,8 +45,6 @@ module.exports = function(app, passport) {
         failureFlash : true // allow flash messages
     }));
 
-
-
     // =====================================
     // PROFILE SECTION =====================
     // =====================================
@@ -57,6 +55,11 @@ module.exports = function(app, passport) {
             user : req.user // get the user out of session and pass to template
         });
     });
+
+    
+
+
+
 
     // =====================================
     // LOGOUT ==============================
