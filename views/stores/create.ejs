@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Store</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/stores">Store List</a></h3>
+      <h1>Create New Store</h1>
+      <form action="/store" method="post">
+        <table>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td><input type="text" name="name" /></td>
+            </tr>
+            <tr>
+              <td>Store ID</td>
+              <td><input type="text" name="userId" /></td>
+            </tr>
+            <tr>
+              <td>Street Address</td>
+              <td><input type="text" name="address" /></td>
+            </tr>
+            <tr>
+              <td>City</td>
+              <td><input name="city"></in></td>
+            </tr>
+            <tr>
+              <td>State</td>
+              <td><input name="state"></in></td>
+            </tr>
+            <tr>
+              <td>General Comments</td>
+              <td><textarea name="generalComments"></textarea></td>
+            </tr>
+            <tr>
+              <td>Tier</td>
+              <td><input type="text" name="tier" /></td>
+            </tr>
+            <tr>
+              <td>Paperwork</td>
+              <td><input type="number" name="havePaperwork" /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" value="Save" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

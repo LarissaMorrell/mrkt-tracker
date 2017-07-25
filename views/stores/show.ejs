@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Store Detail</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a href="/stores">Store List</a></h3>
+      <h1>Store Detail</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td><%= store.name %></td>
+          </tr>
+          <tr>
+            <td>General Comments</td>
+            <td>:</td>
+            <td><%= store.generalComments %></td>
+          </tr>
+          <!--<tr>
+            <td>Position</td>
+            <td>:</td>
+            <td><%= store.position %></td>
+          </tr>
+          <tr>
+            <td>Salary</td>
+            <td>:</td>
+            <td>$<%= store.salary %>/year</td>
+          </tr> -->
+        </tbody>
+      </table>
+      <h3><a href="/store/edit/<%= store._id%>">EDIT</a></h3>
+      <form action="/store/delete/<%= store._id%>" method="post">
+        <button type="submit">DELETE</button>
+      </form>
+    </div>
+  </body>
+</html>

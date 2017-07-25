@@ -1,4 +1,3 @@
-var Store = require('../models/store.js');
 var employee = require("../controllers/EmployeeController.js");
 
 module.exports = function(app, passport) {
