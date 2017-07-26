@@ -64,7 +64,7 @@ storeController.save = (req, res) => {
         })
         .then( store => { //then() takes in a function
             console.log("Successfully created an store.");
-            res.redirect("/store/"+store._id);
+            res.redirect("/stores/show/"+store._id);
         })
         .catch(err => {
             console.error(err);
@@ -109,7 +109,7 @@ storeController.update = (req, res) => {
               console.log("uh-oh...", err);
               res.render("../views/stores/edit", {store: req.body});
             }
-            res.redirect("/store/"+store._id);
+            res.redirect("/stores/show/"+store._id);
         });
 };
 

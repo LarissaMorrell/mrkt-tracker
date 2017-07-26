@@ -20,7 +20,7 @@
 
           <% for(var i=0; i<stores.length;i++) { %>
             <tr>
-              <td><a href="/store/<%= stores[i]._id%>"><%= stores[i].name%></a></td>
+              <td><a href="/stores/show/<%= stores[i]._id%>"><%= stores[i].name%></a></td>
               <td><%= stores[i].tier%></td>
             </tr>
           <% } %>
