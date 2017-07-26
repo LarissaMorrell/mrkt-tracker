@@ -119,6 +119,17 @@ storeController.delete = (req, res) => {
         .exec()
         .then(store => res.status(204).end())
         .catch(err => res.status(500).json({ message: 'Internal server error' }));
+
+    Store.remove({_id: req.params.id}, function(err) {
+    if(err) {
+      console.log(err);
+    }
+    else {
+      console.log("Store deleted!");
+      res.redirect("/stores");
+    }
+  });
+
 };
 
 module.exports = storeController;
