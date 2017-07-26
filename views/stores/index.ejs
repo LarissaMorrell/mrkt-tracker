@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Store List</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <div class="container">
+<html lang="en">
+<% include ../partials/head.ejs %>
+<body>
+<% include ../partials/header.ejs %>
+<div class="container">
+  <div class="row">
+        <div class="col-md-4">
       <h3><a href="/stores/create">Create Store</a></h3>
       <h1>Store List</h1>
       <% if(stores.length>0) { %>
@@ -30,5 +30,8 @@
         <div>No stores found.</div>
       <% } %>
     </div>
-  </body>
-</html>
+    </div>
+</div>
+<% include ../partials/footer.ejs %>
+</body>
+</html>                                     

@@ -5,7 +5,7 @@ module.exports = function(app, passport) {
     //get all of the stores
     app.get('/stores', Store.list);
 
-    app.get('/storetest', (req, res) => {res.render('stores.ejs')})
+    app.get('/test', (req, res) => {res.render('test.ejs')})
 
     //get one store
     // app.get('/store/:id', Store.show);
