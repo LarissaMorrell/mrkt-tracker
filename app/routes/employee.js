@@ -19,6 +19,6 @@ module.exports = function(app, passport) {
     // Edit update
     app.post('/employees/update/:id', employee.update);
 
-    // Edit update
+    // Delete an employee
     app.post('/employees/delete/:id', employee.delete);
 }

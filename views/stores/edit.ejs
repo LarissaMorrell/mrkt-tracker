@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Edit Employee</title>
+    <title>Edit Store</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <div class="container">
-      <h3><a href="/employees">Employee List</a></h3>
-      <h1>Edit Employee</h1>
-      <form action="/employees/update/<%= employee._id%>" method="post">
+      <h3><a href="/stores">Store List</a></h3>
+      <h1>Edit Store</h1>
+      <form action="/stores/update/<%= store._id%>" method="post">
         <table>
           <tbody>
             <tr>
               <td>Name</td>
-              <td><input type="text" name="name" value="<%= employee.name %>" /></td>
+              <td><input type="text" name="name" value="<%= store.name %>" /></td>
             </tr>
             <tr>
               <td>Address</td>
-              <td><textarea name="address"><%= employee.address %></textarea></td>
+              <td><input type="text" name="address" value="<%= store.address %>" /></td>
             </tr>
             <tr>
-              <td>Position</td>
-              <td><input type="text" name="position" value="<%= employee.position %>" /></td>
+              <td>City</td>
+              <td><input type="text" name="city" value="<%= store.city %>" /></td>
             </tr>
             <tr>
-              <td>Salary</td>
-              <td><input type="number" name="salary" value="<%= employee.salary %>" /></td>
+              <td>State</td>
+              <td><input type="text" name="state" value="<%= store.state %>" /></td>
             </tr>
             <tr>
               <td colspan="2"><button type="submit">Update</button></td>

@@ -17,10 +17,10 @@ module.exports = function(app, passport) {
     app.post('/store', Store.save);
 
     //Go to edit a store page
-    app.get('/store/edit/:id', Store.edit);
+    app.get('/stores/edit/:id', Store.edit);
 
     //Update a store
-    app.put('/store/:id', Store.update);
+    app.post('/stores/update/:id', Store.update);
 
     //Delete a store
     app.post('/store/delete/:id', Store.delete);

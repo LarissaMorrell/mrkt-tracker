@@ -74,24 +74,21 @@ storeController.save = (req, res) => {
 
 //Go to the edit store page
 storeController.edit = (req, res) => {
-    req.render("../views/stores/edit");
+    Store.findOne({_id: req.params.id}).exec(function (err, store) {
+        if (err) {
+          console.log("Error:", err);
+        }
+        else {
+          res.render("../views/stores/edit", {store: store});
+        }
+    });
 }
 
 
 //edit store by ID... redirects to edit page
 storeController.update = (req, res) => {
-    // ensure that the id in the request path and the one in request body match
-    if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {
-        const message = (
-            `Request path id (${req.params.id}) and request body id ` +
-            `(${req.body.id}) must match`);
-        console.error(message);
-        res.status(400).json({ message: message });
-    }
 
-    // we only support a subset of fields being updateable.
-    // if the store sent over any of the updatableFields, we udpate those values
-    // in document
+    // we only support a subset of fields being updateable
     const toUpdate = {};
     const updateableFields = ['user_assigned_id', 'name', 'address', 'city',
         'state', 'generalComments', 'tier', 'personnel', 'havePaperwork',
@@ -103,12 +100,17 @@ storeController.update = (req, res) => {
             toUpdate[field] = req.body[field];
         }
     });
-    Store
-        // all key/value pairs in toUpdate will be updated -- that's what `$set` does
-        .findByIdAndUpdate(req.params.id, { $set: toUpdate })
-        .exec()
-        .then(store => res.status(204).end())
-        .catch(err => res.status(500).json({ message: 'Internal server error' }));
+
+    Store.findByIdAndUpdate(req.params.id, 
+        { $set: toUpdate}, 
+        { new: true }, 
+        function (err, store) {
+            if (err) {
+              console.log("uh-oh...", err);
+              res.render("../views/stores/edit", {store: req.body});
+            }
+            res.redirect("/store/"+store._id);
+        });
 };
 
 
