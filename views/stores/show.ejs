@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Store Detail</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+  <% include ../partials/head.ejs %>
+  <title>Store Detail</title>
   <body>
+    <% include ../partials/header.ejs %>
     <div class="container">
-      <h3><a href="/stores">Store List</a></h3>
+      <a class="btn btn-default" role="button" href="/stores"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
       <h1>Store Detail</h1>
-      <table>
-        <tbody>
-          <tr>
-            <td>Name</td>
-            <td>:</td>
-            <td><%= store.name %></td>
-          </tr>
-          <tr>
-            <td>General Comments</td>
-            <td>:</td>
-            <td><%= store.generalComments %></td>
-          </tr>
-        </tbody>
-      </table>
-      <h3><a href="/stores/edit/<%= store._id%>">EDIT</a></h3>
-      <form action="/stores/delete/<%= store._id%>" method="post">
-        <button type="submit">DELETE</button>
-      </form>
+      <h3><%= store.name %></h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">Tier</div>
+          <div class="col-md-10"><%= store.tier%></div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">Address</div>
+          <div class="col-md-10"><%= store.address%>, <%= store.city%>, <%= store.state%></div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">General comments</div>
+          <div class="col-md-10"><%= store.generalComments%></div>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <a class="btn btn-default" role="button" href="/stores/edit/<%= store._id%>">Edit store</a>        <form action="/stores/delete/<%= store._id%>" method="post">
+          <button class="btn btn-default" type="submit">DELETE</button>
+        </form>
+      </div>
     </div>
+    <% include ../partials/footer.ejs %>
   </body>
 </html>

@@ -4,34 +4,24 @@
 <body>
 <% include ../partials/header.ejs %>
 <div class="container">
-  <div class="row">
-        <div class="col-md-4">
-      <h3><a href="/stores/create">Create Store</a></h3>
-      <h1>Store List</h1>
-      <% if(stores.length>0) { %>
-      <table>
-        <thead>
-          <tr>
-            <th>Store Name</th>
-            <th>Tier</th>
-          </tr>
-        </thead>
-        <tbody>
-
-          <% for(var i=0; i<stores.length;i++) { %>
-            <tr>
-              <td><a href="/stores/show/<%= stores[i]._id%>"><%= stores[i].name%></a></td>
-              <td><%= stores[i].tier%></td>
-            </tr>
-          <% } %>
-        </tbody>
-      </table>
-      <% } else { %>
-        <div>No stores found.</div>
-      <% } %>
-    </div>
-    </div>
+  <h3><a href="/stores/create">Create Store</a></h3>
+  <h1>Store List</h1>
+  <% if(stores.length>0) { %>
+  <div class="container">
+    <% for(var i=0; i<stores.length;i++) { %>
+      <div class="row">
+        <h3 class="col-xs-12"><%= stores[i].name%></a></h3>
+        <h4 class="col-xs-12"><%= stores[i].tier%></h4>
+        <div class="col-xs-12"><%= stores[i].address%>, <%= stores[i].city%>, <%= stores[i].state%></div>
+        <div class="col-xs-12"><%= stores[i].generalComments%></div>
+        <div class="col-xs-12"><a class="btn btn-default" role="button" href="/stores/show/<%= stores[i]._id%>">View details</a></div>
+      </div>
+    <% } %>
+  </div>
+  <% } else { %>
+    <div class="row">No stores found.</div>
+  <% } %>
 </div>
 <% include ../partials/footer.ejs %>
 </body>
-</html>                                     
+</html>
