@@ -5,32 +5,52 @@
 <body>
 <% include ../partials/header.ejs %>
     <div class="container">
-      <h3><a href="/stores">Store List</a></h3>
+      <a class="btn btn-default" role="button" href="/stores"><i class="fa fa-home" aria-hidden="true"></i></i></a>
       <h1>Edit Store</h1>
+      <h2><%= store.name %></h2>
+      <h4><%= store.address %>, <%= store.city %>, <%= store.state %></h4>
       <form action="/stores/update/<%= store._id%>" method="post">
-        <table>
-          <tbody>
-            <tr>
-              <td>Name</td>
-              <td><input type="text" name="name" value="<%= store.name %>" /></td>
-            </tr>
-            <tr>
-              <td>Address</td>
-              <td><input type="text" name="address" value="<%= store.address %>" /></td>
-            </tr>
-            <tr>
-              <td>City</td>
-              <td><input type="text" name="city" value="<%= store.city %>" /></td>
-            </tr>
-            <tr>
-              <td>State</td>
-              <td><input type="text" name="state" value="<%= store.state %>" /></td>
-            </tr>
-            <tr>
-              <td colspan="2"><button type="submit">Update</button></td>
-            </tr>
-          </tbody>
-        </table>
+        <!-- General Comments -->
+        <div class="form-group row">
+          <label for="comment" class="col-sm-2 col-form-label">General Comments</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" name="generalComments" rows="5" id="comment"><%= store.generalComments %></textarea>
+          </div>
+        </div>
+        <!-- Tier -->
+        <div class="form-group row">
+          <label for="tier" class="col-sm-2 col-form-label">Tier</label>
+          <select class="custom-select col-sm-10" name="tier" id="tier">
+            <option value="" disabled selected>Select Tier</option>
+            <option value="Platinum">Platinum</option>
+            <option value="Gold">Gold</option>
+            <option value="Silver">Silver</option>
+          </select>
+        </div>
+        <!-- Paperwork -->
+        <div class="form-group row">
+          <label for="paperwork" class="custom-control custom-radio col-sm-3 col-form-label">Paperwork has been submitted</label>
+          <div class="col-sm-1">
+            <label class="custom-control custom-radio">
+              <!-- TODO fill in the CORRECT value for the paperwork -->
+              <input name="havePaperwork" type="radio" class="custom-control-input" checked=
+                <%= store.havePaperwork ? "checked" : "" %> >
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Yes</span>
+            </label>
+          </div>
+          <div class="col-sm-8">
+            <label class="custom-control custom-radio">
+              <!-- TODO fill in the CORRECT value for the paperwork -->
+              <input name="havePaperwork" type="radio" class="custom-control-input" checked=
+                <%= store.havePaperwork ? "checked" : "" %> >
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">No</span>
+            </label>
+          </div>
+        </div>
+        <a class="btn btn-default" role="button" href="/stores">Cancel</a>
+        <button class="btn btn-primary" type="submit">Update Store</button>
       </form>
     </div>
     <% include ../partials/footer.ejs %>

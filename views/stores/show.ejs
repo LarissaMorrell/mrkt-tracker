@@ -5,7 +5,7 @@
   <body>
     <% include ../partials/header.ejs %>
     <div class="container">
-      <a class="btn btn-default" role="button" href="/stores"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+      <a class="btn btn-default" role="button" href="/stores"><i class="fa fa-home" aria-hidden="true"></i></i></a>
       <h1>Store Detail</h1>
       <h3><%= store.name %></h3>
       <div class="container">
@@ -23,8 +23,9 @@
         </div>
       </div>
       <div class="col-xs-12">
-        <a class="btn btn-default" role="button" href="/stores/edit/<%= store._id%>">Edit store</a>        <form action="/stores/delete/<%= store._id%>" method="post">
-          <button class="btn btn-default" type="submit">DELETE</button>
+        <form action="/stores/delete/<%= store._id%>" method="post">
+          <a class="btn btn-default" role="button" href="/stores/edit/<%= store._id%>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Store</a>
+          <button class="btn btn-danger" type="submit"><i class="fa fa-trash-o" aria-hidden="true"></i> DELETE</button>
         </form>
       </div>
     </div>
