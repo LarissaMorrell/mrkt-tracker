@@ -5,10 +5,14 @@
 <body>
 <% include ../partials/header.ejs %>
     <div class="container">
-      <a class="btn btn-default" role="button" href="/stores"><i class="fa fa-home" aria-hidden="true"></i></i></a>
+      <a class="btn btn-default inline" role="button" href="/stores"><i class="fa fa-home" aria-hidden="true"></i></i></a>
       <h1>Edit Store</h1>
       <h2><%= store.name %></h2>
-      <h4><%= store.address %>, <%= store.city %>, <%= store.state %></h4>
+      <!-- <div class="row"> -->
+        <h4><%= store.address %>, <%= store.city %>, <%= store.state %>
+          <button class="btn btn-default inline" id="edit-store-location" role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+        </h4>
+      <!-- </div> -->
       <form action="/stores/update/<%= store._id%>" method="post">
         <!-- General Comments -->
         <div class="form-group row">
@@ -30,8 +34,8 @@
         <!-- Paperwork -->
         <div class="form-group row">
           <label for="paperwork" class="custom-control custom-radio col-sm-3 col-form-label">Paperwork has been submitted</label>
-          <div class="col-sm-1">
-            <label class="custom-control custom-radio">
+          <div class="col-sm-2">
+            <label class="custom-control yes-no-radio">
               <!-- TODO fill in the CORRECT value for the paperwork -->
               <input name="havePaperwork" type="radio" class="custom-control-input" checked=
                 <%= store.havePaperwork ? "checked" : "" %> >
@@ -39,8 +43,8 @@
               <span class="custom-control-description">Yes</span>
             </label>
           </div>
-          <div class="col-sm-8">
-            <label class="custom-control custom-radio">
+          <div class="col-sm-7">
+            <label class="custom-control yes-no-radio">
               <!-- TODO fill in the CORRECT value for the paperwork -->
               <input name="havePaperwork" type="radio" class="custom-control-input" checked=
                 <%= store.havePaperwork ? "checked" : "" %> >
