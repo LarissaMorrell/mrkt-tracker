@@ -7,3 +7,7 @@ body{
      width: auto;
      padding: 0px;
 }
+
+select {
+  max-width: 150px;
+}
