@@ -11,3 +11,8 @@ body{
 select {
   max-width: 150px;
 }
+
+.toggle-details {
+  display: none;
+  padding: 0px;
+}
