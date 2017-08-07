@@ -113,7 +113,7 @@
             </select>
             <div class="col-sm-5"></div><!-- empty space -->
           </div>
-          <!-- Paperwork -->
+          <!-- Submitted paperwork -->
           <div class="form-group row">
             <label for="paperwork" class="custom-control custom-radio col-sm-3 col-form-label">Paperwork has been submitted</label>
             <div class="col-sm-1">
@@ -131,20 +131,26 @@
               </label>
             </div>
           </div>
+          <!-- Wants paperwork back -->
+          <div class="form-group row">
+            <label for="wantPaperworkBack" class="custom-control custom-radio col-sm-3 col-form-label">Paperwork must be returned</label>
+            <div class="col-sm-1">
+              <label class="custom-control custom-radio">
+                <input name="wantPaperworkBack" type="radio" class="custom-control-input" value="true">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">Yes</span>
+              </label>
+            </div>
+            <div class="col-sm-8">
+              <label class="custom-control custom-radio">
+                <input name="wantPaperworkBack" type="radio" class="custom-control-input" value="false">
+                <span class="custom-control-indicator"></span>
+                <span class="custom-control-description">No</span>
+              </label>
+            </div>
+          </div>
           <a class="btn btn-default" role="button" href="/stores">Cancel</a>
           <button class="btn btn-primary" type="submit">Create Store</button>
-          <!--
-          <table>
-            <tbody>
-              <tr>
-                <td>Paperwork</td>
-                <td><input type="number" name="havePaperwork" /></td>
-              </tr>
-              <tr>
-                <td colspan="2"><input type="submit" value="Save" /></td>
-              </tr>
-            </tbody>
-          </table>-->
         </form>
       </div>
     </div>

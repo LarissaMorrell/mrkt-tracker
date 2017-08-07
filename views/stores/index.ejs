@@ -13,6 +13,7 @@
         <h3 class="col-xs-12"><%= stores[i].name%></a></h3>
         <h4 class="col-xs-12"><%= stores[i].tier%></h4>
         <div class="col-xs-12"><%= stores[i].address%>, <%= stores[i].city%>, <%= stores[i].state%></div>
+        <div class="col-xs-12 col-s-6"><%= stores[i].havePaperwork %></div>
         <div class="col-xs-12"><%= stores[i].generalComments%></div>
         <div class="col-xs-12"><a class="btn btn-default" role="button" href="/stores/show/<%= stores[i]._id%>">View details</a></div>
       </div>

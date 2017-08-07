@@ -147,6 +147,28 @@
             </label>
           </div>
         </div>
+        <!-- Wants paperwork back -->
+        <div class="form-group row">
+          <label for="wantPaperworkBack" class="custom-control custom-radio col-sm-3 col-form-label">Paperwork must be returned</label>
+          <div class="col-sm-2">
+            <label class="custom-control yes-no-radio">
+              <!-- TODO fill in the CORRECT value for the paperwork -->
+              <input name="wantPaperworkBack" type="radio" class="custom-control-input" checked=
+                <%= store.wantPaperworkBack ? "checked" : "" %> >
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Yes</span>
+            </label>
+          </div>
+          <div class="col-sm-7">
+            <label class="custom-control yes-no-radio">
+              <!-- TODO fill in the CORRECT value for the paperwork -->
+              <input name="wantPaperworkBack" type="radio" class="custom-control-input" checked=
+                <%= store.wantPaperworkBack ? "checked" : "" %> >
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">No</span>
+            </label>
+          </div>
+        </div>
         <a class="btn btn-default" role="button" href="/stores">Cancel</a>
         <button class="btn btn-primary" type="submit">Update Store</button>
       </form>
