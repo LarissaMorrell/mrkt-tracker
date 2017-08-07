@@ -1,12 +1,17 @@
+html {
+
+}
+
 body{
   padding-top: 70px;
-  /*background-color: yellow;*/
+  min-height: 100%;
 }
 
 .col-sm-auto {
      width: auto;
      padding: 0px;
 }
+
 
 select {
   max-width: 150px;
@@ -15,4 +20,12 @@ select {
 .toggle-details {
   display: none;
   padding: 0px;
+}
+
+.fa-space-after {
+  padding-right: 8px;
+}
+
+.fa::after {
+
 }

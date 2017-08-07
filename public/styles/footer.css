@@ -1,5 +1,10 @@
+footer {
+  position: absolute;
+  width: 100%;
+}
+
 .full {
-    width: 100%;    
+    width: 100%;
 }
 .gap {
 	height: 30px;
@@ -8,7 +13,8 @@
 	display: block;
 }
 .footer {
-	background: #EDEFF1;
+  background: #F8F8F8;
+  /*background: #EDEFF1;*/
 	height: auto;
 	padding-bottom: 30px;
 	position: relative;
@@ -131,5 +137,5 @@
 	padding-top: 6px;
 }
 .payments {
-	font-size: 1.5em;	
+	font-size: 1.5em;
 }
