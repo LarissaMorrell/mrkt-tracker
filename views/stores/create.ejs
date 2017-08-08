@@ -4,8 +4,11 @@
 <body>
 <% include ../partials/header.ejs %>
     <div class="container">
-      <a class="btn btn-default" role="button" href="/stores"><i class="fa fa-home" aria-hidden="true"></i></i></a>
-      <h1>Create New Store</h1>
+      <div class="form-group row page-title-row">
+        <h1 class="col-sm-10">Create New Store</h1>
+        <a class="btn btn-default col-sm-2 btn-corner" role="button" href="/stores">
+          <i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+      </div>
       <div class="container">
         <form action="/stores/save" method="post">
 
@@ -25,15 +28,15 @@
           </div>
           <!-- City -->
           <div class="form-group row">
-            <label for="city" class="col-sm-2 col-form-label">City</label>
-            <div class="col-sm-10">
+            <label for="city" class="col-xs-12 col-sm-2 col-form-label">City</label>
+            <div class="col-xs-12 col-sm-10">
               <input type="text" name="city" class="form-control" id="city" placeholder="Boston">
             </div>
           </div>
           <!-- State select dropdown-->
           <div class="form-group row">
             <label for="state" class="col-sm-2 col-form-label">State</label>
-            <select class="custom-select col-sm-10" name="state" id="state">
+            <select class="custom-select form-control col-xs-12 col-sm-10" name="state" id="state">
               <option value="" disabled selected>Select State</option>
               <option value="AL">Alabama</option>
               <option value="AK">Alaska</option>
@@ -104,8 +107,8 @@
           </div>
           <!-- Tier -->
           <div class="form-group row">
-            <label for="tier" class="col-sm-2 col-form-label">Tier</label>
-            <select class="custom-select col-sm-5" name="tier" id="tier">
+            <label for="tier" class="col-xs-12 col-sm-2 col-form-label">Tier</label>
+            <select class="custom-select form-control col-xs-12 col-sm-10" name="tier" id="tier">
               <option value="" disabled selected>Select Tier</option>
               <option value="Platinum">Platinum</option>
               <option value="Gold">Gold</option>
@@ -115,15 +118,15 @@
           </div>
           <!-- Submitted paperwork -->
           <div class="form-group row">
-            <label for="paperwork" class="custom-control custom-radio col-sm-3 col-form-label">Paperwork has been submitted</label>
-            <div class="col-sm-1">
+            <label for="paperwork" class="custom-control custom-radio col-xs-12 col-sm-4 col-md-3 col-form-label">Paperwork has been submitted</label>
+            <div class="col-xs-12 col-sm-2 col-md-1">
               <label class="custom-control custom-radio">
                 <input name="havePaperwork" type="radio" class="custom-control-input" value="true">
                 <span class="custom-control-indicator"></span>
                 <span class="custom-control-description">Yes</span>
               </label>
             </div>
-            <div class="col-sm-8">
+            <div class="col-xs-12 col-sm-6 col-md-8">
               <label class="custom-control custom-radio">
                 <input name="havePaperwork" type="radio" class="custom-control-input" value="false">
                 <span class="custom-control-indicator"></span>
@@ -133,15 +136,15 @@
           </div>
           <!-- Wants paperwork back -->
           <div class="form-group row">
-            <label for="wantPaperworkBack" class="custom-control custom-radio col-sm-3 col-form-label">Paperwork must be returned</label>
-            <div class="col-sm-1">
+            <label for="wantPaperworkBack" class="custom-control custom-radio col-xs-12 col-sm-4 col-md-3 col-form-label">Paperwork must be returned</label>
+            <div class="col-xs-12 col-sm-2 col-md-1">
               <label class="custom-control custom-radio">
                 <input name="wantPaperworkBack" type="radio" class="custom-control-input" value="true">
                 <span class="custom-control-indicator"></span>
                 <span class="custom-control-description">Yes</span>
               </label>
             </div>
-            <div class="col-sm-8">
+            <div class="col-xs-12 col-sm-6 col-md-8">
               <label class="custom-control custom-radio">
                 <input name="wantPaperworkBack" type="radio" class="custom-control-input" value="false">
                 <span class="custom-control-indicator"></span>

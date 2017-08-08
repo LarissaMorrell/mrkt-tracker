@@ -8,11 +8,11 @@ body{
 }
 
 .page-title-row {
-  margin-bottom: 0px;
   position: relative; /* for position of .btn-corner */
 }
 
-.page-title {
+/* Put the title and corner button line up */
+.page-title-row > * {
   margin-bottom: 0px;
   padding: 0px;
 }
@@ -26,8 +26,12 @@ body{
   bottom:   0;
 }
 
-.btn-corner > * {
-    padding-top: 9px;
+.btn-corner > .fa-home {
+    padding-top: 13px;
+}
+
+.btn-corner > .fa-plus {
+  padding-top: 8px;
 }
 
 .col-sm-auto {
