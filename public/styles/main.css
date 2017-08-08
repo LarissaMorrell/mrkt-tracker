@@ -11,7 +11,7 @@ body{
   position: relative; /* for position of .btn-corner */
 }
 
-/* Put the title and corner button line up */
+/* Make the title and corner button line up */
 .page-title-row > * {
   margin-bottom: 0px;
   padding: 0px;
@@ -26,17 +26,14 @@ body{
   bottom:   0;
 }
 
+/*button to go back to store list*/
 .btn-corner > .fa-home {
     padding-top: 13px;
 }
 
+/*button for adding a store*/
 .btn-corner > .fa-plus {
   padding-top: 8px;
-}
-
-.col-sm-auto {
-     width: auto;
-     padding: 0px;
 }
 
 
@@ -49,10 +46,30 @@ select {
   padding: 0px;
 }
 
+/* Some font awesome need space after icon */
 .fa-space-after {
   padding-right: 8px;
 }
 
-.fa::after {
+/* indicators for store list (index) and store details (show) pages */
+.led-red {
+    margin: 20px auto;
+    width: 12px;
+    height: 12px;
+    background-color: #940;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #600 0 -1px 9px, #F00 0 2px 12px;
+}
 
+.led-green {
+    /*margin: 20px auto;*/
+    max-width: 12px;
+    height: 12px;
+    background-color: #690;
+    border-radius: 50%;
+    box-shadow: #000 0 -1px 7px 1px, inset #460 0 -1px 9px, #7D0 0 2px 12px;
+}
+
+.indicator {
+    background: yellow;
 }
