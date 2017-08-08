@@ -3,17 +3,20 @@
 <html lang="en">
 <% include ../partials/head.ejs %>
 <body>
-<% include ../partials/header.ejs %>
+  <% include ../partials/header.ejs %>
+  <div class="container"> <!-- container for page-->
+    <div class="form-group row page-title-row">
+      <h1 class="col-sm-10 page-title">Edit Store</h1>
+      <a class="btn btn-default col-sm-2 btn-corner" role="button" href="/stores"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+    </div>
+    <div class="form-group row">
+      <h2 class="page-heading"><%= store.name %></h2>
+      <h4><%= store.address %>, <%= store.city %>, <%= store.state %>
+        <button class="btn btn-default" id="edit-store-location" role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+      </h4>
+    </div>
     <div class="container">
-      <a class="btn btn-default inline" role="button" href="/stores"><i class="fa fa-home" aria-hidden="true"></i></i></a>
-      <h1>Edit Store</h1>
-      <h2><%= store.name %></h2>
-      <!-- <div class="row"> -->
-        <h4><%= store.address %>, <%= store.city %>, <%= store.state %>
-          <button class="btn btn-default inline" id="edit-store-location" role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-        </h4>
-      <div class="container">
-        <form action="/stores/update/<%= store._id%>" method="post">
+      <form action="/stores/update/<%= store._id%>" method="post">
 
         <div class="container toggle-details">
           <!-- the hidden store details -->
@@ -132,7 +135,7 @@
             <label class="custom-control yes-no-radio">
               <!-- TODO fill in the CORRECT value for the paperwork -->
               <input name="havePaperwork" type="radio" class="custom-control-input" checked=
-                <%= store.havePaperwork ? "checked" : "" %> >
+              <%= store.havePaperwork ? "checked" : "" %> >
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Yes</span>
             </label>
@@ -141,7 +144,7 @@
             <label class="custom-control yes-no-radio">
               <!-- TODO fill in the CORRECT value for the paperwork -->
               <input name="havePaperwork" type="radio" class="custom-control-input" checked=
-                <%= store.havePaperwork ? "checked" : "" %> >
+              <%= store.havePaperwork ? "checked" : "" %> >
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">No</span>
             </label>
@@ -154,7 +157,7 @@
             <label class="custom-control yes-no-radio">
               <!-- TODO fill in the CORRECT value for the paperwork -->
               <input name="wantPaperworkBack" type="radio" class="custom-control-input" checked=
-                <%= store.wantPaperworkBack ? "checked" : "" %> >
+              <%= store.wantPaperworkBack ? "checked" : "" %> >
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Yes</span>
             </label>
@@ -163,7 +166,7 @@
             <label class="custom-control yes-no-radio">
               <!-- TODO fill in the CORRECT value for the paperwork -->
               <input name="wantPaperworkBack" type="radio" class="custom-control-input" checked=
-                <%= store.wantPaperworkBack ? "checked" : "" %> >
+              <%= store.wantPaperworkBack ? "checked" : "" %> >
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">No</span>
             </label>
@@ -172,8 +175,8 @@
         <a class="btn btn-default" role="button" href="/stores">Cancel</a>
         <button class="btn btn-primary" type="submit">Update Store</button>
       </form>
-      </div>
     </div>
-    <% include ../partials/footer.ejs %>
-  </body>
+  </div>
+  <% include ../partials/footer.ejs %>
+</body>
 </html>

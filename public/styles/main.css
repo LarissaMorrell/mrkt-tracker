@@ -7,6 +7,29 @@ body{
   min-height: 100%;
 }
 
+.page-title-row {
+  margin-bottom: 0px;
+  position: relative; /* for position of .btn-corner */
+}
+
+.page-title {
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+.btn-corner {
+  width: 40px;
+  height: 40px;
+  /* align to bottom corner of parent div */
+  position: absolute;
+  right:    0;
+  bottom:   0;
+}
+
+.btn-corner > * {
+    padding-top: 9px;
+}
+
 .col-sm-auto {
      width: auto;
      padding: 0px;
