@@ -15,54 +15,73 @@
       <div class="row">
         <h3 class="col-xs-12"><%= stores[i].name%></a></h3>
         <div class="col-xs-12"><%= stores[i].address%>, <%= stores[i].city%>, <%= stores[i].state%></div>
-        <img src="../images/platinum.png" class="" alt="platinum">
-        <!-- <h4 class="col-xs-12"><%= stores[i].tier%></h4> -->
+        <!-- <img src="../images/platinum.png" class="" alt="platinum"> -->
+        <h4 class="col-xs-12"><%= stores[i].tier%></h4>
 
-<!-- Plan: tier has 1 row
-          within that row...
-            there is an empty column, then cols for havepaperwork
-            there is an empty column, then cols for want paperworkback-->
-      <!-- <div class="container">
-        <div class="row">
+<!-- Plan: tier has 1 row which has a image in the first column
+        The nxt column in that row has (nested)
+            another row that has cols for havepaperwork
+            another row that has cols for want paperworkback-->
+      <div class="container">
+        <!--This outer row contains the tier image-->
+        <div class="row">          
           <img class="col-xs-2" src="../images/platinum.png" alt="platinum">
-          <div class="col-xs-10">this is empty img</div>
-          <div class="row">
-              <div class="col-sm-12">this is empty</div>
-              <div class="col-sm-10">
-                <div class="col-sm-2 led-green"></div>
-                <div class="col-sm-10">Paperwork has been submitted</div>
-              </div>
+
+          <!--This column contains rows so that other information
+              can be displayed beside the tier img-->
+          <div class="col-xs-10">
+          <!--This first inner row contains havePaperwork-->
+            <div class="row">
+                <% if(stores[i].havePaperwork){ %>
+                  <div class="col-xs-2 led-green"></div>
+                  <div class="col-xs-10">Paperwork has been submitted</div>
+                <% } else { %>
+                  <div class="col-xs-2 led-red"></div>
+                  <div class="col-xs-10">Paperwork has <em>NOT</em> been submitted</div>
+                <% } %>
+            </div> <!--row for havePaperwork-->
+            <!--This is the second inner row, contains wantPaperworkBack
+                It is the same level depth as row above (havePaperwork)-->
+            <div class="row">
+              <% if(stores[i].wantPaperworkBack){ %>
+                <div class="col-xs-2 led-green"></div>
+                <div class="col-xs-10">Paperwork must be returned</div>
+              <% } else { %>
+                <div class="col-xs-2 led-red"></div>
+                <div class="col-xs-10">Paperwork does <em>NOT</em> need to be returned</div>
+              <% } %>
+            </div> <!--row for wantPaperworkBack-->
           </div>
         </div>
-      </div>  -->
+      </div>
 
         <!-- display appropriate signal -->
-        <div class="row">
+        <!-- <div class="row">
           <% if(stores[i].havePaperwork){ %>
             <div class="col-xs-2 led-green"></div>
-            <div class="col-xs-10">Paperwork has been submitted</div>
+            <div class="col-xs-10">Paperwork has been submitted</div> -->
             <!-- <div class="led-green"></div>
             <div >Paperwork has been submitted</div> -->
-          <% } else { %>
+          <!-- <% } else { %>
             <div class="col-xs-2 led-red"></div>
-            <div class="col-xs-10">Paperwork has <em>NOT</em> been submitted</div>
+            <div class="col-xs-10">Paperwork has <em>NOT</em> been submitted</div> -->
             <!-- <div class="led-red"></div>
             <div>Paperwork has <em>NOT</em> been submitted</div> -->
-          <% } %>
+          <!-- <% } %>
         </div>
         <div class="row">
           <% if(stores[i].wantPaperworkBack){ %>
             <div class="col-xs-2 led-green"></div>
-            <div class="col-xs-10">Paperwork must be returned</div>
+            <div class="col-xs-10">Paperwork must be returned</div> -->
             <!-- <div class="led-green"></div>
             <div>Paperwork must be returned</div> -->
-          <% } else { %>
+          <!-- <% } else { %>
             <div class="col-xs-2 led-red"></div>
-            <div class="col-xs-10">Paperwork does <em>NOT</em> need to be returned</div>
+            <div class="col-xs-10">Paperwork does <em>NOT</em> need to be returned</div> -->
             <!-- <div class="led-red"></div>
             <div>Paperwork does <em>NOT</em> need to be returned</div> -->
-          <% } %>
-        </div>
+          <!-- <% } %>
+        </div> -->
         <div class="col-xs-12"><%= stores[i].generalComments%></div>
         <div class="col-xs-12"><a class="btn btn-default" role="button" href="/stores/show/<%= stores[i]._id%>">View details</a></div>
       </div>

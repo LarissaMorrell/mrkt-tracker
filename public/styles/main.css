@@ -70,7 +70,7 @@ img {
 }
 
 .tier-platinum {
-
+  min-width: 100px !important;
 }
 
 .tier-gold {
