@@ -1,0 +1,224 @@
+/*@media (min-width: 1200px) {
+.row {
+	margin-left: -30px;
+ *zoom: 1;
+}
+.row:before, .row:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+.row:after {
+	clear: both;
+}
+
+.span3 {
+	width: 166px;
+}
+
+.services-box h3 {
+	font-size: 20px;
+	line-height: 20px;
+}
+
+.services-box {
+	margin: 0 0 40px 0;
+}
+
+.services-box {
+	margin-bottom: 70px;
+}
+
+.services-box {
+	height: auto;
+}
+.services-box a.readmore {
+	width: 100%;
+	font-size: 12px;
+}
+.services-box a.readmore:before {
+	width: 100px;
+}*/
+
+/*beginning*/
+
+.services-box {
+	float:left;
+	width:100%;
+	padding:0 25px;
+	border:1px solid #d7d7d7;
+	background-color:#fff;
+	position:relative;
+	height:251px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.services-box:before {
+	content:'';
+	position:absolute;
+	left:8px;
+	top:0;
+	bottom:0;
+	margin:auto;
+	height:96%;
+	border-left:2px dotted #e5e6e6;
+}
+.services-box:after {
+}
+.services-round {
+	width:94px;
+	height:94px;
+	border-radius:100%;
+	margin:-37px auto 13px;
+	border:1px solid;
+	background-color:#fff;
+}
+.services-round a.sprite-1 {
+	text-align:center;
+	line-height:100px;
+	display:block;
+	color:#a6ac9a;
+	text-align:center;
+	font-size:45px;
+}
+.services-round a.sprite-2 {
+	text-align:center;
+	line-height:100px;
+	display:block;
+	color:#a6ac9a;
+	text-align:center;
+	font-size:45px;
+}
+.services-round a.sprite-3 {
+	text-align:center;
+	line-height:100px;
+	display:block;
+	color:#a6ac9a;
+	text-align:center;
+	font-size:45px;
+}
+.services-round a.sprite-4 {
+	text-align:center;
+	line-height:100px;
+	display:block;
+	color:#a6ac9a;
+	text-align:center;
+	font-size:45px;
+}
+.services-box h3 {
+	font-family: 'museo500';
+	font-weight:500;
+	font-size:23px;
+	line-height:23px;
+	color:#454545;
+	text-align:center;
+	text-transform:capitalize;
+	margin:0 0 8px 0;
+}
+.services-box strong.title-text {
+	font-family: 'museo100';
+	font-weight:100;
+	color:#454545;
+	font-size:19px;
+	line-height:19px;
+	display:block;
+	text-align:center;
+	padding:0 0 10px 0;
+}
+.services-box p {
+	font-family: 'Open Sans', sans-serif;
+	font-size:13px;
+	color:#868686;
+	font-weight:400;
+	line-height:18px;
+	text-align:center;
+	margin:0 0 6px 0;
+}
+.services-box a.readmore {
+	width:135px;
+	height:39px;
+	margin:0 auto;
+	background-color:#fff;
+	border:1px solid #d7d7d7;
+	text-decoration:none;
+	font-family: 'Open Sans', sans-serif;
+	font-size:14px;
+	line-height:38px;
+	text-align:center;
+	display:block;
+	color:#454545;
+	position:relative;
+}
+.services-box a.readmore:before {
+	content:'';
+	position:absolute;
+	left:-1px;
+	top:-1px;
+	width:138px;
+	height:13px;
+	background-color:#fff;
+}
+.services-box a.readmore .fa {
+	font-size:14px;
+	color:#454545;
+	padding:0 0 0 5px;
+}
+.services-box:hover {
+}
+.services-box:hover:before{
+	border-left:2px dotted #fff;
+}
+.services-box:hover h3 {
+	color:#fff;
+}
+.services-box:hover strong.title-text {
+	color:#fff;
+}
+.services-box:hover p {
+	color:#fff;
+}
+.services-box:hover a.readmore {
+	border:2px solid;
+}
+.services-box:hover a.readmore:before {
+	display:none;
+}
+.services-box:hover .services-round {
+	background-color:#000;
+	border:7px solid #fff;
+}
+.services-box:hover a.sprite-1 {
+	color:#fff;
+}
+.services-box:hover a.sprite-2 {
+	color:#fff;
+}
+.services-box:hover a.sprite-3 {
+	color:#fff;
+}
+.services-box:hover a.sprite-4 {
+	color:#fff;
+}
+.services-box:hover:after {
+	content:'';
+	z-index: -1;
+	position: absolute;
+	content: "";
+	bottom: 15px;
+	right: 10px;
+	left: auto;
+	width: 50%;
+	top: 80%;
+	max-width:300px;
+	background:rgba(0,0,0,0.28);
+	-webkit-box-shadow: 0 15px 10px rgba(0,0,0,0.28);
+	-moz-box-shadow: 0 15px 10px rgba(0,0,0,0.28);
+	box-shadow: 0 15px 10px rgba(0,0,0,0.28);
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);
+	transform: rotate(3deg);
+}
+/*Our Services Section End*/
