@@ -13,15 +13,63 @@
       <h3><%= store.name %></h3>
       <div class="container">
         <div class="row">
-          <div class="col-sm-2">Tier</div>
-          <div class="col-sm-10"><%= store.tier%></div>
-        </div>
-        <div class="row">
           <div class="col-sm-2">Address</div>
           <div class="col-sm-10"><%= store.address%>, <%= store.city%>, <%= store.state%></div>
         </div>
+        <div class="row">
+          <div class="col-sm-2">Tier</div>
+          <div class="col-sm-10"><%= store.tier%></div>
+        </div>
+
+        <!-- Plan: tier has 1 row which has a image in the first column
+                The nxt column in that row has (nested)
+                    another row that has cols for havepaperwork
+                    another row that has cols for want paperworkback-->
+              <div class="container">
+                <!--This outer row contains the tier image-->
+                <div class="row">
+                  <img class="col-xs-2" src="/images/platinum.png" alt="platinum">
+                  <!-- TODO correct ejs conditional -->
+                  <% if(store.tier === "platinum"){ %>
+                    <img class="col-sm-2" src="/images/platinum.png" alt="platinum">
+                  <% } else if(store.tier == "gold") { %>
+                    <img class="col-sm-2" src="/images/gold.png" alt="gold">
+                  <% } else if(store.tier == "silver") { %>
+                    <img class="col-sm-2" src="/images/silver.png" alt="silver">
+                  <% } %>
+                  <!--No tier means no img-->
+
+                  <!--This column contains rows so that other information
+                      can be displayed beside the tier img-->
+                  <div class="col-xs-10">
+                  <!--This first inner row contains havePaperwork-->
+                    <div class="row paperwork-row">
+                        <% if(store.havePaperwork){ %>
+                          <div class="col-xs-2 led-green"></div>
+                          <div class="col-xs-10">Paperwork has been submitted</div>
+                        <% } else { %>
+                          <div class="col-xs-2 led-red"></div>
+                          <div class="col-xs-10">Paperwork has <em>NOT</em> been submitted</div>
+                        <% } %>
+                    </div> <!--row for havePaperwork-->
+                    <!--This is the second inner row, contains wantPaperworkBack
+                        It is the same level depth as row above (havePaperwork)-->
+                    <div class="row paperwork-row">
+                      <% if(store.wantPaperworkBack){ %>
+                        <div class="col-xs-2 led-green"></div>
+                        <div class="col-xs-10">Paperwork must be returned</div>
+                      <% } else { %>
+                        <div class="col-xs-2 led-red"></div>
+                        <div class="col-xs-10">Paperwork does <em>NOT</em> need to be returned</div>
+                      <% } %>
+                    </div> <!--row for wantPaperworkBack-->
+                  </div> <!--end the column with contains LEDs -->
+                </div> <!--outer row -->
+              </div> <!--container-->
+
+
         <!-- display appropriate signal -->
-        <div class="row indicator">
+        <!-- <div class="row indicator">
           <% if(store.havePaperwork){ %>
             <div class="col-sm-2 led-green"></div>
             <div class="col-sm-10">Paperwork has been submitted</div>
@@ -29,9 +77,9 @@
             <div class="col-sm-2 led-red"></div>
             <div class="col-sm-10">Paperwork has <em>NOT</em> been submitted</div>
           <% } %>
-        </div>
+        </div> -->
         <!-- display appropriate signal -->
-        <div class="row indicator">
+        <!-- <div class="row indicator">
           <% if(store.wantPaperworkBack){ %>
             <div class="col-sm-2 led-green"></div>
             <div class="col-sm-10">Paperwork must be returned</div>
@@ -39,7 +87,11 @@
             <div class="col-sm-2 led-red"></div>
             <div class="col-sm-10">Paperwork does <em>NOT</em> need to be returned</div>
           <% } %>
-        </div>
+        </div> -->
+
+
+
+
         <div class="row">
           <div class="col-md-2">General comments</div>
           <div class="col-md-10"><%= store.generalComments%></div>

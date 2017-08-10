@@ -65,12 +65,12 @@ select {
     box-shadow: #000 0 -1px 7px 1px, inset #460 0 -1px 9px, #7D0 0 2px 12px;
 }
 
-img {
-  /*float:left;*/
+.row > img {
+  height: 70px;
+  width: 165px;
 }
 
 .tier-platinum {
-  min-width: 100px !important;
 }
 
 .tier-gold {
