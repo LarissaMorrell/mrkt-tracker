@@ -1,11 +1,19 @@
+
+
 body{
   padding-top: 70px;
   min-height: 100%;
-  background-color: yellow;
+  background-color: #EAF5FF;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+h3 {
+  font-family: 'Assistant', sans-serif;
 }
 
 .page-title-row {
   position: relative; /* for position of .btn-corner */
+  font-weight: 800;
 }
 
 /* Make the title and corner button line up */
