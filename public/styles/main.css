@@ -63,3 +63,7 @@ select {
   height: 70px;
   width: 165px;
 }
+
+.store-details-box {
+  background-color: yellow;
+}
