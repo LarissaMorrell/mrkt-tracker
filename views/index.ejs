@@ -1,15 +1,11 @@
-<!doctype html>
-<html>
-<head>
-    <title>Mrkt Tracker</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-    <style>
-        body        { padding-top:80px; }
-    </style>
-</head>
-<body>
-<div class="container">
+
+
+<!DOCTYPE html>
+<html lang="en">
+<% include /partials/head.ejs %>
+  <body>
+  <% include /partials/header.ejs %>
+  <div class="container">
 
     <div class="jumbotron text-center">
         <h1><i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i>Mrkt Tracker</h1>
@@ -20,6 +16,7 @@
         <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
     </div>
 
-</div>
+  </div> <%/* div container */%>
+  <% include /partials/footer.ejs %>
 </body>
 </html>

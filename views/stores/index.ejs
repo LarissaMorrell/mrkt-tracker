@@ -1,77 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <% include ../partials/head.ejs %>
-<body>
-<% include ../partials/header.ejs %>
-<div class="container">
-  <div class="form-group row page-title-row">
+  <body>
+  <% include ../partials/header.ejs %>
+  <div class="container store-list">
+    <div class="form-group row page-title-row">
     <h1 class="col-sm-10">Store List</h1>
     <h3><a class="btn btn-primary col-sm-2 btn-corner" role="button" href="/stores/create">
-      <i class="fa fa-plus fa-md" aria-hidden="true"></i></a></h3>
-  </div>
-  <% if(stores.length>0) { %>
-  <div class="container">
+    <i class="fa fa-plus fa-md" aria-hidden="true"></i></a></h3>
+    </div>
+    <% if(stores.length>0) { %>
+
+    <div class="container">
     <% for(var i=0; i<stores.length; i++) { %>
-      <div class="row">
-        <h3 class="col-xs-12"><%= stores[i].name%></a></h3>
-        <div class="col-xs-12"><%= stores[i].address%>, <%= stores[i].city%>, <%= stores[i].state%></div>
-        <h4 class="col-xs-12"><%= stores[i].tier%></h4>
+    <div class="row">
 
-<!-- Plan: tier has 1 row which has a image in the first column
-        The nxt column in that row has (nested)
-            another row that has cols for havepaperwork
-            another row that has cols for want paperworkback-->
-      <div class="container">
-        <!--This outer row contains the tier image-->
-        <div class="row">
-          <img class="col-xs-12 col-sm-2" src="../images/platinum.png" alt="platinum">
-          <!-- TODO correct ejs conditional -->
-          <% if(stores[i].tier === "platinum"){ %>
-            <img class="col-xs-12 col-sm-2" src="../images/platinum.png" alt="platinum">
-          <% } else if(stores[i].tier == "gold") { %>
-            <img class="col-xs-12 col-sm-2" src="../images/gold.png" alt="gold">
-          <% } else if(stores[i].tier == "silver") { %>
-            <img class="col-xs-12 col-sm-2" src="../images/silver.png" alt="silver">
-          <% } %>
-          <!--No tier means no img-->
+    <div class="store-box">
 
-          <!--This column contains rows so that other information
-              can be displayed beside the tier img-->
-          <div class="col-xs-12 col-sm-10">
-          <!--This first inner row contains havePaperwork-->
-            <div class="row">
-                <% if(stores[i].havePaperwork){ %>
-                  <div class="col-xs-2 led-green"></div>
-                  <div class="col-xs-10">Paperwork has been submitted</div>
-                <% } else { %>
-                  <div class="col-xs-2 led-red"></div>
-                  <div class="col-xs-10">Paperwork has <em>NOT</em> been submitted</div>
-                <% } %>
-            </div> <!--row for havePaperwork-->
-            <!--This is the second inner row, contains wantPaperworkBack
-                It is the same level depth as row above (havePaperwork)-->
-            <div class="row">
-              <% if(stores[i].wantPaperworkBack){ %>
-                <div class="col-xs-2 led-green"></div>
-                <div class="col-xs-10">Paperwork must be returned</div>
-              <% } else { %>
-                <div class="col-xs-2 led-red"></div>
-                <div class="col-xs-10">Paperwork does <em>NOT</em> need to be returned</div>
-              <% } %>
-            </div> <!--row for wantPaperworkBack-->
-          </div> <!--end the column with contains LEDs -->
-        </div> <!--outer row -->
-      </div> <!--container-->
+      <div class="store-round">
+        <a href="#" class="sprite-tier">
+          <% var tier = stores[i].tier.toLowerCase() %>
+          <div class="sprite-tier label"><%= tier %></div>
+          <img class="sprite-tier" src="/images/<%= tier %>.png" alt= <%= tier %> />
+        </a>
+      </div><%/*closes store round*/%>
 
-        <div class="col-xs-12"><%= stores[i].generalComments%></div>
-        <div class="col-xs-12"><a class="btn btn-default" role="button" href="/stores/show/<%= stores[i]._id%>">View details</a></div>
-      </div>
+      <h3><%= stores[i].name%></h3>
+      <strong class="title-text"><%= stores[i].address%>, <%= stores[i].city%>, <%= stores[i].state%></strong>
+
+
+    <div class="row paperwork-row">
+      <% if(stores[i].havePaperwork){ %>
+        <div class="col-xs-12 col-sm-6">
+          <p>
+            <i class="fa fa-check fa-lg fa-space-after" aria-hidden="true"></i>
+            Paperwork has been submitted
+          </p>
+        </div>
+      <% } else { %>
+        <div class="col-xs-12 col-sm-6">
+          <p>
+            <i class="fa fa-times fa-lg fa-space-after" aria-hidden="true"></i>
+            Paperwork NOT submitted
+          </p>
+        </div>
+      <% } %>
+
+      <% if(stores[i].wantPaperworkBack){ %>
+        <div class="col-xs-12 col-sm-6">
+          <p>
+            <i class="fa fa-check fa-lg fa-space-after" aria-hidden="true"></i>
+            Paperwork must be returned
+          </p>
+        </div>
+      <% } else { %>
+        <div class="col-xs-12 col-sm-6">
+          <p>
+            <i class="fa fa-times fa-lg fa-space-after" aria-hidden="true"></i>
+            Paperwork NOT to be returned
+          </p>
+        </div>
+      <% } %>
+    </div> <%/* closes row paperwork-row */%>
+
+
+    <p class="gen-comments"><%= stores[i].generalComments%></p>
+    <a href="/stores/show/<%= stores[i]._id%>" class="seemore">See More
+      <i class="fa fa-arrow-right"></i>
+    </a>
+
+    </div> <%/* store-box */%>
+
+    </div> <%/* row*/%>
+
+
+
     <% } %>
-  </div>
-  <% } else { %>
-    <div class="row">No stores found.</div>
-  <% } %>
-</div>
-<% include ../partials/footer.ejs %>
+
+    <% } else { %>
+      <div class="row">No stores found.</div>
+    <% } %>
+    </div> <%/* div container */%>
+  </div> <%/* div container */%>
+  <% include ../partials/footer.ejs %>
 </body>
 </html>

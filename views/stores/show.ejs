@@ -4,106 +4,76 @@
   <title>Store Detail</title>
   <body>
     <% include ../partials/header.ejs %>
-    <div class="container">
+    <div class="container store-details">
       <div class="form-group row page-title-row">
-        <h1 class="col-sm-10">Store Details</h1>
+        <h1>Store Details</h1>
         <a class="btn btn-default col-sm-2 btn-corner" role="button" href="/stores">
-          <i class="fa fa-lg fa-home" aria-hidden="true"></i></a>
+          <i class="fa fa-lg fa-home" aria-hidden="true"></i>
+        </a>
       </div>
-      <h3><%= store.name %></h3>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-2">Address</div>
-          <div class="col-sm-10"><%= store.address%>, <%= store.city%>, <%= store.state%></div>
+
+    <div class="row">
+
+    <div class="store-box">
+      <div class="store-round">
+        <a href="#" class="sprite-tier">
+          <% var tier = store.tier.toLowerCase() %>
+          <div class="sprite-tier label"><%= tier %></div>
+          <img class="sprite-tier" src="/images/<%= tier %>.png" alt= <%= tier %> />
+        </a>
+      </div><%/*closes store round*/%>
+
+      <h3><%= store.name%></h3>
+      <strong class="title-text"><%= store.address%>, <%= store.city%>, <%= store.state%></strong>
+
+
+    <div class="row paperwork-row">
+      <% if(store.havePaperwork){ %>
+        <div class="col-xs-12 col-sm-6">
+          <p>
+            <i class="fa fa-check fa-lg fa-space-after" aria-hidden="true"></i>
+            Paperwork has been submitted
+          </p>
         </div>
-        <div class="row">
-          <div class="col-sm-2">Tier</div>
-          <div class="col-sm-10"><%= store.tier%></div>
+      <% } else { %>
+        <div class="col-xs-12 col-sm-6">
+          <p>
+            <i class="fa fa-times fa-lg fa-space-after" aria-hidden="true"></i>
+            Paperwork NOT submitted
+          </p>
         </div>
+      <% } %>
 
-        <!-- Plan: tier has 1 row which has a image in the first column
-                The nxt column in that row has (nested)
-                    another row that has cols for havepaperwork
-                    another row that has cols for want paperworkback-->
-              <div class="container">
-                <!--This outer row contains the tier image-->
-                <div class="row">
-                  <img class="col-xs-2" src="/images/platinum.png" alt="platinum">
-                  <!-- TODO correct ejs conditional -->
-                  <% if(store.tier === "platinum"){ %>
-                    <img class="col-sm-2" src="/images/platinum.png" alt="platinum">
-                  <% } else if(store.tier == "gold") { %>
-                    <img class="col-sm-2" src="/images/gold.png" alt="gold">
-                  <% } else if(store.tier == "silver") { %>
-                    <img class="col-sm-2" src="/images/silver.png" alt="silver">
-                  <% } %>
-                  <!--No tier means no img-->
-
-                  <!--This column contains rows so that other information
-                      can be displayed beside the tier img-->
-                  <div class="col-xs-10">
-                  <!--This first inner row contains havePaperwork-->
-                    <div class="row paperwork-row">
-                        <% if(store.havePaperwork){ %>
-                          <div class="col-xs-2 led-green"></div>
-                          <div class="col-xs-10">Paperwork has been submitted</div>
-                        <% } else { %>
-                          <div class="col-xs-2 led-red"></div>
-                          <div class="col-xs-10">Paperwork has <em>NOT</em> been submitted</div>
-                        <% } %>
-                    </div> <!--row for havePaperwork-->
-                    <!--This is the second inner row, contains wantPaperworkBack
-                        It is the same level depth as row above (havePaperwork)-->
-                    <div class="row paperwork-row">
-                      <% if(store.wantPaperworkBack){ %>
-                        <div class="col-xs-2 led-green"></div>
-                        <div class="col-xs-10">Paperwork must be returned</div>
-                      <% } else { %>
-                        <div class="col-xs-2 led-red"></div>
-                        <div class="col-xs-10">Paperwork does <em>NOT</em> need to be returned</div>
-                      <% } %>
-                    </div> <!--row for wantPaperworkBack-->
-                  </div> <!--end the column with contains LEDs -->
-                </div> <!--outer row -->
-              </div> <!--container-->
-
-
-        <!-- display appropriate signal -->
-        <!-- <div class="row indicator">
-          <% if(store.havePaperwork){ %>
-            <div class="col-sm-2 led-green"></div>
-            <div class="col-sm-10">Paperwork has been submitted</div>
-          <% } else { %>
-            <div class="col-sm-2 led-red"></div>
-            <div class="col-sm-10">Paperwork has <em>NOT</em> been submitted</div>
-          <% } %>
-        </div> -->
-        <!-- display appropriate signal -->
-        <!-- <div class="row indicator">
-          <% if(store.wantPaperworkBack){ %>
-            <div class="col-sm-2 led-green"></div>
-            <div class="col-sm-10">Paperwork must be returned</div>
-          <% } else { %>
-            <div class="col-sm-2 led-red"></div>
-            <div class="col-sm-10">Paperwork does <em>NOT</em> need to be returned</div>
-          <% } %>
-        </div> -->
-
-
-
-
-        <div class="row">
-          <div class="col-md-2">General comments</div>
-          <div class="col-md-10"><%= store.generalComments%></div>
+      <% if(store.wantPaperworkBack){ %>
+        <div class="col-xs-12 col-sm-6">
+          <p>
+            <i class="fa fa-check fa-lg fa-space-after" aria-hidden="true"></i>
+            Paperwork must be returned
+          </p>
         </div>
-      </div>
-      <div class="col-xs-12">
+      <% } else { %>
+        <div class="col-xs-12 col-sm-6">
+          <p>
+            <i class="fa fa-times fa-lg fa-space-after" aria-hidden="true"></i>
+            Paperwork NOT to be returned
+          </p>
+        </div>
+      <% } %>
+    </div> <%/* closes row paperwork-row */%>
+
+    <p class="gen-comments"><%= store.generalComments%></p>
+
+    <div class="col-xs-12">
         <form action="/stores/delete/<%= store._id%>" method="post">
           <a class="btn btn-default" role="button" href="/stores/edit/<%= store._id%>"><i class="fa fa-fw fa-pencil-square-o" aria-hidden="true"></i>Edit Store</a>
-          <button class="btn btn-danger" type="submit"><i class="fa  fa-fw fa-trash-o" aria-hidden="true"></i>DELETE</button>
+          <button class="btn btn-danger" type="submit">
+            <i class="fa  fa-fw fa-trash-o" aria-hidden="true"></i>DELETE
+          </button>
         </form>
       </div>
-    </div>
+    </div> <%/* store-box */%>
+    </div> <%/* row*/%>
+  </div>
     <% include ../partials/footer.ejs %>
   </body>
 </html>

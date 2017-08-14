@@ -1,10 +1,25 @@
-body{
-  padding-top: 70px;
+html {
   min-height: 100%;
+}
+
+body{
+  /*margin-bottom: 25%;*/
+  padding-top: 70px;
+  height: 100%;
+  background-color: #EAF5FF;
+  font-family: 'Droid Sans', sans-serif;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5 h6 {
+  font-family: 'Assistant', sans-serif;
+  font-weight: 600;
+  color:#5F5A9B;
 }
 
 .page-title-row {
   position: relative; /* for position of .btn-corner */
+  font-weight: 800;
 }
 
 /* Make the title and corner button line up */
@@ -48,35 +63,15 @@ select {
   padding-right: 8px;
 }
 
-/* indicators for store list (index) and store details (show) pages */
-.led-red {
-    width: 12px;
-    height: 12px;
-    background-color: #940;
-    border-radius: 50%;
-    box-shadow: #000 0 -1px 7px 1px, inset #600 0 -1px 9px, #F00 0 2px 12px;
-}
-
-.led-green {
-    max-width: 12px;
-    height: 12px;
-    background-color: #690;
-    border-radius: 50%;
-    box-shadow: #000 0 -1px 7px 1px, inset #460 0 -1px 9px, #7D0 0 2px 12px;
-}
-
 .row > img {
   height: 70px;
   width: 165px;
 }
 
-.tier-platinum {
+.store-details-box {
+  background-color: rgba(255,255,255,0.7);
 }
 
-.tier-gold {
-
-}
-
-.tier-silver {
-
+footer {
+  margin-top: 100px;
 }
