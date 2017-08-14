@@ -101,9 +101,9 @@ storeController.update = (req, res) => {
         }
     });
 
-    Store.findByIdAndUpdate(req.params.id, 
-        { $set: toUpdate}, 
-        { new: true }, 
+    Store.findByIdAndUpdate(req.params.id,
+        { $set: toUpdate},
+        { new: true },
         function (err, store) {
             if (err) {
               console.log("uh-oh...", err);
@@ -116,12 +116,7 @@ storeController.update = (req, res) => {
 
 //delete store by ID
 storeController.delete = (req, res) => {
-    Store
-        .findByIdAndRemove(req.params.id)
-        .exec()
-        .then(store => res.status(204).end())
-        .catch(err => res.status(500).json({ message: 'Internal server error' }));
-
+  
     Store.remove({_id: req.params.id}, function(err) {
     if(err) {
       console.log(err);

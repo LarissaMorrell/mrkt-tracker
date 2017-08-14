@@ -14,7 +14,7 @@
   height: auto;
 	float:left;
 	width:100%;
-	padding:0 25px 30px 25px;
+	padding:0 50px 30px 50px;
 	border:1px solid #7E98AF;
   /*border:1px solid #d7d7d7;*/
 	background-color:#fff;
@@ -36,14 +36,6 @@
 }
 .store-box:after {
 }
-/*.store-round {
-	width:94px;
-	height:94px;
-	border-radius:100%;
-	margin:-37px auto 13px;
-	border:1px solid;
-	background-color:#fff;
-}*/
 .store-round {
 	width:200px;
 	height:94px;
@@ -97,7 +89,6 @@ a.sprite-tier > img {
 	padding:0 0 10px 0;
 }
 .store-box p {
-	/*font-family: 'Open Sans', sans-serif;*/
 	font-size:15px;
 	color:#7E98AF;
 	font-weight:400;
@@ -105,7 +96,7 @@ a.sprite-tier > img {
 	text-align:center;
 	margin:0 0 6px 0;
 }
-.store-box p.gen-comments {
+.store-list * p.gen-comments {
 	/*only allow view of first 2 lines*/
 	overflow: hidden;
   display: -webkit-box;
@@ -143,46 +134,41 @@ a.sprite-tier > img {
 	color:##5F5A9B; /*purple*/
 	padding:0 0 0 5px;
 }
-.store-box:hover {
+.store-list * .store-box:hover {
   background: #183D72; /*darker blue*/
 }
-.store-box:hover:before{
+.store-list * .store-box:hover:before{
 	border-left:2px dotted #fff;
 }
-.store-box:hover h3 {
-	color:#fff;
+/*all descendant elements on the store list page*/
+.store-list * .store-box:hover * {
+	color: #fff;
 }
-.store-box:hover strong.title-text {
-	color:#fff;
-}
-.store-box:hover p {
-	color:#fff;
-}
-.store-box:hover a.seemore {
+.store-list * .store-box:hover a.seemore {
 	border:2px solid #FFF;
   color: #fff;
 }
-.store-box:hover a.seemore .fa {
+.store-list * .store-box:hover a.seemore .fa {
   color: #fff;
 }
 
-.store-box:hover a.seemore:before {
+.store-list * .store-box:hover a.seemore:before {
 	display:none;
 }
-.store-box:hover .store-round {
+.store-list * .store-box:hover .store-round {
 	background-color:#183D72; /*darker blue*/
 	border:7px solid #fff;
 }
-.store-box:hover a.sprite-tier {
+.store-list * .store-box:hover a.sprite-tier {
 	color:#fff;
 	padding-bottom: 20px;
 }
-.store-box:hover
+.store-list * .store-box:hover
 a.sprite-tier > div.label {
 	color:white;
 	text-shadow: 2px 2px 4px gray;
 }
-.store-box:hover:after {
+.store-list * .store-box:hover:after {
 	content:'';
 	z-index: -1;
 	position: absolute;
