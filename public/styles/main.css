@@ -1,7 +1,6 @@
 html {
   min-height: 100%;
 }
-
 body{
   /*margin-bottom: 25%;*/
   padding-top: 70px;
@@ -10,24 +9,42 @@ body{
   font-family: 'Droid Sans', sans-serif;
   position: relative;
 }
-
 h1, h2, h3, h4, h5 h6 {
   font-family: 'Assistant', sans-serif;
   font-weight: 600;
   color:#5F5A9B;
 }
+/* Some font awesome need space after icon */
+.fa-space-after {
+  padding-right: 8px;
+}
 
+
+
+/*
+*   NAVBAR
+*/
+ul.navbar-nav > li {
+  padding-top:6px;
+}
+#navbar-logout {
+  margin-top:0px;
+}
+
+
+
+/*
+*   STORE LIST
+*/
 .page-title-row {
   position: relative; /* for position of .btn-corner */
   font-weight: 800;
 }
-
 /* Make the title and corner button line up */
 .page-title-row > * {
   margin-bottom: 0px;
   padding: 0px;
 }
-
 /*The button at the top corner of all pages*/
 .btn-corner {
   width: 40px;
@@ -37,46 +54,41 @@ h1, h2, h3, h4, h5 h6 {
   right:    0;
   bottom:   0;
 }
-
 /*button to go back to store list*/
 .btn-corner > .fa-home {
     padding-top: 13px;
 }
-
 /*button for adding a store*/
 .btn-corner > .fa-plus {
   padding-top: 8px;
 }
 
+
+
+/*
+*   FORMS
+*/
 input[type="text"]{
   height: 38px;
 }
-
 select {
   max-width: 150px;
   height: 38px;
   margin-left: 14px;
 }
 
+/*
+*   EDIT EACH STORE
+*/
+/*toggle the store location details on edit page*/
 .toggle-details {
   display: none;
   padding: 0px;
 }
-
-/* Some font awesome need space after icon */
-.fa-space-after {
-  padding-right: 8px;
-}
-
 .row > img {
   height: 70px;
   width: 165px;
 }
-
 .store-details-box {
   background-color: rgba(255,255,255,0.7);
-}
-
-footer {
-  margin-top: 100px;
 }

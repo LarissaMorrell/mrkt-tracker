@@ -55,6 +55,7 @@
 }
 a.sprite-tier > div.label {
 	position:absolute;
+	background-color: transparent;
 	color:black;
 	font-size:25px;
 	font-family: 'Montserrat', sans-serif;
@@ -133,6 +134,11 @@ a.sprite-tier > img {
 	font-size:14px;
 	color:##5F5A9B; /*purple*/
 	padding:0 0 0 5px;
+}
+form > .btn {
+	padding: 10px 15px 10px 15px;
+	margin: 10px;
+	font-size: 12pt;
 }
 .store-list * .store-box:hover {
   background: #183D72; /*darker blue*/
