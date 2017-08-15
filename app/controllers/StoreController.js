@@ -11,7 +11,7 @@ storeController.list = (req, res) => {
         .find()
         .exec()
         .then(stores => {
-            res.render("../views/stores/index", {stores: stores});
+            res.render("../views/stores/index", {stores: stores, user: req.user });
         })
         .catch(err => {
             console.error(err);
@@ -25,7 +25,7 @@ storeController.show = (req, res) => {
         .findById(req.params.id)
         .exec()
         //{ejsName: parameter}
-        .then(store => res.render("../views/stores/show", {store: store}))
+        .then(store => res.render("../views/stores/show", {store: store, user: req.user }))
         .catch(err => {
             console.error(err);
             res.status(500).json({ message: 'Internal server error' })
@@ -34,7 +34,7 @@ storeController.show = (req, res) => {
 
 //go to a new store creation page
 storeController.getCreateForm = (req, res) => {
-    res.render("../views/stores/create");
+    res.render("../views/stores/create", {user: req.user} );
 }
 
 // for saving a new store... redirects to create page
@@ -68,7 +68,7 @@ storeController.save = (req, res) => {
         })
         .catch(err => {
             console.error(err);
-            res.render("../views/stores/create");
+            res.render("../views/stores/create", {user: req.user} );
         });
 };
 
@@ -79,7 +79,7 @@ storeController.edit = (req, res) => {
           console.log("Error:", err);
         }
         else {
-          res.render("../views/stores/edit", {store: store});
+          res.render("../views/stores/edit", {store: store, user: req.user });
         }
     });
 }
@@ -107,7 +107,7 @@ storeController.update = (req, res) => {
         function (err, store) {
             if (err) {
               console.log("uh-oh...", err);
-              res.render("../views/stores/edit", {store: req.body});
+              res.render("../views/stores/edit", {store: req.body, user: req.user });
             }
             res.redirect("/stores/show/"+store._id);
         });
@@ -116,7 +116,7 @@ storeController.update = (req, res) => {
 
 //delete store by ID
 storeController.delete = (req, res) => {
-  
+
     Store.remove({_id: req.params.id}, function(err) {
     if(err) {
       console.log(err);

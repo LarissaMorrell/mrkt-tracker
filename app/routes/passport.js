@@ -4,7 +4,9 @@ module.exports = function(app, passport) {
     // HOME PAGE (with login links) ========
     // =====================================
     app.get('/', function(req, res) {
-        res.render('index.ejs'); // load the index.ejs file
+      console.log("in the get ");
+      console.log(req.user);
+        res.render('index.ejs', {user: req.user}); // load the index.ejs file
     });
 
     // =====================================
@@ -14,7 +16,7 @@ module.exports = function(app, passport) {
     app.get('/login', function(req, res) {
 
         // render the page and pass in any flash data if it exists
-        res.render('passport/login.ejs', { message: req.flash('loginMessage') }); 
+        res.render('passport/login.ejs', { message: req.flash('loginMessage'), user: req.user });
     });
 
     // process the login form
@@ -31,7 +33,7 @@ module.exports = function(app, passport) {
     app.get('/signup', function(req, res) {
 
         // render the page and pass in any flash data if it exists
-        res.render('passport/signup.ejs', { message: req.flash('signupMessage') });
+        res.render('passport/signup.ejs', { message: req.flash('signupMessage'), user: req.user });
     });
 
     app.get('/me', isLoggedIn, function(req, res) {
@@ -56,7 +58,7 @@ module.exports = function(app, passport) {
         });
     });
 
-    
+
 
 
 
@@ -73,7 +75,7 @@ module.exports = function(app, passport) {
 // route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
 
-    // if user is authenticated in the session, carry on 
+    // if user is authenticated in the session, carry on
     if (req.isAuthenticated())
         return next();
 

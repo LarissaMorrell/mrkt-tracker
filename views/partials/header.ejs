@@ -6,29 +6,46 @@
               <i class="fa fa-lg fa-shopping-cart fa-space-after" aria-hidden="true"></i>
               Mrkt Tracker</p>
         </div>
+
+
         <!-- Collection of nav links and other content for toggling -->
         <div class="navbar-links">
           <ul class="nav navbar-nav">
+
+            <% if(user) {%>
               <li class="active">
                 <a href="/stores">View Stores</a>
               </li>
               <li>
                 <a href="/stores/create">Create Store</a>
               </li>
+            <% } %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            <% if(user) {%>
             <li>
               <a href="/profile">
                 <i class="fa fa-lg fa-space-after fa-user" aria-hidden="true"></i>
                 Profile
-              </a></li>
+              </a>
+            </li>
+
             <li>
               <a href="/logout" class="btn btn-default btn-sm" id="navbar-logout">
                 <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
                 Logout
               </a>
             </li>
+            <% } else {%>
+              <li>
+                <a href="/login" class="btn btn-default btn-sm" id="navbar-logout">
+                  <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
+                  Login
+                </a>
+              </li>
+              <% } %>
           </ul>
         </div>
+
     </div>
 </nav>

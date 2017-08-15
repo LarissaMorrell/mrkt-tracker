@@ -7,6 +7,7 @@ body{
   font-family: 'Droid Sans', sans-serif;
   font-size: 15px;
   position: relative;
+  margin-top: 100px;
 }
 h1, h2, h3, h4, h5 h6 {
   font-family: 'Assistant', sans-serif;
@@ -101,7 +102,7 @@ select {
 *   PROFILE
 */
 .profile-label {
-
+  font-weight: 800;
 }
 @media screen and (min-width: 768px) {
   .profile-label {
