@@ -14,29 +14,32 @@
       <!-- LOCAL INFORMATION -->
       <div class="col-sm-12">
         <div class="well">
-          <h3><span class="fa fa-user"></span>
+          <h3><span class="fa fa-user fa-space-after"></span>
             <%= user.info.firstName + " " + user.info.lastName %>
           </h3>
-
-          <p>
-            <strong>Name</strong>: <%= user.info.firstName + " " + user.info.lastName %>
-          </p>
-          <p>
-            <strong>email</strong>: <%= user.local.email %>
-          </p>
-          <p>
-            <strong>Phone</strong>: <%= user.info.phone %>
-          </p>
-          <p>
-            <strong>Company</strong>: <%= user.info.company %>
-          </p>
-          <p>
-            <strong>Address</strong>: <%= user.info.streetAddress%><br>
-              <%= user.info.city %>, <%= user.info.state %>
-          </p>
+          <div class="row">
+            <p class="col-x2-12 col-sm-3 profile-label">Email</p>
+            <p class="col-xs-12 col-sm-9"><%= user.local.email %></p>
+          </div>
+          <div class="row">
+            <p class="col-x2-12 col-sm-3 profile-label">Phone</p>
+            <p class="col-xs-12 col-sm-9"><%= user.info.phone %></p>
+          </div>
+          <div class="row">
+            <p class="col-x2-12 col-sm-3 profile-label">Address</p>
+            <p class="col-xs-12 col-sm-9"><%= user.info.streetAddress%><br>
+              <%= user.info.city %>, <%= user.info.state %> <%= user.info.zip %></p>
+          </div>
+          <div class="row">
+            <p class="col-x2-12 col-sm-3 profile-label">Company</p>
+            <p class="col-xs-12 col-sm-9"><%= user.info.company %></p>
+          </div>
+          <div class="row">
+            <p class="col-x2-12 col-sm-3 profile-label">Position</p>
+            <p class="col-xs-12 col-sm-9"><%= user.info.position %></p>
+          </div>
         </div>
       </div>
-
     </div>
   </div>
   <% include ../partials/footer.ejs %>

@@ -5,6 +5,7 @@ body{
   height: 100%;
   background-color: #EAF5FF;
   font-family: 'Droid Sans', sans-serif;
+  font-size: 15px;
   position: relative;
 }
 h1, h2, h3, h4, h5 h6 {
@@ -22,6 +23,9 @@ h1, h2, h3, h4, h5 h6 {
 /*
 *   NAVBAR
 */
+nav {
+  margin-bottom: 50px;
+}
 ul.navbar-nav > li {
   padding-top:6px;
 }
@@ -90,4 +94,17 @@ select {
 }
 .store-details-box {
   background-color: rgba(255,255,255,0.7);
+}
+
+
+/*
+*   PROFILE
+*/
+.profile-label {
+
+}
+@media screen and (min-width: 768px) {
+  .profile-label {
+    text-align: right;
+  }
 }
