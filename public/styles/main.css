@@ -4,13 +4,13 @@ html {
 body{
   height: 100%;
   background-color: #EAF5FF;
-  font-family: 'Droid Sans', sans-serif;
-  font-size: 15px;
+  /*font-family: 'Droid Sans', sans-serif;*/
+  /*"Lato","Helvetica Neue","Helvetica",sans-serif*/
+  font-family: 'Lato', sans-serif;
   position: relative;
-  margin-top: 100px;
 }
 h1, h2, h3, h4, h5 h6 {
-  font-family: 'Assistant', sans-serif;
+  /*font-family: 'Assistant', sans-serif;*/
   font-weight: 600;
   color:#5F5A9B;
 }
@@ -39,6 +39,10 @@ ul.navbar-nav > li {
 /*
 *   STORE LIST
 */
+.store-box-container {
+  margin-top: 50px;
+}
+
 .page-title-row {
   position: relative; /* for position of .btn-corner */
   font-weight: 800;
@@ -109,3 +113,8 @@ select {
     text-align: right;
   }
 }
+/*@media screen and (min-width: 882px) {
+  body {
+    margin-top: 100px;
+  }
+}*/
