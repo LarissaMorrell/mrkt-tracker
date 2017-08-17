@@ -4,28 +4,29 @@
 <html lang="en">
 <% include /partials/head.ejs %>
 <body>
-  <% include /partials/header.ejs %>
-  <div class="container">
+  <div class="layer"></div>
+    <% include /partials/header.ejs %>
+    <div class="container">
 
-        <!-- <h1>
-          <i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i>Mrkt Tracker</h1>
-        <h3 class="landing-subtitle">All your retail contacts in one place</h3> -->
-      <div class="landing-description">
-          <div class="description">
-          <h2>Work smarter. Not harder.</h2>
-          <p>We know your busy life leaves you no time to manage all of the paperwork you collect on the road.
-            After being gone all day no one wants to do more paper pushing when they get home. We get it.
-            Mrkt Tracker is the easiest way to organize and maintain all of your professional contacts and notes in one place.
-          </p>
-          <% if(!user){%>
-          <p>
-            <a href="/login" class="btn btn-default"><span class="fa fa-user fa-space-after"></span>Login</a>
-            <a href="/signup" class="btn btn-default"><span class="fa fa-sign-in fa-space-after"></span>Signup</a>
-          </p>
-          <% } %>
+          <!-- <h1>
+            <i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i>Mrkt Tracker</h1>
+          <h3 class="landing-subtitle">All your retail contacts in one place</h3> -->
+        <div class="landing-description">
+            <div class="description">
+            <h2>Work smarter. Not harder.</h2>
+            <p>We know your busy life leaves you no time to manage all of the paperwork you collect on the road.
+              After being gone all day no one wants to do more paper pushing when they get home. We get it.
+              Mrkt Tracker is the easiest way to organize and maintain all of your professional contacts and notes in one place.
+            </p>
+            <% if(!user){%>
+            <p>
+              <a href="/login" class="btn btn-default"><span class="fa fa-user fa-space-after"></span>Login</a>
+              <a href="/signup" class="btn btn-default"><span class="fa fa-sign-in fa-space-after"></span>Signup</a>
+            </p>
+            <% } %>
+          </div>
         </div>
       </div>
-    </div>
-  <% include /partials/footer.ejs %>
+    <% include /partials/footer.ejs %>
 </body>
 </html>
