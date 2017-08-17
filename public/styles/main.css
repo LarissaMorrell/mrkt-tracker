@@ -33,6 +33,9 @@ h3 {
 	margin: 10px;
 	font-size: 12pt;
 }
+.page-header {
+  position: relative; /* for position of .btn-corner */
+}
 /* Some font awesome need space after icon */
 .fa-space-after {
   padding-right: 8px;
@@ -88,17 +91,6 @@ ul.navbar-nav > li {
 .result-container {
   margin-top: 50px;
 }
-
-.page-title-row {
-  position: relative; /* for position of .btn-corner */
-  font-weight: 800;
-}
-/* Make the title and corner button line up */
-.page-title-row > * {
-  margin-bottom: 0px;
-  padding: 0px;
-}
-/*The button at the top corner of all pages*/
 .btn-corner {
   width: 40px;
   height: 40px;
