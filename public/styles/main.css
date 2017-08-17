@@ -32,15 +32,33 @@ h3 {
 .fa-space-after {
   padding-right: 8px;
 }
-
 .landing-description {
+  margin: auto 0 auto 0;
+  padding: 80px 150px 80px 20%;
+  min-width: 100%;
+
+  /*div takes up the whole page*/
+  position: absolute;
+  width: 100%;
+  top:40%;
+  left: 20%;
+
+  /*gradient*/
+  background: rgba(25,49,73,0);
+  background: -moz-linear-gradient(left, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(25,49,73,0)), color-stop(51%, rgba(25,49,73,0.86)), color-stop(100%, rgba(25,49,73,1)));
+  background: -webkit-linear-gradient(left, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
+  background: -o-linear-gradient(left, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
+  background: -ms-linear-gradient(left, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
+  background: linear-gradient(to right, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#193149', endColorstr='#193149', GradientType=1 );
+}
+.description {
+  width: 75%;
+  max-width: 800px;
   color: #fff;
   font-size: 18px;
   line-height: 28px;
-  margin-bottom: 50px;
-  position: relative;
-  left: 55%;
-  max-width: 600px;
 }
 
 
