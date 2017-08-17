@@ -28,6 +28,11 @@ h1, h2 {
 h3 {
   color:#5F5A9B; /* oxford blue */
 }
+.btn {
+	padding: 10px 15px 10px 15px;
+	margin: 10px;
+	font-size: 12pt;
+}
 /* Some font awesome need space after icon */
 .fa-space-after {
   padding-right: 8px;
@@ -104,11 +109,11 @@ ul.navbar-nav > li {
 }
 /*button to go back to store list*/
 .btn-corner > .fa-home {
-    padding-top: 13px;
+    padding-left: -5px;
 }
 /*button for adding a store*/
 .btn-corner > .fa-plus {
-  padding-top: 8px;
+  /*padding-top: 8px;*/
 }
 
 

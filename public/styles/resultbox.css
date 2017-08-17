@@ -129,11 +129,6 @@ a.sprite-tier > img {
 	color:##5F5A9B; /*purple*/
 	padding:0 0 0 5px;
 }
-form > .btn {
-	padding: 10px 15px 10px 15px;
-	margin: 10px;
-	font-size: 12pt;
-}
 .store-list * .store-box:hover {
   background: #183D72; /*darker blue*/
 }
