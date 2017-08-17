@@ -85,6 +85,12 @@ select {
   height: 38px;
   margin-left: 14px;
 }
+.form-group > label {
+  font-size: 17px;
+}
+.yes-no-radio > .yes-no-description {
+  font-size: 16px;
+}
 
 /*
 *   EDIT EACH STORE
@@ -107,7 +113,7 @@ select {
 *   PROFILE
 */
 .profile-label {
-  font-weight: 800;
+  font-size: 17px;
 }
 @media screen and (min-width: 768px) {
   .profile-label {
