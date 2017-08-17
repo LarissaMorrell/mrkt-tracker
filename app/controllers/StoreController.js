@@ -8,7 +8,9 @@ var storeController = {};
 //show the list of stores
 storeController.list = (req, res) => {
     Store
-        .find()
+        .find({
+          user: req.user._id
+        })
         .exec()
         .then(stores => {
             res.render("../views/stores/index", {stores: stores, user: req.user });
@@ -50,6 +52,7 @@ storeController.save = (req, res) => {
     }
     Store
         .create({
+            user: req.user._id,
             user_assigned_id: req.body.userId,
             name: req.body.name,
             address: req.body.address,

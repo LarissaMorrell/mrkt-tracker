@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const storeSchema = mongoose.Schema({
+    user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'}, /* user's _id */
     user_assigned_id: { type: String, required: true },
     name: { type: String, required: true },
     address: { type: String },
@@ -22,6 +23,7 @@ const storeSchema = mongoose.Schema({
 storeSchema.methods.apiRepr = function() {
     return {
         id: this._id,
+        user: this.user, /* user's _id */
         user_assigned_id: this.user_assigned_id,
         name: this.name,
         address: this.address,

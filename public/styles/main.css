@@ -4,7 +4,7 @@ html {
   /*box-shadow: inset 100% rgba(36, 70, 105, 0.74);*/
 }
 body{
-  /*background: url(../images/businessman.jpg) no-repeat fixed 50% 0px / cover;*/
+  background: url(../images/businessman.jpg) no-repeat fixed 50% 0px / cover;
   /* Preserve aspect ratio */
   min-width: 100%;
   /*min-height: 100%;*/
