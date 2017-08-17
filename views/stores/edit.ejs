@@ -10,16 +10,16 @@
       <a class="btn btn-default col-sm-2 btn-corner" role="button" href="/stores">
         <i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
     </div>
-    <div class="form-group row">
-      <h2 class="page-heading"><%= store.name %></h2>
-      <h4><%= store.address %>, <%= store.city %>, <%= store.state %>
-        <button class="btn btn-default" id="edit-store-location" role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-      </h4>
-    </div>
-    <div class="container">
+    <div class="store-box">
+      <div class="form-group row">
+        <h3 class="page-heading"><%= store.name %></h3>
+        <p class="address"><%= store.address %>, <%= store.city %>, <%= store.state %>
+          <button class="btn btn-default" id="edit-store-location" role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+        </p>
+      </div>
       <form action="/stores/update/<%= store._id%>" method="post">
 
-        <div class="container toggle-details">
+        <div class="toggle-details">
           <!-- the hidden store details -->
           <div class="form-group row">
             <label for="storeName" class="col-sm-2 col-form-label">Store Name</label>

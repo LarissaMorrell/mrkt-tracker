@@ -11,7 +11,7 @@
     </div>
     <% if(stores.length>0) { %>
 
-    <div class="container store-box-container">
+    <div class="container result-container">
     <% for(var i=0; i<stores.length; i++) { %>
     <div class="row">
 
@@ -26,7 +26,7 @@
       </div><%/*closes store round*/%>
 
       <h3><%= stores[i].name%></h3>
-      <strong class="title-text"><%= stores[i].address%>, <%= stores[i].city%>, <%= stores[i].state%></strong>
+      <strong class="address"><%= stores[i].address%>, <%= stores[i].city%>, <%= stores[i].state%></strong>
 
 
     <div class="row paperwork-row">

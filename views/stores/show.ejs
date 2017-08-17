@@ -14,7 +14,7 @@
 
 
 
-    <div class="row store-box-container">
+    <div class="row result-container">
       <div class="store-box">
         <div class="store-round">
           <a href="#" class="sprite-tier">
@@ -25,7 +25,7 @@
         </div><%/*closes store round*/%>
 
         <h3><%= store.name%></h3>
-        <strong class="title-text"><%= store.address%>, <%= store.city%>, <%= store.state%></strong>
+        <strong class="address"><%= store.address%>, <%= store.city%>, <%= store.state%></strong>
 
       <div class="row paperwork-row">
         <% if(store.havePaperwork){ %>
