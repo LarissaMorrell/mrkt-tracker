@@ -1,26 +1,163 @@
 html {
   min-height: 100%;
-  background: url(../images/businessman.jpg) no-repeat fixed 50% 0px / cover;
-  box-shadow: inset 0 0 0 1000px rgba(36, 70, 105, 0.74);
 }
 body{
-  /*business man background*/
-  /*background: url(../images/businessman.jpg) no-repeat fixed 50% 0px / cover;
-  box-shadow: inset 0 0 0 100px rgba(36, 70, 105, 0.74);*/
 
-  /*background-position: center;
-  top: 0;
-  left: 0;*/
   /* Preserve aspect ratio */
   min-width: 100%;
-  /*min-height: 100%;*/
-
-  /*height: 100%;*/
   background-color: rgba(0,0,0,0);
   font-family: 'Lato', sans-serif;
   position: relative;
   margin-top: 100px;
+
+  /*for panning image*/
+  margin:0;
+	padding:0;
+	text-align:center;
 }
+
+
+
+/* ANIMATION FOR LANDING */
+.content-block {
+  /*to make it span the width of page*/
+  position:absolute;
+  left: 0;
+  width:100vw;
+
+  height:60vh;
+  margin:20px auto;
+  overflow:hidden;
+}
+.text {
+  font:30px / 30px sans-serif;
+  z-index:10;
+  width:200px;
+  position:absolute;
+  top:85px;
+  left:50%;
+  margin-left:-50px;
+  color:#fff;
+  text-shadow:0 0 10px #000;
+  text-align:center;
+}
+.bg {
+  z-index:1;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:url('/images/supermarket.jpg') 0 0;
+  background-repeat: repeat-x;
+}
+
+#bg-keyframes {
+  -webkit-animation: moving-images 400s linear infinite;
+     -moz-animation: moving-images 400s linear infinite;
+       -o-animation: moving-images 400s linear infinite;
+          animation: moving-images 400s linear infinite;
+}
+@keyframes moving-images {
+  0%   {left:0;}
+  50%  {left:-9999px;}
+  100% {left:0;}
+}
+@-moz-keyframes moving-images {
+  0%   {left:0;}
+  50%  {left:-9999px;}
+  100% {left:0;}
+}
+@-webkit-keyframes moving-images {
+  0%   {left:0;}
+  50%  {left:-9999px;}
+  100% {left:0;}
+}
+@-o-keyframes moving-images {
+  0%   {left:0;}
+  50%  {left:-9999px;}
+  100% {left:0;}
+}
+
+
+
+
+/*.content-block {
+		position:absolute;
+    left: 0;
+		width:100vw;
+		height:60vh;
+		margin:20px 0;
+		overflow:hidden;
+	}
+	.text {
+		font:30px / 30px sans-serif;
+		z-index:10;
+		width:200px;
+		position:absolute;
+		top:85px;
+		left:50%;
+		margin-left:-50px;
+		color:#fff;
+		text-shadow:0 0 10px #000;
+		text-align:center;
+	}
+	.bg {
+		z-index:1;
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+    background:url("/images/supermarket.jpg") 0 0;
+    background-repeat: repeat-x;
+    background-size: contain;
+	}
+
+	#bg-keyframes {
+		-webkit-animation: moving-images 400s linear infinite;
+		   -moz-animation: moving-images 400s linear infinite;
+		     -o-animation: moving-images 400s linear infinite;
+		        animation: moving-images 400s linear infinite;
+	}
+	@keyframes moving-images {
+		0%   {left:0;}
+		50%  {left:-9999px;}
+		100% {left:0;}
+	}
+	@-moz-keyframes moving-images {
+		0%   {left:0;}
+		50%  {left:-9999px;}
+		100% {left:0;}
+	}
+	@-webkit-keyframes moving-images {
+		0%   {left:0;}
+		50%  {left:-9999px;}
+		100% {left:0;}
+	}
+	@-o-keyframes moving-images {
+		0%   {left:0;}
+		50%  {left:-9999px;}
+		100% {left:0;}
+	}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 h1, h2 {
   color: #fff;
