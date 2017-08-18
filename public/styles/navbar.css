@@ -1,3 +1,8 @@
+ul.navbar-nav > li {
+  padding-top:6px;
+  font: #064789; /* dark cerulean*/
+}
+
 .navbar-default {
   background-color: #b3dee0; /* powder blue */;
   border-color: #8ec0f2; /* jordy blue */

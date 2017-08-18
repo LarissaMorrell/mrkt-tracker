@@ -1,7 +1,13 @@
 footer {
-  position: absolute;
+  /*position: absolute;*/
   width: 100%;
   margin-top: 75px;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /*padding: 20px;*/
+  text-align: center;
 }
 
 .full {

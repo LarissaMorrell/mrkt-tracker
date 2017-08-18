@@ -1,6 +1,11 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
 html {
-  /*min-height: 9000px;*/
+  box-sizing: border-box;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body{
 
   /* Preserve aspect ratio */
@@ -129,19 +134,10 @@ h3 {
 /*
 *   NAVBAR
 */
-nav {
-  margin-bottom: 50px;
-}
-ul.navbar-nav > li {
-  padding-top:6px;
-  font: #064789; /* dark cerulean*/
-}
-#navbar-logout {
-  margin-top:0px;
-}
-.navbar-header {
-  color: #064789; /* dark cerulean*/
-}
+
+
+
+
 
 
 
