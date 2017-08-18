@@ -1,5 +1,5 @@
 html {
-  min-height: 100%;
+  /*min-height: 9000px;*/
 }
 body{
 
@@ -16,7 +16,32 @@ body{
 	text-align:center;
 }
 
+h1, h2 {
+  color: #fff;
+}
+h3 {
+  color:#5F5A9B; /* oxford blue */
+}
+.btn {
+	padding: 10px 15px 10px 15px;
+	margin: 10px;
+	font-size: 12pt;
+}
+.page-header { /* for position of .btn-corner */
+  position: relative;
+}
+/* Some font awesomes need space after icon */
+.fa-space-after {
+  padding-right: 8px;
+}
 
+
+
+/*
+*
+*     LANDING PAGE
+*
+*/
 
 /* ANIMATION FOR LANDING */
 .content-block {
@@ -29,14 +54,28 @@ body{
   margin:20px auto;
   overflow:hidden;
 }
+
+.overlay {
+  z-index:10;
+  width: 100vw;
+  position:absolute;
+  top: 45vh;
+  left:0;
+  padding: 100px 50px 25px 50px ;
+
+  /*teal gradient overlay*/
+  background: #3CC1C8;
+  background: rgba(25,49,73,0);
+  background: -moz-linear-gradient(top, rgba(25,49,73,0) 0%, rgba(60,193,200,0.91) 12%, rgba(60,193,200,1) 51%, rgba(60,193,200,0.93) 78%, rgba(60,193,200,0.88) 90%, rgba(25,49,73,0) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(25,49,73,0)), color-stop(12%, rgba(60,193,200,0.91)), color-stop(51%, rgba(60,193,200,1)), color-stop(78%, rgba(60,193,200,0.93)), color-stop(90%, rgba(60,193,200,0.88)), color-stop(100%, rgba(25,49,73,0)));
+  background: -webkit-linear-gradient(top, rgba(25,49,73,0) 0%, rgba(60,193,200,0.91) 12%, rgba(60,193,200,1) 51%, rgba(60,193,200,0.93) 78%, rgba(60,193,200,0.88) 90%, rgba(25,49,73,0) 100%);
+  background: -o-linear-gradient(top, rgba(25,49,73,0) 0%, rgba(60,193,200,0.91) 12%, rgba(60,193,200,1) 51%, rgba(60,193,200,0.93) 78%, rgba(60,193,200,0.88) 90%, rgba(25,49,73,0) 100%);
+  background: -ms-linear-gradient(top, rgba(25,49,73,0) 0%, rgba(60,193,200,0.91) 12%, rgba(60,193,200,1) 51%, rgba(60,193,200,0.93) 78%, rgba(60,193,200,0.88) 90%, rgba(25,49,73,0) 100%);
+  background: linear-gradient(to bottom, rgba(25,49,73,0) 0%, rgba(60,193,200,0.91) 12%, rgba(60,193,200,1) 51%, rgba(60,193,200,0.93) 78%, rgba(60,193,200,0.88) 90%, rgba(25,49,73,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#193149', endColorstr='#193149', GradientType=0 );
+}
 .text {
   font:30px / 30px sans-serif;
-  z-index:10;
-  width:200px;
-  position:absolute;
-  top:85px;
-  left:50%;
-  margin-left:-50px;
   color:#fff;
   text-shadow:0 0 10px #000;
   text-align:center;
@@ -82,129 +121,7 @@ body{
 
 
 
-/*.content-block {
-		position:absolute;
-    left: 0;
-		width:100vw;
-		height:60vh;
-		margin:20px 0;
-		overflow:hidden;
-	}
-	.text {
-		font:30px / 30px sans-serif;
-		z-index:10;
-		width:200px;
-		position:absolute;
-		top:85px;
-		left:50%;
-		margin-left:-50px;
-		color:#fff;
-		text-shadow:0 0 10px #000;
-		text-align:center;
-	}
-	.bg {
-		z-index:1;
-		position:absolute;
-		top:0;
-		bottom:0;
-		left:0;
-		right:0;
-    background:url("/images/supermarket.jpg") 0 0;
-    background-repeat: repeat-x;
-    background-size: contain;
-	}
 
-	#bg-keyframes {
-		-webkit-animation: moving-images 400s linear infinite;
-		   -moz-animation: moving-images 400s linear infinite;
-		     -o-animation: moving-images 400s linear infinite;
-		        animation: moving-images 400s linear infinite;
-	}
-	@keyframes moving-images {
-		0%   {left:0;}
-		50%  {left:-9999px;}
-		100% {left:0;}
-	}
-	@-moz-keyframes moving-images {
-		0%   {left:0;}
-		50%  {left:-9999px;}
-		100% {left:0;}
-	}
-	@-webkit-keyframes moving-images {
-		0%   {left:0;}
-		50%  {left:-9999px;}
-		100% {left:0;}
-	}
-	@-o-keyframes moving-images {
-		0%   {left:0;}
-		50%  {left:-9999px;}
-		100% {left:0;}
-	}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-h1, h2 {
-  color: #fff;
-}
-h3 {
-  color:#5F5A9B; /* oxford blue */
-}
-.btn {
-	padding: 10px 15px 10px 15px;
-	margin: 10px;
-	font-size: 12pt;
-}
-.page-header {
-  position: relative; /* for position of .btn-corner */
-}
-/* Some font awesome need space after icon */
-.fa-space-after {
-  padding-right: 8px;
-}
-.landing-description {
-  margin: auto 0 auto 0;
-  padding: 80px 150px 80px 20%;
-  min-width: 100%;
-
-  /*div takes up the whole page*/
-  position: absolute;
-  width: 100%;
-  top:40%;
-  left: 20%;
-
-  /*gradient*/
-  background: rgba(25,49,73,0);
-  background: -moz-linear-gradient(left, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(25,49,73,0)), color-stop(51%, rgba(25,49,73,0.86)), color-stop(100%, rgba(25,49,73,1)));
-  background: -webkit-linear-gradient(left, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
-  background: -o-linear-gradient(left, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
-  background: -ms-linear-gradient(left, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
-  background: linear-gradient(to right, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#193149', endColorstr='#193149', GradientType=1 );
-}
-.description {
-  width: 75%;
-  max-width: 800px;
-  color: #fff;
-  font-size: 18px;
-  line-height: 28px;
-}
 
 
 /*
