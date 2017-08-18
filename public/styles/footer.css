@@ -19,7 +19,7 @@ footer {
 }
 .footer h3 {
 	border-bottom: 1px solid #BAC1C8;
-	color: #064789; /* dark cerulean */
+	color: #2c8e93; /* illuminating emerald */
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 27px;
@@ -34,14 +34,14 @@ footer {
 	margin-left: 0;
 	padding-left: 0;
 	margin-top: 15px;
-	color: #064789; /* dark cerulean */
+	color: #2c8e93; /* illuminating emerald */
 }
 .footer ul li a {
 	padding: 0 0 5px 0;
 	display: block;
 }
 .footer a {
-	color: #064789 /* dark cerulean */
+	color: #2c8e93; /* illuminating emerald */
 }
 .footer-bottom {
 	background: #E3E3E3;
@@ -51,5 +51,5 @@ footer {
 }
 .footer-bottom p.pull-left {
 	padding-top: 6px;
-  color: #064789;
+  color: #2c8e93; /* illuminating emerald */
 }
