@@ -19,13 +19,13 @@ footer {
 }
 .footer h3 {
 	border-bottom: 1px solid #BAC1C8;
-	color: #54697E;
+	color: #064789; /* dark cerulean */
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 27px;
 	padding: 15px 0 10px;
 	text-transform: uppercase;
-  text-align: center;
+	text-align: center;
 }
 .footer ul,
 .footer .fa {
@@ -34,14 +34,14 @@ footer {
 	margin-left: 0;
 	padding-left: 0;
 	margin-top: 15px;
-	color: #7F8C8D;
+	color: #064789; /* dark cerulean */
 }
 .footer ul li a {
 	padding: 0 0 5px 0;
 	display: block;
 }
 .footer a {
-	color: #78828D
+	color: #064789 /* dark cerulean */
 }
 .footer-bottom {
 	background: #E3E3E3;
@@ -51,4 +51,5 @@ footer {
 }
 .footer-bottom p.pull-left {
 	padding-top: 6px;
+  color: #064789;
 }
