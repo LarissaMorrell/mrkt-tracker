@@ -13,14 +13,13 @@ body{
   /*for panning image*/
   margin:0;
 	padding:0;
-	text-align:center;
 }
 
 h1, h2 {
-  color: #fff;
+  color: #2C8E93; /* illuminating emerald */
 }
 h3 {
-  color:#5F5A9B; /* oxford blue */
+  color:#2c8e93; /* illuminating emerald */
 }
 .btn {
 	padding: 10px 15px 10px 15px;
@@ -64,7 +63,7 @@ h3 {
   padding: 100px 50px 25px 50px ;
 
   /*teal gradient overlay*/
-  background: #3CC1C8;
+  background: #2C8E93; /* illuminating emerald */
   background: rgba(25,49,73,0);
   background: -moz-linear-gradient(top, rgba(25,49,73,0) 0%, rgba(60,193,200,0.91) 12%, rgba(60,193,200,1) 51%, rgba(60,193,200,0.93) 78%, rgba(60,193,200,0.88) 90%, rgba(25,49,73,0) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(25,49,73,0)), color-stop(12%, rgba(60,193,200,0.91)), color-stop(51%, rgba(60,193,200,1)), color-stop(78%, rgba(60,193,200,0.93)), color-stop(90%, rgba(60,193,200,0.88)), color-stop(100%, rgba(25,49,73,0)));
@@ -80,6 +79,9 @@ h3 {
   text-shadow:0 0 10px #000;
   text-align:center;
 }
+.text > h2 {
+  color:#fff;
+}
 .bg {
   z-index:1;
   position:absolute;
@@ -89,8 +91,6 @@ h3 {
   right:0;
   background:url('/images/supermarket.jpg') 0 0;
   background-repeat: repeat-x;
-  /*max-width:100%;*/
-  /*max-height:100%;*/
 }
 
 #bg-keyframes {
@@ -180,9 +180,11 @@ select {
 }
 .form-group > label {
   font-size: 15px;
+  color: #5F99D3; /* livid */
 }
 .yes-no-radio > .yes-no-description {
   font-size: 16px;
+  color: #5F99D3; /* livid */
 }
 
 /*
