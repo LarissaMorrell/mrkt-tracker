@@ -49,9 +49,8 @@ h3 {
 .overlay {   /*teal green overlay */
   z-index:10;
   width: 100vw;
-  position:absolute;
-  top: 24vh;
-  left:0;
+  margin-top: 24vh;
+  margin-left: calc(-50vw + 50%);
   padding: 100px 50px 75px 50px ;
 
   /*illuminating emerald gradient overlay*/
@@ -90,7 +89,7 @@ h3 {
   overflow:hidden;
 }
 .bg-banner {
-  z-index:1;
+  z-index:-1;
   position:absolute;
   top:0;
   bottom:0;
@@ -130,7 +129,7 @@ h3 {
 
 @media screen and (min-width: 495px) {
   .overlay {   /*teal green overlay */
-    top: 32vh;
+    margin-top: 32vh;
   }
   .panning-banner {
     height:37vh;
@@ -147,7 +146,7 @@ h3 {
 @media screen and (min-width: 550px) {
 
   .overlay {   /*teal green overlay */
-    top: 40vh;
+    margin-top: 40vh;
   }
   .panning-banner {
     height:45vh;
@@ -161,7 +160,7 @@ h3 {
 @media screen and (min-width: 650px) {
 
   .overlay {   /*teal green overlay */
-    top: 43vh;
+    margin-top: 43vh;
   }
   .panning-banner {
     height:50vh;
@@ -174,7 +173,7 @@ h3 {
 /* bigger than very small screens */
 @media screen and (min-width: 800px) {
   .overlay {
-    top:48vh;
+    margin-top:48vh;
   }
   .panning-banner {
     height:55vh;
@@ -187,7 +186,7 @@ h3 {
 /* bigger than very small screens */
 @media screen and (min-width: 1000px) {
   .overlay {
-    top:53vh;
+    margin-top:53vh;
   }
   .panning-banner {
     height:60vh;
