@@ -1,19 +1,33 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
 html {
+<<<<<<< HEAD
   min-height: 100%;
 
   /*box-shadow: inset 100% rgba(36, 70, 105, 0.74);*/
+=======
+  box-sizing: border-box;
+>>>>>>> style
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body{
+<<<<<<< HEAD
   background: url(../images/businessman.jpg) no-repeat fixed 50% 0px / cover;
+=======
+
+>>>>>>> style
   /* Preserve aspect ratio */
   min-width: 100%;
-  /*min-height: 100%;*/
-
-  /*height: 100%;*/
   background-color: rgba(0,0,0,0);
   font-family: 'Lato', sans-serif;
   position: relative;
   margin-top: 100px;
+
+  /*for panning image*/
+  margin:0;
+	padding:0;
 }
 
 .layer {
@@ -26,65 +40,176 @@ body{
 }
 
 h1, h2 {
-  color: #fff;
+  color: #2C8E93; /* illuminating emerald */
 }
 h3 {
-  color:#5F5A9B; /* oxford blue */
+  color:#2c8e93; /* illuminating emerald */
 }
 .btn {
 	padding: 10px 15px 10px 15px;
 	margin: 10px;
 	font-size: 12pt;
 }
-.page-header {
-  position: relative; /* for position of .btn-corner */
+.page-header { /* for position of .btn-corner */
+  position: relative;
 }
-/* Some font awesome need space after icon */
+/* Some font awesomes need space after icon */
 .fa-space-after {
   padding-right: 8px;
 }
-.landing-description {
-  margin: auto 0 auto 0;
-  padding: 80px 150px 80px 20%;
-  min-width: 100%;
 
-  /*div takes up the whole page*/
-  position: absolute;
-  width: 100%;
-  top:40%;
-  left: 20%;
-
-  /*gradient*/
-  background: rgba(25,49,73,0);
-  background: -moz-linear-gradient(left, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(25,49,73,0)), color-stop(51%, rgba(25,49,73,0.86)), color-stop(100%, rgba(25,49,73,1)));
-  background: -webkit-linear-gradient(left, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
-  background: -o-linear-gradient(left, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
-  background: -ms-linear-gradient(left, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
-  background: linear-gradient(to right, rgba(25,49,73,0) 0%, rgba(25,49,73,0.86) 51%, rgba(25,49,73,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#193149', endColorstr='#193149', GradientType=1 );
-}
-.description {
-  width: 75%;
-  max-width: 800px;
-  color: #fff;
-  font-size: 18px;
-  line-height: 28px;
-}
 
 
 /*
-*   NAVBAR
+*
+*     LANDING PAGE
+*
 */
-nav {
-  margin-bottom: 50px;
+.overlay {   /*teal green overlay */
+  z-index:10;
+  width: 100vw;
+  position:absolute;
+  top: 24vh;
+  left:0;
+  padding: 100px 50px 75px 50px ;
+
+  /*illuminating emerald gradient overlay*/
+  background: rgba(25,49,73,0);
+  background: -moz-linear-gradient(top, rgba(25,49,73,0) 0%, rgba(44,142,147,0.91) 12%, rgba(44,142,147,1) 51%, rgba(44,142,147,0.93) 78%, rgba(44,142,147,0.88) 90%, rgba(25,49,73,0) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(25,49,73,0)), color-stop(12%, rgba(44,142,147,0.91)), color-stop(51%, rgba(44,142,147,1)), color-stop(78%, rgba(44,142,147,0.93)), color-stop(90%, rgba(44,142,147,0.88)), color-stop(100%, rgba(25,49,73,0)));
+  background: -webkit-linear-gradient(top, rgba(25,49,73,0) 0%, rgba(44,142,147,0.91) 12%, rgba(44,142,147,1) 51%, rgba(44,142,147,0.93) 78%, rgba(44,142,147,0.88) 90%, rgba(25,49,73,0) 100%);
+  background: -o-linear-gradient(top, rgba(25,49,73,0) 0%, rgba(44,142,147,0.91) 12%, rgba(44,142,147,1) 51%, rgba(44,142,147,0.93) 78%, rgba(44,142,147,0.88) 90%, rgba(25,49,73,0) 100%);
+  background: -ms-linear-gradient(top, rgba(25,49,73,0) 0%, rgba(44,142,147,0.91) 12%, rgba(44,142,147,1) 51%, rgba(44,142,147,0.93) 78%, rgba(44,142,147,0.88) 90%, rgba(25,49,73,0) 100%);
+  background: linear-gradient(to bottom, rgba(25,49,73,0) 0%, rgba(44,142,147,0.91) 12%, rgba(44,142,147,1) 51%, rgba(44,142,147,0.93) 78%, rgba(44,142,147,0.88) 90%, rgba(25,49,73,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#193149', endColorstr='#193149', GradientType=0 );
+  }
+.text {
+  font:23px 'Montserrat', sans-serif;
+  font-weight: 300;
+  color:#fff;
+  text-shadow:0 0 8px #000;
+  text-align:center;
+  margin: auto;
 }
-ul.navbar-nav > li {
-  padding-top:6px;
+.text > h2 {
+  margin:auto auto 10px auto;
+  color:#fff;
+  font:35px 'Lato', sans-serif;
+  font-weight: 500;
 }
-#navbar-logout {
-  margin-top:0px;
+
+/* ANIMATION FOR LANDING */
+.panning-banner {
+  /*to make it span the width of page*/
+  position:absolute;
+  left: 0;
+  width:100vw;
+  height:30vh;
+  margin:20px auto;
+  overflow:hidden;
 }
+.bg-banner {
+  z-index:1;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:url('/images/supermarket.jpg') 0 0;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+#bg-keyframes {
+  -webkit-animation: moving-images 400s linear infinite;
+     -moz-animation: moving-images 400s linear infinite;
+       -o-animation: moving-images 400s linear infinite;
+          animation: moving-images 400s linear infinite;
+}
+@keyframes moving-images {
+  0%   {left:0;}
+  50%  {left:-9999px;}
+  100% {left:0;}
+}
+@-moz-keyframes moving-images {
+  0%   {left:0;}
+  50%  {left:-9999px;}
+  100% {left:0;}
+}
+@-webkit-keyframes moving-images {
+  0%   {left:0;}
+  50%  {left:-9999px;}
+  100% {left:0;}
+}
+@-o-keyframes moving-images {
+  0%   {left:0;}
+  50%  {left:-9999px;}
+  100% {left:0;}
+}
+
+
+@media screen and (min-width: 495px) {
+  .overlay {   /*teal green overlay */
+    top: 32vh;
+  }
+  .panning-banner {
+    height:37vh;
+  }
+  .text {
+    font-size: 25px;
+  }
+  .text > h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+
+  .overlay {   /*teal green overlay */
+    top: 40vh;
+  }
+  .panning-banner {
+    height:45vh;
+  }
+  .text > h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+
+  .overlay {   /*teal green overlay */
+    top: 43vh;
+  }
+  .panning-banner {
+    height:50vh;
+  }
+  .text > h2 {
+    max-width: inherit;
+  }
+}
+
+
+/* bigger than very small screens */
+@media screen and (min-width: 800px) {
+  .overlay {
+    top:53vh;
+  }
+  .panning-banner {
+    height:60vh;
+  }
+  .text {
+    max-width: 1000px;
+  }
+}
+
+
+/*bootstrap
+xs= 0-767 pixels
+sm = 768-991 pixels
+md = 992-1199 pixels
+lg = 1200 pixels and up*/
 
 
 
@@ -127,9 +252,11 @@ select {
 }
 .form-group > label {
   font-size: 15px;
+  color: #5F99D3; /* livid */
 }
 .yes-no-radio > .yes-no-description {
   font-size: 16px;
+  color: #5F99D3; /* livid */
 }
 
 /*

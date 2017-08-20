@@ -15,7 +15,7 @@
 	float:left;
 	width:100%;
 	padding:50px 50px 30px 50px;
-	border:1px solid #7E98AF;
+	border:2px solid #2C8E93; /* Illuminating emerald */
   /*border:1px solid #d7d7d7;*/
 	background-color:#fff;
 	position:relative;
@@ -32,7 +32,7 @@
 	bottom:0;
 	margin:auto;
 	height:96%;
-	border-left:2px dotted #7E98AF;
+	border-left:2px dotted #2C8E93; /* Illuminating emerald */
 }
 .store-box:after {
 }
@@ -41,7 +41,7 @@
 	height:94px;
 	border-radius:20px;
 	margin:-95px auto 13px;
-	border:1px solid;
+	border:2px solid #2C8E93; /* Illuminating emerald */
 	background-color:#fff;
 }
 .store-round a.sprite-tier {
@@ -49,14 +49,14 @@
 	text-align:center;
 	line-height:100px;
 	display:block;
-	color:#a6ac9a;
+	color:#5F99D3; /* livid */
 	font-size:45px;
 	position:relative;
 }
 a.sprite-tier > div.label {
 	position:absolute;
 	background-color: transparent;
-	color:#244669; /* theme deep blue */
+	color:#2C8E93; /* Illuminating emerald */
 	font-family: 'Raleway', sans-serif;
 	font-size:22px;
 	text-shadow: 2px 2px 4px gray;
@@ -76,7 +76,7 @@ a.sprite-tier > img {
 }
 .store-box strong.address {
   font-family: 'Raleway', sans-serif;
-	color:#7E98AF;
+	color:#5F99D3; /* livid */
 	font-size:16px;
 	line-height:22px;
 	display:block;
@@ -85,7 +85,7 @@ a.sprite-tier > img {
 }
 .store-box p {
 	font-size:15px;
-	color:#7E98AF;
+	color:#5F99D3; /* livid */
 	font-weight:400;
 	line-height:18px;
 	text-align:center;
@@ -103,15 +103,14 @@ a.sprite-tier > img {
 	height:39px;
 	margin:0 auto;
 	background-color:##EAF5FF;/*light blue*/
-	border:2px solid #5F5A9B;/*purple*/
-  /*border:2px solid #d7d7d7;*/
+	border:2px solid #5f99d3; /* livid */
 	text-decoration:none;
 	/*font-family: 'Open Sans', sans-serif;*/
 	font-size:14px;
 	line-height:38px;
 	text-align:center;
 	display:block;
-	color:#5F5A9B; /*purple*/
+	color:#2C8E93; /* illuminating emerald */
 	position:relative;
 }
 
@@ -126,14 +125,14 @@ a.sprite-tier > img {
 }*/
 .store-box a.seemore .fa {
 	font-size:14px;
-	color:##5F5A9B; /*purple*/
+	color:##2C8E93; /* illuminating emerald */
 	padding:0 0 0 5px;
 }
 .store-list * .store-box:hover {
-  background: #183D72; /*darker blue*/
+  background: #5f99d3; /* livid */
 }
 .store-list * .store-box:hover:before{
-	border-left:2px dotted #fff;
+	border-left:2px dotted #5f99d3; /* livid */
 }
 /*all descendant elements on the store list page*/
 .store-list * .store-box:hover * {
@@ -151,7 +150,7 @@ a.sprite-tier > img {
 	display:none;
 }
 .store-list * .store-box:hover .store-round {
-	background-color:#183D72; /*darker blue*/
+	background-color:#5f99d3; /* livid */
 	border:7px solid #fff;
 }
 .store-list * .store-box:hover a.sprite-tier {
