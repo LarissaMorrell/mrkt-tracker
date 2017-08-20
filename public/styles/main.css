@@ -173,7 +173,7 @@ h3 {
   }
   .text > h2 {
     font-size: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -190,17 +190,26 @@ h3 {
   }
 }
 
-
 /* bigger than very small screens */
 @media screen and (min-width: 800px) {
+  .overlay {
+    top:48vh;
+  }
+  .panning-banner {
+    height:55vh;
+  }
+  .text {
+    max-width: 1000px;
+  }
+}
+
+/* bigger than very small screens */
+@media screen and (min-width: 1000px) {
   .overlay {
     top:53vh;
   }
   .panning-banner {
     height:60vh;
-  }
-  .text {
-    max-width: 1000px;
   }
 }
 
