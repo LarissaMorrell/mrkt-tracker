@@ -5,27 +5,47 @@
 <% include /partials/head.ejs %>
 <body>
   <% include /partials/header.ejs %>
-  <div class="container">
-    <div class="content-block">
+  <div class="container main">
 
-      <div class="bg" id="bg-keyframes"></div>
-    </div>
-
-    <div class="overlay">
-      <div class="text" >
-            <h2>Work smarter. Not harder.</h2>
-            <p>We know your busy life leaves you no time to manage all of the paperwork you collect on the road.
-              After being gone all day no one wants to do more paper pushing when they get home. We get it.
-              Mrkt Tracker is the easiest way to organize and maintain all of your professional contacts and notes in one place.
-            </p>
-            <% if(!user){%>
+    <div class="row">
+      <div class="panning-banner">
+        <div class="bg-banner" id="bg-keyframes"></div>
+      </div>
+      <div class="overlay">
+        <div class="text" >
+          <h2>Work smarter. Not harder.</h2>
+          <p>We know your busy life leaves you no time to manage all of the paperwork you collect on the road.
+            After being gone all day no one wants to do more paper pushing when they get home. We get it.
+            Mrkt Tracker is the easiest way to organize and maintain all of your professional contacts and notes in one place.
+          </p>
+          <% if(!user){%>
             <p>
               <a href="/login" class="btn btn-default"><span class="fa fa-user fa-space-after"></span>Login</a>
               <a href="/signup" class="btn btn-default"><span class="fa fa-sign-in fa-space-after"></span>Signup</a>
             </p>
-            <% } %>
+          <% } %>
+        </div>
       </div>
     </div>
+
+    <div class="row">
+      <p class="col-sm-6">
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <img class="col-sm-6" src="/images/iphone.png">
+    </div>
+    <div class="row">
+      <img class="col-sm-6" src="/images/iphone.png">
+      <p class="col-sm-6">
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+
+
+
+
+
+
   </div>
   <% include /partials/footer.ejs %>
 </body>
