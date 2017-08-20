@@ -14,17 +14,16 @@ footer {
     width: 100%;
 }
 .footer {
-  background: #F8F8F8;
-  /*background: #EDEFF1;*/
+  background: #D7F3F4; /* azureish white */
 	height: auto;
 	padding-bottom: 20px;
 	position: relative;
 	width: 100%;
-	border-bottom: 1px solid #CCCCCC;
-	border-top: 1px solid #DDDDDD;
+	border-bottom: 1px solid #A0D1D3; /* pale robin egg blue */
+	border-top: 1px solid #A0D1D3; /* pale robin egg blue */
 }
 .footer h3 {
-	border-bottom: 1px solid #BAC1C8;
+	border-bottom: 1px solid #A0D1D3; /* pale robin egg blue */
 	color: #2c8e93; /* illuminating emerald */
 	font-size: 18px;
 	font-weight: 600;
@@ -50,8 +49,8 @@ footer {
 	color: #2c8e93; /* illuminating emerald */
 }
 .footer-bottom {
-	background: #E3E3E3;
-	border-top: 1px solid #DDDDDD;
+	background-color: #b3dee0; /* powder blue */;
+	border-top: 1px solid #A0D1D3; /* pale robin egg blue */
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
