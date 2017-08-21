@@ -7,12 +7,13 @@
 .main {
   margin-top: 100px;
 }
-
+#navbar-logout:hover {
+  background:#E8E8E8; /* gray */
+}
 ul.navbar-nav > li {
   padding-top:6px;
   font: #064789; /* dark cerulean*/
 }
-
 .navbar-default {
   background-color: #b3dee0; /* powder blue */;
   border-color: #8ec0f2; /* jordy blue */
