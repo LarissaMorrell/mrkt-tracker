@@ -279,8 +279,9 @@ select {
   margin-left: 14px;
 }
 .form-group > label {
-  font-size: 15px;
-  color: #5F99D3; /* livid */
+  font: 16px 'Montserrat', sans-serif;
+	color:#5F99D3; /* livid */
+	font-weight:400;
 }
 .yes-no-radio > .yes-no-description {
   font-size: 16px;
