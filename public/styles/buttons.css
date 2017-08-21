@@ -1,3 +1,7 @@
+.btn-row > .btn {
+  margin: 10px;
+}
+
 /**************************
   DEFAULT BOOTSTRAP STYLES
 **************************/
