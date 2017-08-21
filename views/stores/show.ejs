@@ -64,9 +64,9 @@
     <p class="gen-comments"><%= store.generalComments%></p>
 
     <div class="col-xs-12">
-        <form class="store-detail-btns" action="/stores/delete/<%= store._id%>" method="post">
-          <a class="btn btn-default" role="button" href="/stores/edit/<%= store._id%>"><i class="fa fa-fw fa-pencil-square-o" aria-hidden="true"></i>Edit Store</a>
-          <button class="btn btn-danger" type="submit">
+        <form class="btn-row" action="/stores/delete/<%= store._id%>" method="post">
+          <a class="btn btn-primary raised" role="button" href="/stores/edit/<%= store._id%>"><i class="fa fa-fw fa-pencil-square-o" aria-hidden="true"></i>Edit Store</a>
+          <button class="btn btn-danger raised" type="submit">
             <i class="fa  fa-fw fa-trash-o" aria-hidden="true"></i>DELETE
           </button>
         </form>

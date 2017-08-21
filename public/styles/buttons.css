@@ -29,10 +29,27 @@
   border-radius: 6px;
 }
 
+.btn-default {
+  background-color: #e6e6e6;
+}
 .btn-primary {
   color: #fff;
   background-color: #428bca;
   border-color: #357ebd;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #ff5e68;
+  /*border-color: */
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  background-color: #b3b3b3;
 }
 
 .btn-primary:hover,
@@ -48,8 +65,14 @@
 /***********************
   RAISED BUTTONS
 ************************/
+.btn-default.raised {
+  box-shadow: 3px 3px #8388a4;
+}
 .btn-primary.raised {
-	box-shadow: 0 3px 0 0 #007299;
+	box-shadow: 3px 3px #007299;
+}
+.btn-danger.raised {
+	box-shadow: 3px 3px #99000a;
 }
 .btn-primary.raised:active, .btn-primary.raised.active {
 	background: #064789; /* dark cerulean */;
