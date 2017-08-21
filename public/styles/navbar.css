@@ -13,6 +13,20 @@
 #navbar-logout:hover {
   background:#E8E8E8; /* gray */
 }
+
+.container > .navbar-header {
+  margin-left: 15px;
+  margin-right:15px;
+}
+
+
+
+
+/*
+*
+*   bootstrap navbar generator overrides
+*
+*/
 ul.navbar-nav > li {
   padding-top:6px;
   font: #064789; /* dark cerulean*/
