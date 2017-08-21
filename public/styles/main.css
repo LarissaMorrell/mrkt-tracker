@@ -30,11 +30,6 @@ h1, h2 {
 h3 {
   color:#2c8e93; /* illuminating emerald */
 }
-.btn {
-	padding: 10px 15px 10px 15px;
-	margin: 10px;
-	font-size: 12pt;
-}
 .page-header { /* for position of .btn-corner */
   position: relative;
 }
@@ -42,6 +37,9 @@ h3 {
 .fa-space-after {
   padding-right: 8px;
 }
+
+
+
 
 
 
