@@ -18,12 +18,12 @@ This app was built HTML5, CSS3, jQuery, JavaScript, Node.js, MongoDB, and Mongoo
  * New users create accounts with their email, location and company information
  * Users create new stores and provide data about it's location information, points of contact, sales level, paperwork preferences and status.
  ![screenshot of create store](./screenshots/createstore.png)
- * Users easily view a summarized listing of their stores
- ![screenshot of list of stores](./screenshots/storelist.png)
  * Users can view a detailed page of each store's information, with the option to edit or delete each one.
  ![screenshot of detailed store view](./screenshots/storedetail.png)
  * Users are able to edit any of the store's information for proper record keeping.
  ![screenshot of editing store](./screenshots/editstore.png)
+ * Users easily view a summarized listing of their stores
+ ![screenshot of list of stores](./screenshots/storelist.png)
 
 #### Development Roadmap ####
 This is v1.0 of the app, but future updates and feature enhancements are expected to include:
