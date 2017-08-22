@@ -1,51 +1,49 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <p class="navbar-brand">
-              <i class="fa fa-lg fa-shopping-cart fa-space-after" aria-hidden="true"></i>
-              Mrkt Tracker</p>
-        </div>
-
-
-        <!-- Collection of nav links and other content for toggling -->
-        <div class="navbar-links">
-          <ul class="nav navbar-nav">
-
-            <% if(user) {%>
-              <li>
-                <a href="/stores">View Stores</a>
-              </li>
-              <li>
-                <a href="/stores/create">Create Store</a>
-              </li>
-            <% } %>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <% if(user) {%>
-            <li>
-              <a href="/profile">
-                <i class="fa fa-lg fa-space-after fa-user" aria-hidden="true"></i>
-                Profile
+<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="javascript:void(0)">
+      <i class="fa fa-lg fa-shopping-cart fa-space-after" aria-hidden="true"></i>
+                Mrkt Tracker
               </a>
-            </li>
+  </div>
 
-            <li>
-              <a href="/logout" class="btn btn-default btn-sm" id="navbar-logout">
-                <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
-                Logout
-              </a>
-            </li>
-            <% } else {%>
-              <li>
-                <a href="/login" class="btn btn-default" id="navbar-logout">
-                  <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
-                  Login
-                </a>
-              </li>
-              <% } %>
-          </ul>
-        </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/stores/create">Create Store</a></li>
+      <li><a href="/stores">View Stores</a></li>
+    </ul>
 
-    </div>
+    <ul class="nav navbar-nav navbar-right">
+  <% if(user) {%>
+
+      <li class="">
+        <a href="/profile">
+          <i class="fa fa-lg fa-space-after fa-user" aria-hidden="true"></i>
+          Profile
+        </a>
+    </li>
+    <li class="">
+        <a href="/logout">
+            <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
+            Logout
+        </a>
+      </li>
+        <% } else {%>
+            <li class="">
+          <a href="/login">
+              <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
+              Login
+          </a>
+  </li>
+      <% } %>
+
+    </ul>
+  </div><!-- /.navbar-collapse -->
 </nav>
