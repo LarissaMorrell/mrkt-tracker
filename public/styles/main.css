@@ -70,7 +70,6 @@ h3 {
   font:23px 'Montserrat', sans-serif;
   font-weight: 300;
   color:#fff;
-  text-shadow:0 0 8px #000;
   text-align:center;
   margin: auto;
 }
@@ -80,6 +79,10 @@ h3 {
   font:35px 'Lato', sans-serif;
   font-weight: 500;
 }
+.shadow {
+  text-shadow:0 0 8px #000;
+}
+
 
 /* ANIMATION FOR LANDING */
 .panning-banner {
