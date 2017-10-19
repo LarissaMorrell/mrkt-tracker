@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 // var Store = mongoose.model("store");
-var Store = require('../models/Store.js');
+var Store = require('../models/store.js');
 //controller object for CRUD operations
 var storeController = {};
 
