@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 // var Employee = mongoose.model("employee");
-var Employee = require('../models/Employee.js');
+var Employee = require('../models/employee.js');
 //controller object for CRUD operations
 var employeeController = {};
 
@@ -64,14 +64,14 @@ employeeController.edit = function(req, res) {
 
 //update employee
 employeeController.update = function(req, res) {
-  Employee.findByIdAndUpdate(req.params.id, 
-  	{ $set: 
-  	  { name: req.body.name, 
-  		address: req.body.address, 
-  		position: req.body.position, 
+  Employee.findByIdAndUpdate(req.params.id,
+  	{ $set:
+  	  { name: req.body.name,
+  		address: req.body.address,
+  		position: req.body.position,
   		salary: req.body.salary }
-  	}, 
-  	{ new: true }, 
+  	},
+  	{ new: true },
   	function (err, employee) {
 	    if (err) {
 	      console.log(err);
