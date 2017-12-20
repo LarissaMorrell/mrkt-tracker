@@ -1,4 +1,5 @@
 footer {
+  display:hidden;
   width: 100%;
   margin-top: 75px;
   position:absolute;
