@@ -1,9 +1,7 @@
 footer {
-  display:none;
   width: 100%;
   margin-top: 75px;
   position:absolute;
-  bottom: 0;
   left:0;
 	text-align: center;
 }
@@ -32,7 +30,6 @@ footer {
 }
 .footer ul,
 .footer .fa {
-	/*font-size: 13px;*/
 	list-style-type: none;
 	margin-left: 0;
 	padding-left: 0;
