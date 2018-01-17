@@ -53,7 +53,7 @@ h3 {
 .overlay {   /*teal green overlay */
   z-index:10;
   width: 100vw;
-  margin-top: 24vh;
+  margin-top: 22vh;
   margin-left: calc(-51vw + 52%);
   padding: 100px 50px 75px 50px ;
 
@@ -89,11 +89,11 @@ h3 {
 .panning-banner {
   /*to make it span the width of page*/
   position:absolute;
-  left: 0;
+  top:0;
+  left:0;
   width:100vw;
   height:30vh;
-  margin:20px auto;
-  overflow:hidden;
+  margin-top: 25px;
 }
 .bg-banner {
   z-index:-1;
@@ -105,8 +105,40 @@ h3 {
   background:url('/images/supermarket.jpg') 0 0;
   background-repeat: repeat-x;
   background-size: cover;
+
+  -webkit-animation:100s scroll infinite linear;
+  -moz-animation:100s scroll infinite linear;
+  -o-animation:100s scroll infinite linear;
+  -ms-animation:100s scroll infinite linear;
+  animation:100s scroll infinite linear;
 }
-#bg-keyframes {
+
+
+
+@-webkit-keyframes scroll{
+  100%{
+    background-position:-3000px 0px;
+  }
+}
+
+@-moz-keyframes scroll{
+  100%{
+    background-position:-3000px 0px;
+  }
+}
+
+@-o-keyframes scroll{
+  100%{
+    background-position:-3000px 0px;
+  }
+}
+
+@-ms-keyframes scroll{
+  100%{
+    background-position:-3000px 0px;
+  }
+}
+/* #bg-keyframes {
   -webkit-animation: moving-images 400s linear infinite;
      -moz-animation: moving-images 400s linear infinite;
        -o-animation: moving-images 400s linear infinite;
@@ -131,19 +163,7 @@ h3 {
   0%   {left:0;}
   50%  {left:-9999px;}
   100% {left:0;}
-}
-
-
-/*#red {
-  background: red;
-  vertical-align: middle;
-}
-#yellow {
-  background: yellow;
-}*/
-/*#blue {
-  background: blue;
-}*/
+} */
 
 div.landing-description-container > .row {
   width:100vw;
@@ -180,7 +200,7 @@ div.row-landing-content {
 
 @media screen and (min-width: 495px) {
   .overlay {   /*teal green overlay */
-    margin-top: 32vh;
+    margin-top: 30vh;
   }
   .panning-banner {
     height:37vh;
@@ -197,7 +217,7 @@ div.row-landing-content {
 @media screen and (min-width: 550px) {
 
   .overlay {   /*teal green overlay */
-    margin-top: 40vh;
+    margin-top: 38vh;
   }
   .panning-banner {
     height:45vh;
