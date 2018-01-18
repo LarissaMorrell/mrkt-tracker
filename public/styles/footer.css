@@ -1,9 +1,8 @@
 footer {
   width: 100%;
-  margin-top: 75px;
-  position:absolute;
-  left:0;
-	text-align: center;
+  position: absolute;
+  left: 0;
+  text-align: center;
 }
 .links {
   padding-bottom: 15px;
@@ -12,47 +11,47 @@ footer {
   line-height: 25px;
 }
 .full {
-    width: 100%;
+  width: 100%;
 }
 .footer {
-  background: #D7F3F4; /* azureish white */
-	height: auto;
-	position: relative;
-	width: 100%;
-	border-bottom: 1px solid #A0D1D3; /* pale robin egg blue */
-	border-top: 1px solid #A0D1D3; /* pale robin egg blue */
+  background: #d7f3f4; /* azureish white */
+  height: auto;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #a0d1d3; /* pale robin egg blue */
+  border-top: 1px solid #a0d1d3; /* pale robin egg blue */
 }
 .footer h3 {
-	border-bottom: 1px solid #A0D1D3; /* pale robin egg blue */
-	color: #2c8e93; /* illuminating emerald */
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 27px;
-	padding: 0 10px;
-	text-transform: uppercase;
-	text-align: center;
+  border-bottom: 1px solid #a0d1d3; /* pale robin egg blue */
+  color: #2c8e93; /* illuminating emerald */
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  text-align: center;
 }
 .footer ul,
 .footer .fa {
-	list-style-type: none;
-	margin-left: 0;
-	padding-left: 0;
-	color: #2c8e93; /* illuminating emerald */
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  color: #2c8e93; /* illuminating emerald */
 }
 .footer ul li a {
-	padding: 0 0 5px 0;
-	display: block;
+  padding: 0 0 5px 0;
+  display: block;
 }
 .footer a {
-	color: #2c8e93; /* illuminating emerald */
+  color: #2c8e93; /* illuminating emerald */
 }
 .footer-bottom {
-	background-color: #b3dee0; /* powder blue */;
-	border-top: 1px solid #A0D1D3; /* pale robin egg blue */
-	padding-top: 10px;
-	padding-bottom: 10px;
+  background-color: #b3dee0; /* powder blue */
+  border-top: 1px solid #a0d1d3; /* pale robin egg blue */
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .footer-bottom p.pull-left {
-	padding-top: 6px;
+  padding-top: 6px;
   color: #2c8e93; /* illuminating emerald */
 }
