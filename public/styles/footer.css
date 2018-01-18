@@ -5,14 +5,18 @@ footer {
   left:0;
 	text-align: center;
 }
-
+.links {
+  padding-bottom: 15px;
+}
+.links > div {
+  line-height: 25px;
+}
 .full {
     width: 100%;
 }
 .footer {
   background: #D7F3F4; /* azureish white */
 	height: auto;
-	padding-bottom: 20px;
 	position: relative;
 	width: 100%;
 	border-bottom: 1px solid #A0D1D3; /* pale robin egg blue */
@@ -24,7 +28,7 @@ footer {
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 27px;
-	padding: 15px 0 10px;
+	padding: 0 10px;
 	text-transform: uppercase;
 	text-align: center;
 }
@@ -33,7 +37,6 @@ footer {
 	list-style-type: none;
 	margin-left: 0;
 	padding-left: 0;
-	margin-top: 15px;
 	color: #2c8e93; /* illuminating emerald */
 }
 .footer ul li a {
