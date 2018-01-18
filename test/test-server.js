@@ -229,7 +229,7 @@ describe('Users API resource', function() {
     });
 
 
-    
+
 
     describe('PUT endpoint', function() {
         it('should update fields you send over', function() {
@@ -297,7 +297,7 @@ describe('Users API resource', function() {
 
 
 /*******************************************************
-        &&&&&   
+        &&&&&
        &&   &&    &&                  &&&&&
          &&     &&&&&&   &&    &&&&&  &&
           &&      &&   &&  &&  &&     &&&&
@@ -310,7 +310,7 @@ describe('Users API resource', function() {
 function generatePersonnel() {
     var personnel = [];
     var rand = getRand(4);
-    
+
     while (personnel.length < rand) {
         personnel.push(generatePerson());
     };

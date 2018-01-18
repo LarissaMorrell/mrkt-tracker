@@ -1,6 +1,6 @@
 {
-  "name": "auth-tutorial",
-  "description": "Easy Node Authentication Tutorial from scotch.io",
+  "name": "mrkt-tracker",
+  "description": "Keep track of all your retail contacts",
   "scripts": {
     "test": "node test",
     "start": "node server.js"
