@@ -55,7 +55,7 @@ function getRand(n) {
 
 describe("Stores API resource", function() {
   before(function() {
-    return runServer(configDB.testUrl);
+    return runServer(configDB.testDBUrl);
   });
   beforeEach(function() {
     return seedStoreData();
