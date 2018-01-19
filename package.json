@@ -2,7 +2,7 @@
   "name": "mrkt-tracker",
   "description": "Keep track of all your retail contacts",
   "scripts": {
-    "test": "node test",
+    "test": "mocha",
     "start": "node server.js"
   },
   "repository": {
@@ -11,24 +11,26 @@
   },
   "main": "server.js",
   "dependencies": {
+    "bcrypt-nodejs": "latest",
+    "body-parser": "1.0.2",
+    "connect-flash": "0.1.1",
+    "cookie-parser": "1.0.1",
+    "ejs": "0.8.8",
     "express": "4.0.0",
     "express-session": "1.0.1",
-    "ejs": "0.8.8",
+    "faker": "^4.1.0",
+    "method-override": "1.0.2",
     "mongoose": "4.4.20",
-    "passport": "0.1.18",
-    "passport-local": "0.1.6",
-    "passport-facebook": "1.0.3",
-    "passport-twitter": "1.0.2",
-    "passport-google-oauth": "0.1.5",
-    "connect-flash": "0.1.1",
-    "bcrypt-nodejs": "latest",
     "morgan": "1.0.1",
-    "body-parser": "1.0.2",
-    "cookie-parser": "1.0.1",
-    "method-override": "1.0.2"
+    "passport": "0.1.18",
+    "passport-facebook": "1.0.3",
+    "passport-google-oauth": "0.1.5",
+    "passport-local": "0.1.6",
+    "passport-twitter": "1.0.2"
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
     "mocha": "^5.0.0"
   }
 }
