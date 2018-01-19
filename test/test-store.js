@@ -3,7 +3,8 @@ const chaiHttp = require("chai-http");
 const faker = require("faker");
 const mongoose = require("mongoose");
 const configDB = require("../config/database.js");
-const { app, runTestServer, closeTestServer } = require("../server.js");
+const { app, runServer, closeServer } = require("../server.js");
+const Store = require("../app/models/store.js");
 
 const should = chai.should();
 
@@ -12,7 +13,7 @@ const should = chai.should();
 function tearDownDb() {
   return new Promise((resolve, reject) => {
     console.warn("Deleting database");
-    mongoose.connection
+    mongoose.connection.db
       .dropDatabase()
       .then(result => resolve(result))
       .catch(err => reject(err));
@@ -54,7 +55,7 @@ function getRand(n) {
 
 describe("Stores API resource", function() {
   before(function() {
-    return runTestServer(configDB.testUrl);
+    return runServer(configDB.testUrl);
   });
   beforeEach(function() {
     return seedStoreData();
@@ -63,7 +64,7 @@ describe("Stores API resource", function() {
     return tearDownDb();
   });
   after(function() {
-    return closeTestServer();
+    return closeServer();
   });
 
   describe("GET Stores endpoint", function() {
