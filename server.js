@@ -41,17 +41,17 @@ app.listen(port);
 console.log("The magic happens on port " + port);
 
 let server;
-function runTestServer() {
+function runServer(databaseUrl = config.dbUrl) {
   const PORT = process.env.PORT || 8080;
 
   return new Promise((resolve, reject) => {
-    mongoose.connect(configDB.testDBUrl, err => {
+    mongoose.connect(databaseUrl, err => {
       if (err) {
         return reject(err);
       }
       server = app
         .listen(PORT, () => {
-          console.log(`Your app is listening on port ${PORT}`);
+          console.log(`=====>>>Your app is listening on port ${PORT}`);
           resolve();
         })
         .on("error", err => {
@@ -62,7 +62,7 @@ function runTestServer() {
   });
 }
 
-function closeTestServer() {
+function closeServer() {
   return mongoose.disconnect().then(() => {
     return new Promise((resolve, reject) => {
       console.log("Closing server");
@@ -76,4 +76,4 @@ function closeTestServer() {
   });
 }
 
-module.exports = { runTestServer, closeTestServer, app };
+module.exports = { runServer, closeServer, app };
