@@ -3,22 +3,16 @@ footer {
   position: absolute;
   left: 0;
   text-align: center;
-}
-.links {
-  padding-bottom: 15px;
-}
-.links > div {
-  line-height: 25px;
-}
-.full {
-  width: 100%;
+  background: #d7f3f4; /* azureish white */
+  border-bottom: 1px solid #a0d1d3; /* pale robin egg blue */
+  border-top: 1px solid #a0d1d3; /* pale robin egg blue */
 }
 .wrapper {
   min-height: 100%;
   height: 100%;
   margin: 0 auto -155px;
 }
-.footer,
+footer,
 .push {
   height: 155px;
 }
@@ -27,10 +21,9 @@ footer {
   height: auto;
   position: relative;
   width: 100%;
-  border-bottom: 1px solid #a0d1d3; /* pale robin egg blue */
-  border-top: 1px solid #a0d1d3; /* pale robin egg blue */
 }
-.footer h3 {
+
+footer h3 {
   border-bottom: 1px solid #a0d1d3; /* pale robin egg blue */
   color: #2c8e93; /* illuminating emerald */
   font-size: 18px;
@@ -40,18 +33,18 @@ footer {
   text-transform: uppercase;
   text-align: center;
 }
-.footer ul,
-.footer .fa {
+footer ul,
+footer .fa {
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
   color: #2c8e93; /* illuminating emerald */
 }
-.footer ul li a {
+footer ul li a {
   padding: 0 0 5px 0;
   display: block;
 }
-.footer a {
+footer a {
   color: #2c8e93; /* illuminating emerald */
 }
 .footer-bottom {
