@@ -32,7 +32,6 @@ function seedStoreData() {
 }
 
 function generateStore() {
-  let tiers = ["silver", "gold", "platinum"];
   return {
     user: faker.internet.userName(),
     user_assigned_id: faker.finance.account(),
@@ -40,11 +39,7 @@ function generateStore() {
     address: faker.address.streetAddress(),
     city: faker.address.city(),
     state: faker.address.state(),
-    generalComments: faker.lorem.paragraph(),
-    tier: tiers[Math.floor(Math.random() * 3)],
-    havePaperwork: faker.random.boolean(),
-    wantPaperworkBack: faker.random.boolean(),
-    lastRedeemed: faker.random.boolean()
+    generalComments: faker.lorem.paragraph()
   };
 }
 
