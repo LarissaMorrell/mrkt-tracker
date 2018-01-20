@@ -2,6 +2,8 @@
 <html>
 <% include ../partials/head.ejs %>
 <body>
+  <% /* If logged-out, there will be a redirect */ %>
+  <div class="logged-in-wrapper">
   <% include ../partials/header.ejs %>
   <div class="container content">
 
@@ -42,6 +44,7 @@
       </div>
     </div>
   </div>
+</div>
   <% include ../partials/footer.ejs %>
 </body>
 </html>

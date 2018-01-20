@@ -16,13 +16,13 @@ footer {
   margin: 0 auto -155px;
 }
 .logged-out-wrapper {
-  margin: 0 auto -50px;
+  margin: 0 auto -58px;
 }
 footer.logged-in {
   height: 155px;
 }
 footer.logged-out {
-  height: 50px;
+  height: 58px;
 }
 
 footer h3 {
@@ -45,6 +45,9 @@ footer .fa {
 footer ul li a {
   padding: 0 0 5px 0;
   display: block;
+}
+footer .links {
+  min-height: 38px;
 }
 footer a {
   color: #2c8e93; /* illuminating emerald */
