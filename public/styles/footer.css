@@ -13,7 +13,16 @@ footer {
 .full {
   width: 100%;
 }
-.footer {
+.wrapper {
+  min-height: 100%;
+  height: 100%;
+  margin: 0 auto -155px;
+}
+.footer,
+.push {
+  height: 155px;
+}
+.footerssssss {
   background: #d7f3f4; /* azureish white */
   height: auto;
   position: relative;
