@@ -1,5 +1,10 @@
 
-<footer>
+<% if(user){ %>
+  <footer class="logged-in">
+<% } else { %>
+  <footer class="logged-out">
+<% } %>
+
   <% if(user) {%>
     <div >
         <div class="container">

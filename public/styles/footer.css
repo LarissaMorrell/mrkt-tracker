@@ -7,20 +7,22 @@ footer {
   border-bottom: 1px solid #a0d1d3; /* pale robin egg blue */
   border-top: 1px solid #a0d1d3; /* pale robin egg blue */
 }
-.wrapper {
+.logged-in-wrapper,
+.logged-out-wrapper {
   min-height: 100%;
   height: 100%;
+}
+.logged-in-wrapper {
   margin: 0 auto -155px;
 }
-footer,
-.push {
+.logged-out-wrapper {
+  margin: 0 auto -50px;
+}
+footer.logged-in {
   height: 155px;
 }
-.footerssssss {
-  background: #d7f3f4; /* azureish white */
-  height: auto;
-  position: relative;
-  width: 100%;
+footer.logged-out {
+  height: 50px;
 }
 
 footer h3 {

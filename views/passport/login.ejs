@@ -2,7 +2,11 @@
 <html lang="en">
 <% include ../partials/head.ejs %>
   <body>
-    <div class="wrapper">
+    <% if(user){ %>
+      <div class="logged-in-wrapper">
+    <% } else { %>
+      <div class="logged-out-wrapper">
+    <% } %>
       <% include ../partials/header.ejs %>
 
       <div class="container content">
