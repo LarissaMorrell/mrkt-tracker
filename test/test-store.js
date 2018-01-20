@@ -7,6 +7,7 @@ const { app, runServer, closeServer } = require("../server.js");
 const Store = require("../app/models/store.js");
 
 const should = chai.should();
+chai.use(chaiHttp);
 
 // this function deletes the entire database
 // so that nothing is left over after the test
@@ -22,6 +23,7 @@ function tearDownDb() {
 
 function seedStoreData() {
   var stores = [];
+
   let rand = getRand(1);
   do {
     stores.push(generateStore());
@@ -56,7 +58,7 @@ describe("Stores API resource", function() {
   before(function() {
     return runServer(configDB.testDBUrl);
   });
-  beforeEach(function() {
+  beforeEach(function(done) {
     return seedStoreData();
   });
   afterEach(function() {

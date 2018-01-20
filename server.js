@@ -45,7 +45,9 @@ function runServer(databaseUrl = configDB.dbUrl) {
   const PORT = process.env.PORT || 8080;
 
   return new Promise((resolve, reject) => {
+    console.log("in RUN  HEARRR", databaseUrl);
     mongoose.connect(databaseUrl, err => {
+      console.log("in RUN SERVERRR NO ERR");
       if (err) {
         return reject(err);
       }

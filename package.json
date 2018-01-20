@@ -12,16 +12,16 @@
   "main": "server.js",
   "dependencies": {
     "bcrypt-nodejs": "latest",
-    "body-parser": "1.0.2",
     "connect-flash": "0.1.1",
     "cookie-parser": "1.0.1",
     "ejs": "0.8.8",
-    "express": "4.0.0",
     "express-session": "1.0.1",
     "faker": "^4.1.0",
     "method-override": "1.0.2",
-    "mongoose": "4.4.20",
-    "morgan": "1.0.1",
+    "body-parser": "^1.15.2",
+    "express": "^4.12.4",
+    "mongoose": "^4.7.1",
+    "morgan": "^1.7.0",
     "passport": "0.1.18",
     "passport-facebook": "1.0.3",
     "passport-google-oauth": "0.1.5",
@@ -29,8 +29,9 @@
     "passport-twitter": "1.0.2"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
+    "chai": "^3.5.0",
     "chai-http": "^3.0.0",
-    "mocha": "^5.0.0"
+    "faker": "^3.1.0",
+    "mocha": "^4.0.1"
   }
 }
