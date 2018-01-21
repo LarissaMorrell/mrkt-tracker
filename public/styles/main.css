@@ -325,24 +325,6 @@ lg = 1200 pixels and up*/
 .result-container {
   margin-top: 50px;
 }
-.btn-corner {
-  width: 40px;
-  height: 40px;
-  /* align to bottom corner of parent div */
-  position: absolute;
-  right: 16px;
-  bottom: 14px;
-}
-/*button to go back to store list*/
-.btn-corner > .fa-home {
-  position: absolute;
-  top: 14px;
-  left: 12px;
-}
-/*button for adding a store*/
-.btn-corner > .fa-plus {
-  /*padding-top: 8px;*/
-}
 
 /*
 *   FORMS
@@ -360,6 +342,7 @@ select {
   font: 16px "Montserrat", sans-serif;
   color: #5f99d3; /* livid */
   font-weight: 400;
+  margin-top: 7px;
 }
 .no-padding-right {
   padding-right: 0;
@@ -367,6 +350,7 @@ select {
 .yes-no-radio > .yes-no-description {
   font-size: 16px;
   color: #5f99d3; /* livid */
+  padding-left: 5px;
 }
 
 /*
