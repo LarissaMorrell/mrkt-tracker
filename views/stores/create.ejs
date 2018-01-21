@@ -6,7 +6,7 @@
   <% include ../partials/header.ejs %>
       <div class="container ">
         <div class="form-group row page-header">
-          <h1 class="col-sm-10">Create New Store</h1>
+          <h1 class="col-sm-10">Create Retailer</h1>
           <a class="btn btn-primary col-sm-2 btn-corner" role="button" href="/stores">
             <i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
         </div>
@@ -15,29 +15,29 @@
 
             <!-- Name of store -->
             <div class="form-group row">
-              <label for="storeName" class="col-sm-2 col-form-label">Store Name</label>
-              <div class="col-sm-10">
+              <label for="storeName" class="col-sm-3 col-md-2 col-form-label">Store Name</label>
+              <div class="col-sm-9 col-md-10">
                 <input type="text" name="name" class="form-control" id="storeName" placeholder="Smith's Market">
               </div>
             </div>
             <!-- Street -->
             <div class="form-group row">
-              <label for="streetAddress" class="col-sm-2 col-form-label">Street Address</label>
-              <div class="col-sm-10">
+              <label for="streetAddress" class="col-sm-3 col-md-2 col-form-label no-padding-right">Street Address</label>
+              <div class="col-sm-9 col-md-10">
                 <input type="text" name="address" class="form-control" id="streetAddress" placeholder="10 Park Street">
               </div>
             </div>
             <!-- City -->
             <div class="form-group row">
-              <label for="city" class="col-xs-12 col-sm-2 col-form-label">City</label>
-              <div class="col-xs-12 col-sm-10">
+              <label for="city" class="col-xs-12 col-sm-3 col-md-2 col-form-label">City</label>
+              <div class="col-xs-12 col-sm-9 col-md-10">
                 <input type="text" name="city" class="form-control" id="city" placeholder="Boston">
               </div>
             </div>
             <!-- State select dropdown-->
             <div class="form-group row">
-              <label for="state" class="col-sm-2 col-form-label">State</label>
-              <select class="custom-select form-control col-xs-12 col-sm-10" name="state" id="state">
+              <label for="state" class="col-xs-12 col-sm-3 col-md-2 col-form-label">State</label>
+              <select class="custom-select form-control col-xs-12 col-sm-9 col-md-10" name="state" id="state">
                 <option value="" disabled selected>Select State</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
@@ -94,22 +94,15 @@
             </div>
             <!-- Store ID -->
             <div class="form-group row">
-              <label for="storeId" class="col-sm-2 col-form-label">Store ID</label>
-              <div class="col-sm-10">
+              <label for="storeId" class="col-sm-3 col-md-2 col-form-label">Store ID</label>
+              <div class="col-sm-9 col-md-10">
                 <input type="text" name="userId" class="form-control" id="storeId" placeholder="MC532478">
-              </div>
-            </div>
-            <!-- General Comments -->
-            <div class="form-group row">
-              <label for="comment" class="col-sm-2 col-form-label">General Comments</label>
-              <div class="col-sm-10">
-                <textarea class="form-control" name="generalComments" rows="5" id="comment"></textarea>
               </div>
             </div>
             <!-- Tier -->
             <div class="form-group row">
-              <label for="tier" class="col-xs-12 col-sm-2 col-form-label">Tier</label>
-              <select class="custom-select form-control col-xs-12 col-sm-10" name="tier" id="tier">
+              <label for="tier" class="col-xs-12 col-sm-3 col-md-2 col-form-label">Tier</label>
+              <select class="custom-select form-control col-xs-12 col-sm-9 col-md-10" name="tier" id="tier">
                 <option value="" disabled selected>Select Tier</option>
                 <option value="Platinum">Platinum</option>
                 <option value="Gold">Gold</option>
@@ -117,6 +110,14 @@
               </select>
               <div class="col-sm-5"></div><!-- empty space -->
             </div>
+            <!-- General Comments -->
+            <div class="form-group row">
+              <label for="comment" class="col-xs-12 col-form-label">General Comments</label>
+              <div class="col-sm-12">
+                <textarea class="form-control" name="generalComments" rows="5" id="comment"></textarea>
+              </div>
+            </div>
+
             <!-- Submitted paperwork -->
             <div class="form-group row">
               <label for="paperwork" class="custom-control custom-radio col-xs-12 col-sm-6 col-md-4 col-form-label">Paperwork has been submitted</label>
