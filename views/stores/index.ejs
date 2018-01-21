@@ -6,7 +6,7 @@
     <% include ../partials/header.ejs %>
     <div class="container store-list ">
       <div class="form-group row page-header">
-      <h1 class="col-sm-10">Store List</h1>
+      <h1 class="col-sm-10">View Retailers</h1>
       <h3><a class="btn btn-primary col-sm-2 btn-corner" role="button" href="/stores/create">
       <i class="fa fa-plus fa-md" aria-hidden="true"></i></a></h3>
       </div>
@@ -17,7 +17,7 @@
 
         <div class="row store-box">
           <div class="store-round">
-            <a href="#" class="sprite-tier">
+            <a href="/stores/show/<%= stores[i]._id%>" class="sprite-tier">
               <% var tier = stores[i].tier.toLowerCase() %>
               <div class="sprite-tier label"><%= tier %></div>
               <img class="sprite-tier" src="/images/<%= tier %>.png" alt= <%= tier %> />
