@@ -1,187 +1,121 @@
 .store-box a.seemore {
-	width: 100%;
-	font-size: 12px;
+  width: 100%;
+  font-size: 12px;
 }
 .store-box a.seemore:before {
-	width: 100px;
+  width: 100px;
 }
-
-
+.store-box a {
+  text-decoration: none;
+}
 /*beginning*/
 
 .store-box {
-	margin-bottom: 70px;
+  margin-bottom: 70px;
   height: auto;
-	float:left;
-	width:100%;
-	padding:50px 50px 30px 50px;
-	border:2px solid #2C8E93; /* Illuminating emerald */
+  float: left;
+  width: 100%;
+  padding: 50px 50px 30px 50px;
+  border: 2px solid #2c8e93; /* Illuminating emerald */
   /*border:1px solid #d7d7d7;*/
-	background-color:#fff;
-	position:relative;
-	height: auto;
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */
+  background-color: #fff;
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
 }
 .store-box:before {
-	content:'';
-	position:absolute;
-	left:8px;
-	top:0;
-	bottom:0;
-	margin:auto;
-	height:96%;
-	border-left:2px dotted #2C8E93; /* Illuminating emerald */
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 96%;
+  border-left: 2px dotted #2c8e93; /* Illuminating emerald */
 }
 .store-box:after {
 }
 .store-round {
-	width:200px;
-	height:94px;
-	border-radius:20px;
-	margin:-95px auto 13px;
-	border:2px solid #2C8E93; /* Illuminating emerald */
-	background-color:#fff;
+  width: 200px;
+  height: 94px;
+  border-radius: 20px;
+  margin: -95px auto 13px;
+  border: 2px solid #2c8e93; /* Illuminating emerald */
+  background-color: #fff;
 }
 .store-round a.sprite-tier {
-	height:200px;
-	text-align:center;
-	line-height:100px;
-	display:block;
-	color:#5F99D3; /* livid */
-	font-size:45px;
-	position:relative;
+  height: 200px;
+  text-align: center;
+  line-height: 100px;
+  display: block;
+  color: #5f99d3; /* livid */
+  font-size: 45px;
+  position: relative;
 }
 a.sprite-tier > div.label {
-	position:absolute;
-	background-color: transparent;
-	color:#2C8E93; /* Illuminating emerald */
-	font:26px 'Montserrat', sans-serif;
-	text-shadow: 1px 1px 2px gray;
-	left:65px;
-	top:49px;
+  background-color: transparent;
+  color: #2c8e93; /* Illuminating emerald */
+  font: 26px "Montserrat", sans-serif;
+  text-shadow: 1px 1px 2px gray;
 }
 a.sprite-tier > img {
-	width: 175px;
-	height:85px;
-	padding-bottom: 15px;
+  width: 175px;
+  height: 85px;
+  padding-bottom: 15px;
+  position: absolute;
+  left: 10px;
+  z-index: 1;
 }
 .store-box h3 {
-	line-height:33px;
-	text-align:center;
-	text-transform:capitalize;
-	margin:0 0 8px 0;
+  line-height: 33px;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 0 0 8px 0;
 }
 .store-box strong.address {
-	font: 17px 'Montserrat', sans-serif;
-	font-weight: 500;
-	color:#5F99D3; /* livid */
-	line-height:22px;
-	display:block;
-	text-align:center;
-	padding:0 0 10px 0;
+  font: 17px "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #5f99d3; /* livid */
+  line-height: 22px;
+  display: block;
+  text-align: center;
+  padding: 0 0 10px 0;
 }
 .store-box p {
-	font: 16px 'Montserrat', sans-serif;
-	color:#5F99D3; /* livid */
-	font-weight:400;
-	line-height:22px;
-	text-align:center;
-	margin:0 0 6px 0;
+  font: 16px "Montserrat", sans-serif;
+  color: #5f99d3; /* livid */
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  margin: 0 0 6px 0;
 }
 .store-list * p.gen-comments {
-	/*only allow view of first 2 lines*/
-	overflow: hidden;
+  /*only allow view of first 2 lines*/
+  overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-	margin: 10px 0 16px 0;
+  margin: 10px 0 16px 0;
 }
 .store-box a.seemore {
-	width:135px;
-	height:39px;
-	margin:0 auto;
-	background-color:##EAF5FF;/*light blue*/
-	border:2px solid #5f99d3; /* livid */
-	text-decoration:none;
-	/*font-family: 'Open Sans', sans-serif;*/
-	font-size:14px;
-	line-height:38px;
-	text-align:center;
-	display:block;
-	color:#2C8E93; /* illuminating emerald */
-	position:relative;
+  width: 135px;
+  height: 39px;
+  margin: 0 auto;
+  background-color: ##eaf5ff; /*light blue*/
+  border: 2px solid #5f99d3; /* livid */
+  font-size: 14px;
+  line-height: 38px;
+  text-align: center;
+  display: block;
+  color: #2c8e93; /* illuminating emerald */
+  position: relative;
 }
-
-/*.store-box a.seemore:before {
-	content:'';
-	position:absolute;
-	/*left:-1px;*/
-	/*top:-1px;*/
-	/*width:138px;
-	height:13px;
-	background-color:#fff;
-}*/
 .store-box a.seemore .fa {
-	font-size:14px;
-	color:##2C8E93; /* illuminating emerald */
-	padding:0 0 0 5px;
-}
-.store-list * .store-box:hover {
-  background: #5f99d3; /* livid */
-}
-.store-list * .store-box:hover:before{
-	border-left:2px dotted #5f99d3; /* livid */
-}
-/*all descendant elements on the store list page*/
-.store-list * .store-box:hover * {
-	color: #fff;
-}
-.store-list * .store-box:hover a.seemore {
-	border:2px solid #FFF;
-  color: #fff;
-}
-.store-list * .store-box:hover a.seemore .fa {
-  color: #fff;
-}
-
-.store-list * .store-box:hover a.seemore:before {
-	display:none;
-}
-.store-list * .store-box:hover .store-round {
-	background-color:#5f99d3; /* livid */
-	border:7px solid #fff;
-}
-.store-list * .store-box:hover a.sprite-tier {
-	color:#fff;
-	padding-bottom: 20px;
-}
-.store-list * .store-box:hover
-a.sprite-tier > div.label {
-	color:white;
-	text-shadow: 2px 2px 4px gray;
-}
-.store-list * .store-box:hover:after {
-	content:'';
-	z-index: -1;
-	position: absolute;
-	content: "";
-	bottom: 15px;
-	right: 10px;
-	left: auto;
-	width: 50%;
-	top: 80%;
-	max-width:300px;
-	background:rgba(0,0,0,0.28);
-	-webkit-box-shadow: 0 15px 10px rgba(0,0,0,0.28);
-	-moz-box-shadow: 0 15px 10px rgba(0,0,0,0.28);
-	box-shadow: 0 15px 10px rgba(0,0,0,0.28);
-	-webkit-transform: rotate(3deg);
-	-moz-transform: rotate(3deg);
-	-o-transform: rotate(3deg);
-	-ms-transform: rotate(3deg);
-	transform: rotate(3deg);
+  font-size: 14px;
+  color: #2c8e93; /* illuminating emerald */
+  padding: 0 0 0 5px;
 }
 
 .paperwork-row {
