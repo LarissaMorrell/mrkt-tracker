@@ -15,7 +15,7 @@
         <div class="form-group row">
           <h3 class="page-heading"><%= store.name %></h3>
           <p class="address"><%= store.address %>, <%= store.city %>, <%= store.state %>
-            <button class="btn btn-default" id="edit-store-location" role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+            <button class="btn btn-default raised" id="edit-store-location" role="button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
           </p>
         </div>
         <form action="/stores/update/<%= store._id%>" method="post">
