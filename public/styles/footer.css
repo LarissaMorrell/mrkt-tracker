@@ -1,7 +1,7 @@
 footer {
   width: 100%;
-  position: absolute;
-  left: 0;
+  /* position: absolute;
+  left: 0; */
   text-align: center;
   background: #d7f3f4; /* azureish white */
   border-bottom: 1px solid #a0d1d3; /* pale robin egg blue */
@@ -10,7 +10,6 @@ footer {
 .logged-in-wrapper,
 .logged-out-wrapper {
   min-height: 100%;
-  height: 100%;
 }
 .logged-in-wrapper {
   margin: 0 auto -155px;
@@ -18,10 +17,12 @@ footer {
 .logged-out-wrapper {
   margin: 0 auto -58px;
 }
-footer.logged-in {
+footer.logged-in,
+.logged-in-push {
   height: 155px;
 }
-footer.logged-out {
+footer.logged-out,
+.logged-out-push {
   height: 58px;
 }
 

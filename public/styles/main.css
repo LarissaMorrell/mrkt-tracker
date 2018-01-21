@@ -1,14 +1,13 @@
+* {
+  margin: 0;
+}
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-  margin: 0;
   box-sizing: border-box;
 }
 html,
 body {
   height: 100%;
-}
-* {
-  margin: 0;
 }
 *,
 *:before,
@@ -25,12 +24,6 @@ body {
   /*for panning image*/
   margin: 0;
   padding: 0;
-}
-
-/* for sticky footer */
-.content {
-  /*min-height: calc(100vh - 80px);*/
-  /*min-height: 900px;*/
 }
 
 h1,
@@ -315,9 +308,6 @@ div.row-landing-content {
   }
   .panning-banner {
     height: 60vh;
-  }
-
-  div.row-landing-content {
   }
 }
 
