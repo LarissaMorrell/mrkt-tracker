@@ -2,7 +2,7 @@
   "name": "mrkt-tracker",
   "description": "Keep track of all your retail contacts",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha ./test/test-zombie.js",
     "start": "node server.js"
   },
   "repository": {
@@ -29,9 +29,11 @@
     "passport-twitter": "1.0.2"
   },
   "devDependencies": {
+    "assert": "^1.4.1",
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
     "faker": "^3.1.0",
-    "mocha": "^4.0.1"
+    "mocha": "^4.0.1",
+    "zombie": "^5.0.7"
   }
 }
