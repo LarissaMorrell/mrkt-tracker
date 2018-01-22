@@ -333,13 +333,15 @@ lg = 1200 pixels and up*/
 /*
 *   FORMS
 */
-#login-box {
+#login-box,
+#signup-box {
   max-width: 600px;
   min-width: 285px;
   width: 75%;
   margin: 10px auto 20px auto;
 }
-#login-box > .store-box {
+#login-box > .store-box,
+#signup-box > .store-box {
   margin-bottom: 25px;
 }
 input[type="text"],

@@ -15,7 +15,7 @@ footer {
   margin: 0 auto -155px;
 }
 .logged-out-wrapper {
-  margin: 0 auto -58px;
+  margin: 0 auto -49px;
 }
 footer.logged-in,
 .logged-in-push {
@@ -23,7 +23,7 @@ footer.logged-in,
 }
 footer.logged-out,
 .logged-out-push {
-  height: 58px;
+  height: 49px;
 }
 
 footer h3 {
