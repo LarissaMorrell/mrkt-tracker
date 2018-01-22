@@ -8,6 +8,7 @@ html {
 html,
 body {
   height: 100%;
+  min-width: 300px;
 }
 *,
 *:before,
@@ -42,6 +43,9 @@ h3 {
 /* Some font awesomes need space after icon */
 .fa-space-after {
   padding-right: 8px;
+}
+.container {
+  max-width: 950px;
 }
 
 /*
@@ -142,7 +146,7 @@ h3 {
 .panning-banner {
   /*to make it span the width of page*/
   position: absolute;
-  top: 0;
+  top: 25px;
   left: 0;
   width: 100vw;
   height: 30vh;
@@ -249,7 +253,7 @@ div.row-landing-content {
   padding: 15px;
 }
 
-@media screen and (min-width: 495px) {
+@media only screen and (min-width: 495px) {
   .overlay {
     /*teal green overlay */
     margin-top: 30vh;
@@ -266,7 +270,7 @@ div.row-landing-content {
   }
 }
 
-@media screen and (min-width: 550px) {
+@media only screen and (min-width: 550px) {
   .overlay {
     /*teal green overlay */
     margin-top: 38vh;
@@ -280,7 +284,7 @@ div.row-landing-content {
   }
 }
 
-@media screen and (min-width: 650px) {
+@media only screen and (min-width: 650px) {
   .overlay {
     /*teal green overlay */
     margin-top: 43vh;
@@ -291,7 +295,7 @@ div.row-landing-content {
 }
 
 /* bigger than very small screens */
-@media screen and (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   .overlay {
     margin-top: 48vh;
   }
@@ -304,7 +308,7 @@ div.row-landing-content {
 }
 
 /* bigger than very small screens */
-@media screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) {
   .overlay {
     margin-top: 53vh;
   }
@@ -329,6 +333,15 @@ lg = 1200 pixels and up*/
 /*
 *   FORMS
 */
+#login-box {
+  max-width: 600px;
+  min-width: 285px;
+  width: 75%;
+  margin: 10px auto 20px auto;
+}
+#login-box > .store-box {
+  margin-bottom: 25px;
+}
 input[type="text"],
 input[type="password"] {
   height: 38px;
@@ -351,6 +364,13 @@ select {
   font-size: 16px;
   color: #5f99d3; /* livid */
   padding-left: 5px;
+}
+@media only screen and (max-width: 650px) {
+  #login-from {
+    margin-top: 400px;
+    padding: 25px;
+    background-color: blue;
+  }
 }
 
 /*
@@ -375,7 +395,7 @@ select {
 .profile-label {
   font-size: 17px;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .profile-label {
     text-align: right;
   }
