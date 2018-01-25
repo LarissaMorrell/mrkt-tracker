@@ -87,7 +87,9 @@ a.sprite-tier > img {
   text-align: center;
   padding: 0 0 10px 0;
 }
-.store-box p {
+.store-box p,
+.demo-account,
+.link-decoration {
   font: 16px "Montserrat", sans-serif;
   color: #5f99d3; /* livid */
   font-weight: 400;
@@ -125,4 +127,28 @@ a.sprite-tier > img {
 .paperwork-row {
   align-items: stretch;
 }
-/*Our store Section End*/
+
+/* Login and Signup boxes have links for the demo account */
+.link-decoration {
+  /* font: 16px "Montserrat", sans-serif; */
+  font-weight: 500;
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  border-bottom: 1px solid;
+  font-weight: 500;
+  cursor: pointer;
+}
+.demo-account {
+  color: #ff5e68; /* red */
+  border-color: #ff5e68; /* red */
+  margin-bottom: 2px;
+}
+form.demo-account {
+  display: inline-block;
+}
+a.link-decoration {
+  color: #5f99d3; /* livid */
+  border-color: #5f99d3; /* livid */
+  margin-bottom: 0;
+}
