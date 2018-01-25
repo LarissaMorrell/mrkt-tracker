@@ -371,6 +371,9 @@ select {
 .no-padding-right {
   padding-right: 0;
 }
+.yes-no-radio {
+  width: 100px;
+}
 .yes-no-radio > .yes-no-description {
   font-size: 16px;
   color: #5f99d3; /* livid */
