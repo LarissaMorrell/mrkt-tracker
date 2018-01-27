@@ -13,7 +13,6 @@ var session = require("express-session");
 var configDB = require("./config/database.js");
 
 // configuration ===============================================================
-// mongoose.connect(configDB.dbUrl); // connect to our database
 
 require("./config/passport")(passport); // pass passport for configuration
 
@@ -41,7 +40,7 @@ require("./app/routes/employee.js")(app, passport);
 // console.log("The magic happens on port " + port);
 
 let server;
-function runServer(databaseUrl = configDB.dbUrl) {
+function runServer(databaseUrl = configDB.DATABASE_URL) {
   const PORT = process.env.PORT || 8080;
 
   return new Promise((resolve, reject) => {
