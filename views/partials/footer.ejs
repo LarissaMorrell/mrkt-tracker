@@ -1,49 +1,40 @@
 
-<footer>
-  <% if(user) {%>
-    <div class="footer" id="footer">
-        <div class="container">
-            <div class="row">
-              <h3>
-                <i class="fa fa-lg fa-shopping-cart fa-space-after" aria-hidden="true"></i>
-                Mrkt Tracker: All your retail contacts in one place
-              </h3>
-            </div>
-
-            <div class="row links">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-                    <i class="fa icon-eye-open icon-large fa-space-after"></i>
-                    <a href="/stores">View Stores</a>
-                </div>
-                <div class="col-lg-3  col-md-3 col-sm-3 col-xs-6">
-                    <i class="fa fa-plus fa-lg fa-space-after" aria-hidden="true"></i>
-                    <a href="/stores/create">Create Store</a>
-                </div>
-                <div class="col-lg-3  col-md-3 col-sm-3 col-xs-6">
-                    <i class="fa fa-lg fa-space-after fa-user" aria-hidden="true"></i>
-                    <a href="/profile">Profile</a>
-                </div>
-                <div class="col-lg-3  col-md-3 col-sm-3 col-xs-6">
-                    <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
-                    <a href="/logout">Log Out</a>
-                </div>
-            </div><!--/.row-->
-        </div><!--/.container-->
-        <div class="footer-bottom">
-            <div class="container">
-                <p class="pull-left"> Copyright © Mrkt Tracker 2017. All right reserved.
-                  Contact larissa.perkins(at)gmail(dot)com
-                </p>
-            </div>
+<% if(user){ %>
+  <footer class="logged-in">
+      <div class="container">
+        <div class="row">
+          <h3>
+            <i class="fa fa-lg fa-shopping-cart fa-space-after" aria-hidden="true"></i>
+            Mrkt Tracker: All your retail contacts in one place
+          </h3>
         </div>
-    </div><!--/.footer-->
-  <% } else { %>
+        <div class="row links">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <i class="fa icon-eye-open icon-large fa-space-after"></i>
+            <a href="/stores">View Stores</a>
+          </div>
+          <div class="col-lg-3  col-md-3 col-sm-3 col-xs-6">
+            <i class="fa fa-plus fa-lg fa-space-after" aria-hidden="true"></i>
+            <a href="/stores/create">Create Store</a>
+          </div>
+          <div class="col-lg-3  col-md-3 col-sm-3 col-xs-6">
+            <i class="fa fa-lg fa-space-after fa-user" aria-hidden="true"></i>
+            <a href="/profile">Profile</a>
+          </div>
+          <div class="col-lg-3  col-md-3 col-sm-3 col-xs-6">
+            <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
+            <a href="/logout">Log Out</a>
+          </div>
+        </div><!--/.row-->
+      </div><!--/.container-->
+<% } else { %>
+  <footer class="logged-out">
+<% } %>
     <div class="footer-bottom">
-        <div class="container">
-            <p class="pull-left"> Copyright © Mrkt Tracker 2017. All right reserved.
-              Contact larissa.perkins(at)gmail(dot)com
-            </p>
-        </div>
+      <div class="container">
+        <p> Copyright © Mrkt Tracker 2017. All right reserved.
+          Contact larissa.perkins(at)gmail(dot)com
+        </p>
+      </div>
     </div>
-  <% } %>
-</footer>
+  </footer>

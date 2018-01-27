@@ -1,57 +1,75 @@
 footer {
   width: 100%;
-  position: absolute;
-  left: 0;
+  /* position: absolute;
+  left: 0; */
   text-align: center;
-}
-.links {
-  padding-bottom: 15px;
-}
-.links > div {
-  line-height: 25px;
-}
-.full {
-  width: 100%;
-}
-.footer {
   background: #d7f3f4; /* azureish white */
-  height: auto;
-  position: relative;
-  width: 100%;
   border-bottom: 1px solid #a0d1d3; /* pale robin egg blue */
   border-top: 1px solid #a0d1d3; /* pale robin egg blue */
 }
-.footer h3 {
+.logged-in-wrapper,
+.logged-out-wrapper {
+  min-height: 100%;
+}
+.logged-in-wrapper {
+  margin: 0 auto -155px;
+}
+.logged-out-wrapper {
+  margin: 0 auto -49px;
+}
+footer.logged-in,
+.logged-in-push {
+  height: 155px;
+}
+footer.logged-out,
+.logged-out-push {
+  height: 49px;
+}
+
+footer h3 {
   border-bottom: 1px solid #a0d1d3; /* pale robin egg blue */
   color: #2c8e93; /* illuminating emerald */
   font-size: 18px;
   font-weight: 600;
-  line-height: 27px;
+  line-height: 22px;
   padding: 0 10px;
   text-transform: uppercase;
   text-align: center;
 }
-.footer ul,
-.footer .fa {
+footer ul,
+footer .fa {
   list-style-type: none;
   margin-left: 0;
   padding-left: 0;
   color: #2c8e93; /* illuminating emerald */
 }
-.footer ul li a {
+footer ul li a {
   padding: 0 0 5px 0;
   display: block;
 }
-.footer a {
+footer .links {
+  line-height: 25px;
+  padding-bottom: 6px;
+}
+footer a {
   color: #2c8e93; /* illuminating emerald */
 }
 .footer-bottom {
   background-color: #b3dee0; /* powder blue */
   border-top: 1px solid #a0d1d3; /* pale robin egg blue */
   padding-top: 10px;
-  padding-bottom: 10px;
 }
-.footer-bottom p.pull-left {
+.footer-bottom p {
   padding-top: 6px;
   color: #2c8e93; /* illuminating emerald */
+}
+
+@media only screen and (min-width: 768px) {
+  .logged-in-wrapper {
+    margin: 0 auto -133px;
+  }
+  footer.logged-in,
+  .logged-in-push {
+    height: 133px;
+  }
 }

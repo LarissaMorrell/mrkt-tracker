@@ -1,48 +1,55 @@
+* {
+  margin: 0;
+}
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-  min-height: 100%;
   box-sizing: border-box;
 }
-*, *:before, *:after {
+html,
+body {
+  height: 100%;
+  min-width: 300px;
+}
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body{
+body {
   /* Preserve aspect ratio */
   min-width: 100%;
-  background-color: rgba(0,0,0,0);
-  font-family: 'Lato', sans-serif;
+  background-color: rgba(0, 0, 0, 0);
+  font-family: "Lato", sans-serif;
 
   /*for panning image*/
-  margin:0;
-	padding:0;
+  margin: 0;
+  padding: 0;
 }
 
-/* for sticky footer */
-.content {
-  /*min-height: calc(100vh - 80px);*/
-  /*min-height: 900px;*/
-}
-
-
-h1, h2 {
-  color: #2C8E93; /* illuminating emerald */
+h1,
+h2 {
+  color: #2c8e93; /* illuminating emerald */
 }
 h3 {
-  color:#2c8e93; /* illuminating emerald */
+  color: #2c8e93; /* illuminating emerald */
 }
-.page-header { /* for position of .btn-corner */
+.page-header {
+  /* for position of .btn-corner */
   position: relative;
+  margin: 0 0 20px 0;
+  padding-bottom: 0;
 }
 /* Some font awesomes need space after icon */
 .fa-space-after {
   padding-right: 8px;
 }
-
-
-
-
-
+.container,
+.row-container {
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /*
 *
@@ -50,132 +57,225 @@ h3 {
 *
 */
 
-.overlay {   /*teal green overlay */
-  z-index:10;
+.overlay {
+  /*teal green overlay */
+  z-index: 10;
   width: 100vw;
   margin-top: 22vh;
   margin-left: calc(-51vw + 52%);
-  padding: 100px 50px 75px 50px ;
+  padding: 80px 50px 75px 50px;
 
   /*illuminating emerald gradient overlay*/
-  background: rgba(25,49,73,0);
-  background: -moz-linear-gradient(top, rgba(25,49,73,0) 0%, rgba(44,142,147,0.91) 12%, rgba(44,142,147,1) 51%, rgba(44,142,147,0.93) 78%, rgba(44,142,147,0.88) 90%, rgba(25,49,73,0) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(25,49,73,0)), color-stop(12%, rgba(44,142,147,0.91)), color-stop(51%, rgba(44,142,147,1)), color-stop(78%, rgba(44,142,147,0.93)), color-stop(90%, rgba(44,142,147,0.88)), color-stop(100%, rgba(25,49,73,0)));
-  background: -webkit-linear-gradient(top, rgba(25,49,73,0) 0%, rgba(44,142,147,0.91) 12%, rgba(44,142,147,1) 51%, rgba(44,142,147,0.93) 78%, rgba(44,142,147,0.88) 90%, rgba(25,49,73,0) 100%);
-  background: -o-linear-gradient(top, rgba(25,49,73,0) 0%, rgba(44,142,147,0.91) 12%, rgba(44,142,147,1) 51%, rgba(44,142,147,0.93) 78%, rgba(44,142,147,0.88) 90%, rgba(25,49,73,0) 100%);
-  background: -ms-linear-gradient(top, rgba(25,49,73,0) 0%, rgba(44,142,147,0.91) 12%, rgba(44,142,147,1) 51%, rgba(44,142,147,0.93) 78%, rgba(44,142,147,0.88) 90%, rgba(25,49,73,0) 100%);
-  background: linear-gradient(to bottom, rgba(25,49,73,0) 0%, rgba(44,142,147,0.91) 12%, rgba(44,142,147,1) 51%, rgba(44,142,147,0.93) 78%, rgba(44,142,147,0.88) 90%, rgba(25,49,73,0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#193149', endColorstr='#193149', GradientType=0 );
-  }
+  background: rgba(25, 49, 73, 0);
+  background: -moz-linear-gradient(
+    top,
+    rgba(25, 49, 73, 0) 0%,
+    rgba(44, 142, 147, 0.91) 12%,
+    rgba(44, 142, 147, 1) 51%,
+    rgba(44, 142, 147, 0.93) 78%,
+    rgba(44, 142, 147, 0.88) 90%,
+    rgba(25, 49, 73, 0) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(25, 49, 73, 0)),
+    color-stop(12%, rgba(44, 142, 147, 0.91)),
+    color-stop(51%, rgba(44, 142, 147, 1)),
+    color-stop(78%, rgba(44, 142, 147, 0.93)),
+    color-stop(90%, rgba(44, 142, 147, 0.88)),
+    color-stop(100%, rgba(25, 49, 73, 0))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(25, 49, 73, 0) 0%,
+    rgba(44, 142, 147, 0.91) 12%,
+    rgba(44, 142, 147, 1) 51%,
+    rgba(44, 142, 147, 0.93) 78%,
+    rgba(44, 142, 147, 0.88) 90%,
+    rgba(25, 49, 73, 0) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(25, 49, 73, 0) 0%,
+    rgba(44, 142, 147, 0.91) 12%,
+    rgba(44, 142, 147, 1) 51%,
+    rgba(44, 142, 147, 0.93) 78%,
+    rgba(44, 142, 147, 0.88) 90%,
+    rgba(25, 49, 73, 0) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(25, 49, 73, 0) 0%,
+    rgba(44, 142, 147, 0.91) 12%,
+    rgba(44, 142, 147, 1) 51%,
+    rgba(44, 142, 147, 0.93) 78%,
+    rgba(44, 142, 147, 0.88) 90%,
+    rgba(25, 49, 73, 0) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 49, 73, 0) 0%,
+    rgba(44, 142, 147, 0.91) 12%,
+    rgba(44, 142, 147, 1) 51%,
+    rgba(44, 142, 147, 0.93) 78%,
+    rgba(44, 142, 147, 0.88) 90%,
+    rgba(25, 49, 73, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#193149",
+      endColorstr="#193149",
+      GradientType=0
+    );
+}
 .text {
-  font:23px 'Montserrat', sans-serif;
+  font: 23px "Montserrat", sans-serif;
   font-weight: 300;
-  color:#fff;
-  text-align:center;
+  color: #fff;
+  text-align: center;
   margin: auto;
 }
 .text > h2 {
-  margin:auto auto 10px auto;
-  color:#fff;
-  font:35px 'Lato', sans-serif;
+  margin: auto auto 10px auto;
+  color: #fff;
+  font: 35px "Lato", sans-serif;
   font-weight: 500;
 }
 .shadow {
-  text-shadow:0 0 8px #000;
+  text-shadow: 0 0 8px #000;
 }
-
+.landing {
+  margin: 50px auto;
+  display: block;
+}
+img.landing {
+  max-height: 400px;
+}
+#img-files {
+  max-height: 300px;
+}
+#img-tablet {
+  max-height: 400px;
+}
 
 /* ANIMATION FOR LANDING */
 .panning-banner {
   /*to make it span the width of page*/
-  position:absolute;
-  top:0;
-  left:0;
-  width:100vw;
-  height:30vh;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100vw;
+  height: 30vh;
   margin-top: 25px;
 }
 .bg-banner {
-  z-index:-1;
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  background:url('/images/supermarket.jpg') 0 0;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("/images/supermarket.jpg") 0 0;
   background-repeat: repeat-x;
   background-size: cover;
 
-  -webkit-animation:100s scroll infinite linear;
-  -moz-animation:100s scroll infinite linear;
-  -o-animation:100s scroll infinite linear;
-  -ms-animation:100s scroll infinite linear;
-  animation:100s scroll infinite linear;
+  -webkit-animation: 100s scroll infinite linear;
+  -moz-animation: 100s scroll infinite linear;
+  -o-animation: 100s scroll infinite linear;
+  -ms-animation: 100s scroll infinite linear;
+  animation: 100s scroll infinite linear;
 }
 
-
-
-@-webkit-keyframes scroll{
-  100%{
-    background-position:-3000px 0px;
+@-webkit-keyframes scroll {
+  100% {
+    background-position: -3000px 0px;
   }
 }
 
-@-moz-keyframes scroll{
-  100%{
-    background-position:-3000px 0px;
+@-moz-keyframes scroll {
+  100% {
+    background-position: -3000px 0px;
   }
 }
 
-@-o-keyframes scroll{
-  100%{
-    background-position:-3000px 0px;
+@-o-keyframes scroll {
+  100% {
+    background-position: -3000px 0px;
   }
 }
 
-@-ms-keyframes scroll{
-  100%{
-    background-position:-3000px 0px;
+@-ms-keyframes scroll {
+  100% {
+    background-position: -3000px 0px;
   }
 }
 
-div.landing-description-container > .row {
-  width:100vw;
+#landing-description-container > .row {
+  width: 100vw;
   margin-left: calc(-51vw + 51%);
 
-  background: rgba(32,124,229,0);
-  background: -moz-linear-gradient(top, rgba(32,124,229,0) 0%, rgba(73,155,234,0.12) 100%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(32,124,229,0)), color-stop(100%, rgba(73,155,234,0.12)));
-  background: -webkit-linear-gradient(top, rgba(32,124,229,0) 0%, rgba(73,155,234,0.12) 100%);
-  background: -o-linear-gradient(top, rgba(32,124,229,0) 0%, rgba(73,155,234,0.12) 100%);
-  background: -ms-linear-gradient(top, rgba(32,124,229,0) 0%, rgba(73,155,234,0.12) 100%);
-  background: linear-gradient(to bottom, rgba(32,124,229,0) 0%, rgba(73,155,234,0.12) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207ce5', endColorstr='#499bea', GradientType=0 );
+  background: rgba(32, 124, 229, 0);
+  background: -moz-linear-gradient(
+    top,
+    rgba(32, 124, 229, 0) 0%,
+    rgba(73, 155, 234, 0.12) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(32, 124, 229, 0)),
+    color-stop(100%, rgba(73, 155, 234, 0.12))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(32, 124, 229, 0) 0%,
+    rgba(73, 155, 234, 0.12) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(32, 124, 229, 0) 0%,
+    rgba(73, 155, 234, 0.12) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(32, 124, 229, 0) 0%,
+    rgba(73, 155, 234, 0.12) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(32, 124, 229, 0) 0%,
+    rgba(73, 155, 234, 0.12) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(
+      startColorstr="#207ce5",
+      endColorstr="#499bea",
+      GradientType=0
+    );
 }
-div.landing-description-container h2 {
+#landing-description-container h2 {
   text-align: center;
-  font:35px 'Lato', sans-serif;
+  font: 35px "Lato", sans-serif;
   font-weight: 600;
 }
-div.landing-description-container p {
-  font:23px 'Montserrat', sans-serif;
+#landing-description-container p {
+  font: 23px "Montserrat", sans-serif;
   font-weight: 300;
-  color:#5F99D3; /* livid */
-  text-shadow:0 0 1px gray;
-  text-align:center;
+  color: #5f99d3; /* livid */
+  text-shadow: 0 0 1px gray;
+  text-align: center;
   margin: auto;
 }
-div.row-landing-content {
-  padding: 15px;
+#landing-description-container img {
+  max-width: 100%;
 }
 
-
-@media screen and (min-width: 495px) {
-  .overlay {   /*teal green overlay */
+@media only screen and (min-width: 495px) {
+  .overlay {
+    /*teal green overlay */
     margin-top: 30vh;
   }
   .panning-banner {
-    height:37vh;
+    height: 37vh;
   }
   .text {
     font-size: 25px;
@@ -186,13 +286,13 @@ div.row-landing-content {
   }
 }
 
-@media screen and (min-width: 550px) {
-
-  .overlay {   /*teal green overlay */
+@media only screen and (min-width: 550px) {
+  .overlay {
+    /*teal green overlay */
     margin-top: 38vh;
   }
   .panning-banner {
-    height:45vh;
+    height: 45vh;
   }
   .text > h2 {
     font-size: 40px;
@@ -200,24 +300,23 @@ div.row-landing-content {
   }
 }
 
-@media screen and (min-width: 650px) {
-
-  .overlay {   /*teal green overlay */
+@media only screen and (min-width: 650px) {
+  .overlay {
+    /*teal green overlay */
     margin-top: 43vh;
   }
   .panning-banner {
-    height:50vh;
+    height: 50vh;
   }
-
 }
 
 /* bigger than very small screens */
-@media screen and (min-width: 800px) {
+@media only screen and (min-width: 800px) {
   .overlay {
-    margin-top:48vh;
+    margin-top: 48vh;
   }
   .panning-banner {
-    height:55vh;
+    height: 55vh;
   }
   .text {
     max-width: 1000px;
@@ -225,19 +324,14 @@ div.row-landing-content {
 }
 
 /* bigger than very small screens */
-@media screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) {
   .overlay {
-    margin-top:53vh;
+    margin-top: 53vh;
   }
   .panning-banner {
-    height:60vh;
-  }
-
-  div.row-landing-content {
-
+    height: 60vh;
   }
 }
-
 
 /*bootstrap
 xs= 0-767 pixels
@@ -245,41 +339,29 @@ sm = 768-991 pixels
 md = 992-1199 pixels
 lg = 1200 pixels and up*/
 
-
-
-
-
-
 /*
 *   STORE LIST
 */
 .result-container {
   margin-top: 50px;
 }
-.btn-corner {
-  width: 40px;
-  height: 40px;
-  /* align to bottom corner of parent div */
-  position: absolute;
-  right:    0;
-  bottom:   0;
-}
-/*button to go back to store list*/
-.btn-corner > .fa-home {
-    padding-left: -5px;
-}
-/*button for adding a store*/
-.btn-corner > .fa-plus {
-  /*padding-top: 8px;*/
-}
-
-
 
 /*
 *   FORMS
 */
+#login-box,
+#signup-box {
+  max-width: 600px;
+  min-width: 285px;
+  width: 75%;
+  margin: 10px auto 20px auto;
+}
+#login-box > .store-box,
+#signup-box > .store-box {
+  margin-bottom: 25px;
+}
 input[type="text"],
-input[type="password"]{
+input[type="password"] {
   height: 38px;
 }
 select {
@@ -288,13 +370,28 @@ select {
   margin-left: 14px;
 }
 .form-group > label {
-  font: 16px 'Montserrat', sans-serif;
-	color:#5F99D3; /* livid */
-	font-weight:400;
+  font: 16px "Montserrat", sans-serif;
+  color: #5f99d3; /* livid */
+  font-weight: 400;
+  margin-top: 7px;
+}
+.no-padding-right {
+  padding-right: 0;
+}
+.yes-no-radio {
+  width: 100px;
 }
 .yes-no-radio > .yes-no-description {
   font-size: 16px;
-  color: #5F99D3; /* livid */
+  color: #5f99d3; /* livid */
+  padding-left: 5px;
+}
+@media only screen and (max-width: 650px) {
+  #login-from {
+    margin-top: 400px;
+    padding: 25px;
+    background-color: blue;
+  }
 }
 
 /*
@@ -310,9 +407,8 @@ select {
   width: 165px;
 }
 .store-details-box {
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255, 255, 255, 0.7);
 }
-
 
 /*
 *   PROFILE
@@ -320,7 +416,7 @@ select {
 .profile-label {
   font-size: 17px;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .profile-label {
     text-align: right;
   }

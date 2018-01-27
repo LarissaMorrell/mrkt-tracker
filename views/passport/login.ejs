@@ -1,40 +1,69 @@
-<!DOCTYPE html>
 <html lang="en">
 <% include ../partials/head.ejs %>
-  <body>
+<body>
+  <% if(user){ %>
+    <div class="logged-in-wrapper">
+  <% } else { %>
+    <div class="logged-out-wrapper">
+  <% } %>
   <% include ../partials/header.ejs %>
-
-  <div class="container content">
-      <div class="col-sm-6 col-sm-offset-3">
-          <h1 class="page-header"><span class="fa fa-sign-in"></span> Login</h1>
-          <!-- show any messages that come back with authentication -->
-          <% if (message.length > 0) { %>
-              <div class="alert alert-danger">
-                  <%= message %>
-              </div>
-              <% } %>
-                  <!-- LOGIN FORM -->
-                  <div class="store-box">
-                    <form action="/login" method="post">
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input type="text" class="form-control" name="email">
-                        </div>
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" class="form-control" name="password">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg">
-                          <span class="fa fa-sign-in fa-lg fa-space-after"></span>Login
-                        </button>
-                    </form>
-                    <hr>
-                    <p>Need an account? <a href="/signup">Signup</a></p>
-                    <p>Or go <a href="/">home</a>.</p>
+    <div class="container ">
+        <h1 class="page-header">
+          <span class="fa fa-sign-in"></span> Login
+        </h1>
+        <!-- TODO show any messages that come back with authentication -->
+        <% if (message.length > 0) { %>
+          <div class="alert alert-danger">
+              <%= message %>
+          </div>
+        <% } %>
+        <!-- LOGIN FORM -->
+          <div id="login-box" >
+            <div class="store-box">
+              <form action="/login" method="post">
+                <div class="form-group">
+                  <label>Email</label>
+                  <input type="text" class="form-control" name="email">
                 </div>
-      </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" class="form-control" name="password">
+                </div>
+                <div class="btn-row">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    <span class="fa fa-sign-in fa-lg fa-space-after"></span>Login
+                  </button>
+                </div>
+              </form>
+              <hr>
+              <div class="demo-account center-horizontal">
+                I'm just looking for a
+                <form class="demo-account" action="/login" method="post">
+                  <input type="hidden" name="email" value="jalvarez@makersgroup.com" />
+                  <input type="hidden" name="password" value="password" />
+                  <button class="demo-account link-decoration" type="submit" class="btn btn-lg">
+                    DEMO
+                  </button>
+                </form>
+              </div>
+              <p>
+                Need an account?
+                <a class="link-decoration" href="/signup">Signup</a>
+              </p>
+              <p>
+                Change your mind? 
+                <a class="link-decoration" href="/">Go back</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      <% if(user){ %>
+        <div class="logged-in-push"></div>
+      <% } else { %>
+        <div class="logged-out-push"></div>
+      <% } %>
+    </div>
   </div>
-
   <% include ../partials/footer.ejs %>
 </body>
 </html>

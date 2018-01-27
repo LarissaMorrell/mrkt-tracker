@@ -2,75 +2,78 @@
 <html lang="en">
 <% include ../partials/head.ejs %>
   <body>
-  <% include ../partials/header.ejs %>
-  <div class="container store-list content">
-    <div class="form-group row page-header">
-    <h1 class="col-sm-10">Store List</h1>
-    <h3><a class="btn btn-primary col-sm-2 btn-corner" role="button" href="/stores/create">
-    <i class="fa fa-plus fa-md" aria-hidden="true"></i></a></h3>
-    </div>
-    <% if(stores.length>0) { %>
+    <div class="logged-in-wrapper">
+    <% include ../partials/header.ejs %>
+    <div class="container store-list ">
+      <div class="form-group row page-header">
+      <h1 class="col-sm-10">View Retailers</h1>
+      <h3><a class="btn btn-primary col-sm-2 btn-corner" role="button" href="/stores/create">
+      <i class="fa fa-plus fa-md" aria-hidden="true"></i></a></h3>
+      </div>
+      <% if(stores.length>0) { %>
 
-    <div class="container result-container">
-    <% for(var i=0; i<stores.length; i++) { %>
+      <div class="container result-container">
+      <% for(var i=0; i<stores.length; i++) { %>
 
-      <div class="row store-box">
-        <div class="store-round">
-          <a href="#" class="sprite-tier">
-            <% var tier = stores[i].tier.toLowerCase() %>
-            <div class="sprite-tier label"><%= tier %></div>
-            <img class="sprite-tier" src="/images/<%= tier %>.png" alt= <%= tier %> />
+        <div class="row store-box">
+          <div class="store-round">
+            <a href="/stores/show/<%= stores[i]._id%>" class="sprite-tier">
+              <% var tier = stores[i].tier.toLowerCase() %>
+              <div class="sprite-tier label"><%= tier %></div>
+              <img class="sprite-tier" src="/images/<%= tier %>.png" alt= <%= tier %> />
+            </a>
+          </div><%/*closes store round*/%>
+
+          <h3><%= stores[i].name%></h3>
+          <strong class="address"><%= stores[i].address%>, <%= stores[i].city%>, <%= stores[i].state%></strong>
+
+          <div class="row paperwork-row">
+            <% if(stores[i].havePaperwork){ %>
+              <div class="col-xs-12 col-sm-6">
+                <p>
+                  <i class="fa fa-check fa-lg fa-space-after" aria-hidden="true"></i>
+                  Paperwork has been submitted
+                </p>
+              </div>
+            <% } else { %>
+              <div class="col-xs-12 col-sm-6">
+                <p>
+                  <i class="fa fa-times fa-lg fa-space-after" aria-hidden="true"></i>
+                  Paperwork NOT submitted
+                </p>
+              </div>
+            <% } %>
+
+            <% if(stores[i].wantPaperworkBack){ %>
+              <div class="col-xs-12 col-sm-6">
+                <p>
+                  <i class="fa fa-check fa-lg fa-space-after" aria-hidden="true"></i>
+                  Paperwork must be returned
+                </p>
+              </div>
+            <% } else { %>
+              <div class="col-xs-12 col-sm-6">
+                <p>
+                  <i class="fa fa-times fa-lg fa-space-after" aria-hidden="true"></i>
+                  Paperwork NOT to be returned
+                </p>
+              </div>
+            <% } %>
+          </div> <%/* closes row paperwork-row */%>
+          <p class="gen-comments"><%= stores[i].generalComments%></p>
+          <a href="/stores/show/<%= stores[i]._id%>" class="seemore">See More
+            <i class="fa fa-arrow-right"></i>
           </a>
-        </div><%/*closes store round*/%>
+        </div> <%/* store-box */%>
+      <% } %>
 
-        <h3><%= stores[i].name%></h3>
-        <strong class="address"><%= stores[i].address%>, <%= stores[i].city%>, <%= stores[i].state%></strong>
-
-        <div class="row paperwork-row">
-          <% if(stores[i].havePaperwork){ %>
-            <div class="col-xs-12 col-sm-6">
-              <p>
-                <i class="fa fa-check fa-lg fa-space-after" aria-hidden="true"></i>
-                Paperwork has been submitted
-              </p>
-            </div>
-          <% } else { %>
-            <div class="col-xs-12 col-sm-6">
-              <p>
-                <i class="fa fa-times fa-lg fa-space-after" aria-hidden="true"></i>
-                Paperwork NOT submitted
-              </p>
-            </div>
-          <% } %>
-
-          <% if(stores[i].wantPaperworkBack){ %>
-            <div class="col-xs-12 col-sm-6">
-              <p>
-                <i class="fa fa-check fa-lg fa-space-after" aria-hidden="true"></i>
-                Paperwork must be returned
-              </p>
-            </div>
-          <% } else { %>
-            <div class="col-xs-12 col-sm-6">
-              <p>
-                <i class="fa fa-times fa-lg fa-space-after" aria-hidden="true"></i>
-                Paperwork NOT to be returned
-              </p>
-            </div>
-          <% } %>
-        </div> <%/* closes row paperwork-row */%>
-        <p class="gen-comments"><%= stores[i].generalComments%></p>
-        <a href="/stores/show/<%= stores[i]._id%>" class="seemore">See More
-          <i class="fa fa-arrow-right"></i>
-        </a>
-      </div> <%/* store-box */%>
-    <% } %>
-
-    <% } else { %>
-      <div class="row">No stores found.</div>
-    <% } %>
-  </div> <%/* div result-container */%>
-  </div> <%/* div container */%>
+      <% } else { %>
+        <div class="row container">No stores found.</div>
+      <% } %>
+    </div> <%/* div result-container */%>
+    <div class="logged-in-push"></div>
+    </div> <%/* div container */%>
+  </div>
   <% include ../partials/footer.ejs %>
 </body>
 </html>

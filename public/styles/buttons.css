@@ -1,7 +1,41 @@
+.btn-row {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+}
 .btn-row > .btn {
   margin: 10px;
 }
 
+.btn-corner {
+  width: 40px;
+  height: 40px;
+  /* align to bottom corner of parent div */
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+}
+/*button to go back to store list*/
+.btn-corner > .fa-home {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+}
+#edit-store-location {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: -4px;
+}
+#edit-store-location > .fa {
+  position: relative;
+  top: -5px;
+  left: -5px;
+}
+/*button for adding a store*/
+.btn-corner > .fa-plus {
+  /*padding-top: 8px;*/
+}
 /**************************
   DEFAULT BOOTSTRAP STYLES
 **************************/
@@ -18,9 +52,9 @@
   vertical-align: middle;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -73,16 +107,17 @@
   box-shadow: 3px 3px #8388a4;
 }
 .btn-primary.raised {
-	box-shadow: 3px 3px #007299;
+  box-shadow: 3px 3px #007299;
 }
 .btn-danger.raised {
-	box-shadow: 3px 3px #99000a;
+  box-shadow: 3px 3px #99000a;
 }
-.btn-primary.raised:active, .btn-primary.raised.active {
-	background: #064789; /* dark cerulean */;
-	box-shadow: none;
-	margin-bottom: -3px;
-	margin-top: 3px;
+.btn-primary.raised:active,
+.btn-primary.raised.active {
+  background: #064789; /* dark cerulean */
+  box-shadow: none;
+  margin-bottom: -3px;
+  margin-top: 3px;
 }
 
 /***********************
@@ -90,24 +125,31 @@
 ************************/
 
 .btn {
-	/*padding: 14px 24px;*/
-	border: 0 none;
-	font-weight: 700;
-	letter-spacing: 1px;
-	text-transform: uppercase;
+  /*padding: 14px 24px;*/
+  border: 0 none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-.btn:focus, .btn:active:focus, .btn.active:focus {
-	outline: 0 none;
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+  outline: 0 none;
 }
 
 .btn-primary {
-	background: #3CC1C8; /* maximum blue green */
-	color: #ffffff;
+  background: #3cc1c8; /* maximum blue green */
+  color: #ffffff;
 }
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-	background: #064789; /* dark cerulean */;
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background: #064789; /* dark cerulean */
 }
-.btn-primary:active, .btn-primary.active {
-	background: #007299;
-	box-shadow: none;
+.btn-primary:active,
+.btn-primary.active {
+  background: #007299;
+  box-shadow: none;
 }
