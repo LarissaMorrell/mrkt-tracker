@@ -1,84 +1,47 @@
 process.env.NODE_ENV = "test";
 var assert = require("assert");
-//var Browser = require("zombie");
+var Browser = require("zombie");
 const configDB = require("../config/database.js");
 const { app, runServer, closeServer } = require("../server.js");
-
-describe("contact page", function() {
+Browser.localhost("mrkt-tracker.heroku.com", 8080);
+const browser = new Browser();
+let cookies = {};
+describe("All pages", function() {
   before(function() {
-    // return runServer(configDB.testDBUrl).then(server => {
-    //   this.server = server;
-    //   this.browser = new Browser({ site: "http://localhost:8080" });
-    //   done();
-    // });
-    // .catch(e => console.log(e));
-    // console.log(this.server);
     return runServer(configDB.testDBUrl);
   });
 
-  // load the contact page before each test
-  // beforeEach(function(done) {
-  //   //  this.browser.visit("/", done);
-  // });
-
-  // it('should show contact a form', function() {
-  //   assert.ok(this.browser.success);
-  //   assert.equal(this.browser.text('h1'), 'Contact');
-  //   assert.equal(this.browser.text('form label'), 'First NameLast NameEmailMessage');
-  // });
-  //
-  it("should refuse empty submissions", function(done) {
-    // var browser = this.browser;
-    //
-    // assert.ok(browser.success);
-    // assert.equal(browser.text("h2.shadow"), "Work smarter. Not harder.");
-    // // assert.equal(browser.text("div.alert"), "Please fill in all the fields");
-    done();
+  it("Homepage should display homepage stuff", function(done) {
+    browser.visit("/", () => {
+      assert.ok(browser.success);
+      assert.equal(browser.text("h2.shadow"), "Work smarter. Not harder.");
+      // TODO: TEST MORE HOME STUFF HERE
+      done();
+    });
   });
-  //
-  // it('should refuse partial submissions', function(done) {
-  //   var browser = this.browser;
-  //   browser.fill('first_name', 'John');
-  //   browser.pressButton('Send').then(function() {
-  //     assert.ok(browser.success);
-  //     assert.equal(browser.text('h1'), 'Contact');
-  //     assert.equal(browser.text('div.alert'), 'Please fill in all the fields');
-  //   }).then(done, done);
-  // });
-  //
-  // it('should keep values on partial submissions', function(done) {
-  //   var browser = this.browser;
-  //   browser.fill('first_name', 'John');
-  //   browser.pressButton('Send').then(function() {
-  //     assert.equal(browser.field('first_name').value, 'John');
-  //   }).then(done, done);
-  // });
-  //
-  // it('should refuse invalid emails', function(done) {
-  //   var browser = this.browser;
-  //   browser.fill('first_name', 'John');
-  //   browser.fill('last_name', 'Doe');
-  //   browser.fill('email', 'incorrect email');
-  //   browser.fill('message', 'Lorem ipsum');
-  //   browser.pressButton('Send').then(function() {
-  //     assert.ok(browser.success);
-  //     assert.equal(browser.text('h1'), 'Contact');
-  //     assert.equal(browser.text('div.alert'), 'Please check the email address format');
-  //   }).then(done, done);
-  // });
-  //
-  // it('should accept complete submissions', function(done) {
-  //   var browser = this.browser;
-  //   browser.fill('first_name', 'John');
-  //   browser.fill('last_name', 'Doe');
-  //   browser.fill('email', 'test@example.com');
-  //   browser.fill('message', 'Lorem ipsum');
-  //   browser.pressButton('Send').then(function() {
-  //     assert.ok(browser.success);
-  //     assert.equal(browser.text('h1'), 'Message Sent');
-  //     assert.equal(browser.text('p'), 'Thank you for your message. We\'ll answer you shortly.');
-  //   }).then(done, done);
-  // });
+
+  it("Test creating an account", function(done) {
+    browser.visit("/signup", () => {
+      assert.ok(browser.success);
+      browser
+        .fill("email", "zombie@underworld.dead")
+        .fill("password", "eat-the-living");
+      browser.pressButton("#signup", () => {
+        cookies = browser.cookies;
+        //browser.setCookie("connect.sid", cookies);
+        //console.log(cookies);
+        browser.visit("/profile", () => {
+          assert.ok(browser.success);
+          assert.equal(browser.text("h1"), "Profile Page");
+        });
+      });
+
+      //;
+      //assert.equal(browser.text("h2.shadow"), "Work smarter. Not harder.");
+      // TODO: TEST MORE HOME STUFF HERE
+      done();
+    });
+  });
 
   after(function() {
     return closeServer();
