@@ -35,10 +35,6 @@ describe("All pages", function() {
           assert.equal(browser.text("h1"), "Profile Page");
         });
       });
-
-      //;
-      //assert.equal(browser.text("h2.shadow"), "Work smarter. Not harder.");
-      // TODO: TEST MORE HOME STUFF HERE
       done();
     });
   });
