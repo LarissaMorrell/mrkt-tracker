@@ -8,7 +8,8 @@ const browser = new Browser();
 let cookies = {};
 describe("All pages", function() {
   before(function() {
-    return runServer(configDB.testDBUrl);
+    console.log(configDB.TEST_DATABASE_URL);
+    return runServer(configDB.TEST_DATABASE_URL);
   });
 
   it("Homepage should display homepage stuff", function(done) {
