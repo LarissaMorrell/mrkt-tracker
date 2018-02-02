@@ -8,7 +8,6 @@ const browser = new Browser();
 let cookies = {};
 describe("All pages", function() {
   before(function() {
-    console.log(configDB.TEST_DATABASE_URL);
     return runServer(configDB.TEST_DATABASE_URL);
   });
 
@@ -16,7 +15,7 @@ describe("All pages", function() {
     browser.visit("/", () => {
       assert.ok(browser.success);
       assert.equal(browser.text("h2.shadow"), "Work smarter. Not harder.");
-      // TODO: TEST MORE HOME STUFF
+
       done();
     });
   });
