@@ -5,6 +5,7 @@
     "test": "mocha ./test/test-zombie.js",
     "start": "node server.js"
   },
+  "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": "https://github.com/LarissaMorrell/mrkt-tracker.git"
@@ -12,28 +13,27 @@
   "main": "server.js",
   "dependencies": {
     "bcrypt-nodejs": "latest",
-    "connect-flash": "0.1.1",
-    "cookie-parser": "1.0.1",
-    "ejs": "0.8.8",
-    "express-session": "1.0.1",
-    "faker": "^4.1.0",
-    "method-override": "1.0.2",
     "body-parser": "^1.15.2",
+    "connect-flash": "0.1.1",
+    "cookie-parser": "1.4.3",
+    "ejs": "0.8.8",
     "express": "^4.12.4",
-    "mongoose": "^4.7.1",
+    "express-session": "1.15.6",
+    "method-override": "2.3.10",
+    "mongoose": "^5.0.3",
     "morgan": "^1.7.0",
-    "passport": "0.1.18",
-    "passport-facebook": "1.0.3",
-    "passport-google-oauth": "0.1.5",
-    "passport-local": "0.1.6",
-    "passport-twitter": "1.0.2"
+    "passport": "0.4.0",
+    "passport-facebook": "2.1.1",
+    "passport-google-oauth": "1.0.0",
+    "passport-local": "1.0.0",
+    "passport-twitter": "1.0.4"
   },
   "devDependencies": {
     "assert": "^1.4.1",
-    "chai": "^3.5.0",
+    "chai": "4.1.2",
     "chai-http": "^3.0.0",
-    "faker": "^3.1.0",
-    "mocha": "^4.0.1",
+    "faker": "^4.1.0",
+    "mocha": "^5.0.0",
     "zombie": "~5.0.0"
   }
 }
