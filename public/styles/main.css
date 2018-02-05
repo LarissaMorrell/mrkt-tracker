@@ -60,9 +60,9 @@ h3 {
 .overlay {
   /*teal green overlay */
   z-index: 10;
-  width: 100vw;
+  width: 101vw;
   margin-top: 22vh;
-  margin-left: calc(-51vw + 52%);
+  margin-left: calc(-52vw + 52%);
   padding: 80px 50px 75px 50px;
 
   /*illuminating emerald gradient overlay*/
@@ -211,9 +211,8 @@ img.landing {
 }
 
 #landing-description-container > .row {
-  width: 100vw;
-  margin-left: calc(-51vw + 51%);
-
+  width: 101vw;
+  margin-left: calc(-52vw + 52%);
   background: rgba(32, 124, 229, 0);
   background: -moz-linear-gradient(
     top,
