@@ -9,43 +9,45 @@
     </button>
     <a class="navbar-brand" href="javascript:void(0)">
       <i class="fa fa-lg fa-shopping-cart fa-space-after" aria-hidden="true"></i>
-                Mrkt Tracker
-              </a>
+      Mrkt Tracker
+    </a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-          <% if(user) {%>
-      <li class="active"><a href="/stores/create">Create Store</a></li>
-      <li><a href="/stores">View Stores</a></li>
-            <% } %>
+      <% if(user) { %>
+        <li class="active">
+          <a href="/stores/create">Create Store</a>
+        </li>
+        <li>
+          <a href="/stores">View Stores</a>
+        </li>
+      <% } %>
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-  <% if(user) {%>
-
-      <li class="">
-        <a href="/profile">
-          <i class="fa fa-lg fa-space-after fa-user" aria-hidden="true"></i>
-          Profile
-        </a>
-    </li>
-    <li class="">
-        <a href="/logout">
-            <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
-            Logout
-        </a>
-      </li>
-        <% } else {%>
-            <li class="">
+      <% if(user) {%>
+        <li>
+          <a href="/profile">
+            <i class="fa fa-lg fa-space-after fa-user" aria-hidden="true"></i>
+            Profile
+          </a>
+        </li>
+        <li>
+          <a href="/logout">
+              <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
+              Logout
+          </a>
+        </li>
+      <% } else {%>
+        <li>
           <a href="/login">
               <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
               Login
           </a>
-  </li>
+        </li>
       <% } %>
-
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
