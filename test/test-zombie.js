@@ -28,8 +28,6 @@ describe("All pages", function() {
         .fill("password", "eat-the-living");
       browser.pressButton("#signup", () => {
         cookies = browser.cookies;
-        //browser.setCookie("connect.sid", cookies);
-        //console.log(cookies);
         browser.visit("/profile", () => {
           assert.ok(browser.success);
           assert.equal(browser.text("h1"), "Profile Page");

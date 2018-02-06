@@ -38,9 +38,6 @@ require("./app/routes/store.js")(app, passport);
 require("./app/routes/employee.js")(app, passport);
 
 // launch ======================================================================
-// app.listen(port);
-// console.log("The magic happens on port " + port);
-
 let server;
 function runServer(databaseUrl = configDB.DATABASE_URL) {
   const PORT = process.env.PORT || 8080;

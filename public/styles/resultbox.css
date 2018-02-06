@@ -17,7 +17,6 @@
   width: 100%;
   padding: 50px 50px 30px 50px;
   border: 2px solid #2c8e93; /* Illuminating emerald */
-  /*border:1px solid #d7d7d7;*/
   background-color: #fff;
   position: relative;
   height: auto;
@@ -130,7 +129,6 @@ a.sprite-tier > img {
 
 /* Login and Signup boxes have links for the demo account */
 .link-decoration {
-  /* font: 16px "Montserrat", sans-serif; */
   font-weight: 500;
   background: none !important;
   border: none;
